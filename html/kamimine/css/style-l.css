@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+img{
+	width: 100%;
+}
+
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/*ヘッダー
+---------------------------------------------------------------------------*/
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	width: 100%;
+}
+
+header h1 img {
+	margin: 0 auto;
+	width: 90px;
+	height: 15px;
+}
+/*top-menu 
+---------------------------------------------------------------------------*/
+
+
+#top-menu {
+	margin: 0;
+	width: 100%;
+	display: inline;
+}
+
+#top-menu .menu {
+	margin: 0 10px 0 0;
+	width: 25px;
+	height: 20px;
+	float: right;
+	cursor: pointer;
+	z-index: 1;
+	position: relative;
+	top: -20px;
+}
+
+.sb-right ul {
+	margin: 30px auto 0 auto;;
+	width: 90%;
+	list-style-type: none;
+}
+
+.sb-right li {
+	padding: 5px 0 5px 10px;
+	color: #ffffff;
+	text-align: left;
+	border-bottom: solid 1px #aaaaaa;
+}
+
+.sb-right li:hover {
+	text-decoration: none;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
+
+.js-menu, .js-search {
+	padding: 0;
+	width: 100%;
+	height: auto;
+	background-color: #333333;
+	display: none;
+	clear: both;
+}
+
+/*---------------------------------------------------------------------------*/
+/* menu
+/*---------------------------------------------------------------------------*/
+
+
+#main-menu .main-menu-box {
+	margin: 0;
+	width: 100%;
+}
+
+#main-menu .route-map {
+	padding: 0;
+	width: 120px;
+	height: 70px;
+	font-size: 0.6em;
+	background-position: center 5px;
+	position: relative;
+}
+
+#main-menu .route-map:after {
+	padding: 0;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	top: 30px;
+	left: 125px;
+}
+
+
+#main-menu .timetable {
+	padding: 0;
+	width: 120px;
+	height: 70px;
+	font-size: 0.6em;
+	background-position: center 5px;
+}
+
+#main-menu .timetable:before {
+	padding: 0;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	top: 30px;
+	right: 125px;
+}
+
+#main-menu .main {
+	padding: 0 0 5px 0;
+	font-size: 0.8em;
+	line-height: 1.2em;
+	background-position: center 5px;
+}
+
+#main-menu .main br {
+	display: inline;
+}
+
+/*---------------------------------------------------------------------------*/
+/* serch
+/*---------------------------------------------------------------------------*/
+
+#serch {
+	width: 100%;
+}
+
+/*---------------------------------------------------------------------------*/
+/* result
+/*---------------------------------------------------------------------------*/
+
+
+#result .present-time {
+	width: 100%;
+	background-position: 30px center;
+}
+
+#result p {
+	margin: 10px 0 0 120px;
+}
+
+#result .refresh {
+	margin: 0 20px 0 0;
+}
+
+.bus-info {
+    margin: 0 auto 20px auto;
+    width: 100%;
+}
+
+.bus-info .title {
+    margin: 14px 30px 0 0;
+}
+
+
+.bus-info .time {
+    margin: 0 0 0 80px;
+    padding: 0;
+    line-height: 1em;
+    clear: both;
+}
+
+.depart {
+    padding: 14px 20px 0 0;
+}
+
+.arrival {
+    padding: 16px 20px 0 50px;
+    background-position: 60px 52%;
+}
+
+/*---------------------------------------------------------------------------*/
+/* timetable
+/*---------------------------------------------------------------------------*/
+
+
+table.timetable {
+	width: 100%;
+}
+
+.more {
+	width: 100%;
+}
+
+.situation {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/*---------------------------------------------------------------------------*/
+/*footer
+/*---------------------------------------------------------------------------*/
+
+
+.footer-box {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.copyright {
+    margin: 140px 0 0 0;
+    font-size: 0.8em;
+    clear: both;
+}

@@ -1,0 +1,189 @@
+/* ============================================================================
+ * Offset  
+ * ============================================================================ */
+ul li {
+    list-style: none;
+    list-style-type: none;
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure{
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+}
+label {
+    font-weight: normal;
+    border-collapse:collapse;
+    font-size: 100%;
+    border-spacing: 0;
+}
+img {
+    border: none;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+/* ============================================================================
+ *  Modal Message
+ * ============================================================================ */
+#tciMsgModal {
+    margin:0;
+    padding:10px 20px;
+    border:2px solid #aaa;
+    border-radius: 10px;
+    background:#fff;
+    position:fixed;
+    display:none;
+    z-index:8889;
+}
+#tciMsgModal .tciMsgTitle {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    margin: -10px 0 0 -20px;
+    padding: 12px 0 0 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+#tciMsgModal.tciMsgInfo .tciMsgTitle {
+    background: #b0c4de;
+}
+#tciMsgModal.tciMsgErr .tciMsgTitle {
+    background: #F78181;
+}
+#tciMsgModal .tciMsgText {
+    position: initial;
+    min-height: 50px;
+    margin-top: 50px;
+}
+#tciMsgBtnArea {
+    width: 100%;
+    margin-top: 30px;
+}
+#tciMsgBtnArea .tcibtn {
+    margin: 0px auto;
+    width: 120px;
+    outline: none;
+}
+#tciMsgBtnArea .tciMsgModalClose.col2 {
+    float: left;
+    margin-left: 20px;
+}
+#tciMsgBtnArea .tciMsgModalClose.col2:after {
+    clear: both;
+}
+#tciMsgBtnArea .tciMsgModalOk {
+    float: right;
+    margin-right: 20px;
+}
+#tciMsgBtnArea .tciMsgModalOk:after {
+    clear: both;
+}
+#tciMsgModalOverlay, #tciDialogOverlay {
+    z-index:8888;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120%;
+    background-color:rgba(0,0,0,0.75);
+}
+#tciBeforeRegMsg {
+    text-align: center;
+    width: 100%;
+    padding: 0 0 25px 0;
+    color: #4682b4;
+    font-size: 20px;
+    display: none;
+    height: 0px;
+}
+#tciBeforeRegMsg.display {
+    display: inline-table;
+    height: 25px;
+}
+/* メッセージモーダルのサイズ */
+@media screen and (min-width: 992px){
+    #tciMsgModal {
+        width:400px;
+        min-height: 180px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:991px){
+    #tciMsgModal {
+        width:400px;
+        min-height: 200px;
+    }
+}
+@media screen and (max-width:767px){
+    #tciMsgModal {
+        width:70%;
+        min-height: 200px;
+    }
+}
+/* ボタン tcibase.cssと同一内容 */
+.tcibtn {
+    min-width: 50px;
+    padding: 7px;
+    border: 2px solid transparent;
+    color:#ffffff;
+    text-align:center;
+    display:block;
+    text-decoration:none;
+    border-radius:5px;
+    cursor: pointer;
+    margin: 20px 4px 4px 4px;
+}
+.tcibtn:hover, .tcibtn:focus {
+    text-decoration:none;
+}
+.tcibtn.gray {
+    background: #BBBBBB;
+}
+.tcibtn.gray:hover, .tcibtn.gray:focus {
+    background: #AAAAAA;
+}
+/* ============================================================================
+ *   Tools  
+ * ============================================================================ */
+/* インジケータ表示 */
+#tciIndicator {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border: none;
+	z-index: 9999;
+	opacity: 0.2;
+	-moz-opacity: 0.5;
+	filter: alpha(opacity=50);
+	display: inline;
+	background: #000;
+}
+/* 吹き出し表示 */
+.tciBalloontop {
+	position: absolute;
+	padding: 10px 16px 10px 16px;
+	background: #2E2E2E;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;  
+	border-radius: 8px;
+    z-index: 9999;
+}
+.tciBalloontop:before {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	margin-left: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #2E2E2E;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+    z-index: 9999;
+}

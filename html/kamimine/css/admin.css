@@ -1,0 +1,58 @@
+section#service-term {
+    margin: 0 auto;
+    padding: 50px 0 20px 0;
+    text-align: center;    
+}
+
+section#service-graph-area,
+section#search-analysis-graph-area,
+section#search-ranking-graph-area {
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 200px;
+}
+
+section#search-term {
+    margin: 0 auto;
+    padding: 50px 0 20px 0;
+    text-align: center;    
+}
+
+section.search-graph-area {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 200px;
+}
+
+#msg {
+    padding-top: 50px;
+    text-align: center;    
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-family: "Meiryo";
+    font-size: 15px;
+}
+
+.information-row {
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.period {
+    float:left;
+    margin: 5px 2% 0 0;
+}
+
+#to_date {
+    margin-left: 0;
+}

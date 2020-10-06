@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+img{
+	width: 100%;
+}
+
+/*?R???e?i?[?iHP?????u???b?N?j
+---------------------------------------------------------------------------*/
+#container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/*?w?b?_?[
+---------------------------------------------------------------------------*/
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	width: 100%;
+}
+
+header h1 img {
+	margin: 0 auto;
+	width: 75px;
+	height: 15px;
+}
+/*top-menu 
+---------------------------------------------------------------------------*/
+
+
+#top-menu {
+	margin: 0;
+	width: 100%;
+	display: inline;
+}
+
+#top-menu .menu {
+	margin: 0 10px 0 0;
+	width: 25px;
+	height: 20px;
+	float: right;
+	cursor: pointer;
+	z-index: 1;
+	position: relative;
+	top: -20px;
+}
+
+.sb-right ul {
+	margin: 30px auto 0 auto;;
+	width: 90%;
+	list-style-type: none;
+}
+
+.sb-right li {
+	padding: 5px 0 5px 10px;
+	color: #ffffff;
+	text-align: left;
+	border-bottom: solid 1px #aaaaaa;
+}
+
+.sb-right li:hover {
+	text-decoration: none;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
+
+.js-menu, .js-search {
+	padding: 0;
+	width: 100%;
+	height: auto;
+	background-color: #333333;
+	display: none;
+	clear: both;
+}
+
+/*---------------------------------------------------------------------------*/
+/*footer
+/*---------------------------------------------------------------------------*/
+
+footer{
+	margin: 0;
+	padding: 5px 0;
+	width: 100%;
+}
+
+nav {
+	margin: 10px auto 0 auto;
+	width: 95%;
+	font-size: 0.6em;
+	line-height: 1em;
+}
+
+nav li {
+	padding: 0 2px;
+	width: 23%;
+}
+
+nav li:first-of-type {
+	width: 31%;
+}
+
+.copyright {
+	margin: 10px;
+	font-size: 0.6em;
+}
+
+
+
+/*---------------------------------------------------------------------------*/
+/* section
+/*---------------------------------------------------------------------------*/
+
+section {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.maine-content h2 {
+	padding: 10px 0 10px 0;
+	font-size: 1.2em;
+}
+/*---------------------------------------------------------------------------*/
+/* ?n??
+/*---------------------------------------------------------------------------*/
+
+.bus-name {
+	margin: 10px 0 0 0;
+	padding: 0;
+	width: 100%;
+	font-size: 1em;
+}
+
+.bus-name .system {
+	width: 13%;
+	margin: 0 0 0 5px;
+	padding: 10px 0 10px 0;
+}
+
+.bus-name .pass {
+	margin: 0 0 0 10px;
+	padding: 10px 0 10px 0;
+}
+
+.bus-name .destination2 {
+	margin: 0 0 0 10px;
+	padding: 10px 0 0 0;
+	font-size: 1.2em;
+	line-height: 0.9em;
+}
+
+.bus-name .note {
+	padding: 10px 10px 0 0;
+}
+
+.current-time {
+	margin: 0;
+	padding: 10px 0 10px 0;
+	width: 100%;
+	background-position: 6% center;
+}
+
+.current-time p {
+	margin: 0 0 0 24%;
+
+}
+
+.timetable2 .time {
+	width: 15%;
+	font-size: 1em;
+}
+
+
+.timetable2 .station {
+	padding: 0 0 0 25px;
+	width: 55%;
+	font-size: 0.9em;
+	background-position: 5px center;
+}
+
+.timetable2 .up {
+	background-position: 5px 17px;
+}
+
+.timetable2 .bottom {
+	background-position: 5px -12px;
+}
+
+.timetable2 .station span {
+	font-size: 0.7em;
+}
+
+.timetable2 .fare {
+	padding: 5px 10px 5px 5px;
+	font-size: 0.8em;
+	line-height: 1em;
+}
+
+.timetable2 .fare .en {
+	margin: 0 2px 0 0;
+	padding: 1px 4px 1px 4px;
+	font-size: 0.8em;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/* menu
+/*---------------------------------------------------------------------------*/
+
+#main-menu .serch {
+	padding: 0 0 5px 0;
+	font-size: 1.1em;
+	line-height: 1.2em;
+	background-position: center 5px;
+}
+
+/* ‚ ‚¢‚¤‚¦‚¨ */
+
+.aiueo {
+	margin: 30px auto 0 auto;
+	padding: 0;
+	width: 90%;
+}
+
+.aiueo li a {
+	margin: 0 auto 10px auto;
+	padding: 15px 0;
+	width: 90%;
+}

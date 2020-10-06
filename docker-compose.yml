@@ -1,0 +1,27 @@
+version: '3'
+services:
+  # DB
+  mysql:
+    container_name: "mysql"
+    image: mysql:5.7
+    ports:
+      - '3306:3306' #デバッグ用
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  # nginx
+  nginx:
+    container_name: "nginx"
+    image: nginx:1.18
+    links:
+      - mysql
+      - php
+  # php
+  php:
+    container_name: "php"
+    image: php:5.5-apache
+    ports:
+      - '80:80'
+    volumes:
+      - ./html:/var/www/html
+    links:
+      - mysql
