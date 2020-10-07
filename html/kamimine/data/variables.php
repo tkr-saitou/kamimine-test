@@ -60,7 +60,7 @@ $LANG_LIST = array('en','ja');
 
 /*** ログ/ジャーナル出力 ***/
 // DEBUGモード設定 ※falseに設定すると、/tmp/log配下のデバッグログ(D_始まりのログ)の出力OFF
-define('DEBUG', false);
+define('DEBUG', true);
 // Accessジャーナル出力
 define('ACCESS_JOURNAL', true);
 // SQLジャーナル出力

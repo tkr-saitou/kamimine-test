@@ -16,12 +16,18 @@ services:
   # php
   php:
     container_name: "php"
+    build:
+      context: ./php
+      dockerfile: Dockerfile
     image: php:5.5-apache
     ports:
       - '80:80'
     volumes:
       - ./html:/var/www/html
-      - ./share:/usr/share
-      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./share:/var/www/share
+      - ./Zend:/usr/share
+      - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./share:/tmp/log
+      - ./share:/tmp/journal
     links:
       - mysql
