@@ -6,15 +6,13 @@ services:
     image: mysql:5.7
     ports:
       - '3306:3306' #デバッグ用
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d"
+      - ./sql/data:/var/lib/mysql
+  
     environment:
       MYSQL_ROOT_PASSWORD: root
-  # nginx
-  nginx:
-    container_name: "nginx"
-    image: nginx:1.18
-    links:
-      - mysql
-      - php
+
   # php
   php:
     container_name: "php"
@@ -23,5 +21,7 @@ services:
       - '80:80'
     volumes:
       - ./html:/var/www/html
+      - ./share:/usr/share
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
     links:
       - mysql
