@@ -7,9 +7,8 @@ services:
     ports:
       - '3306:3306' #デバッグ用
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d"
+      - ./sql:/docker-entrypoint-initdb.d
       - ./sql/data:/var/lib/mysql
-  
     environment:
       MYSQL_ROOT_PASSWORD: root
 

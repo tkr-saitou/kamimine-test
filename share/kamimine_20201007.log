@@ -190,3 +190,35 @@ Stack trace:
 #10 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(30): BaseApi->run()
 #11 {main}
 2020-10-07T18:00:25+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-10-07T18:11:01+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-07T18:11:01+09:00 ERR (3): [U:,T:20201007181100-5f7d8624c9d48]exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(102): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopId8DigitList('KMM', '001', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(16): ModelManager->invoke('t_sbt_busstop', 'getBusStopId8Di...', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopId8DigitList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(30): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(102): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopId8DigitList('KMM', '001', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(16): ModelManager->invoke('t_sbt_busstop', 'getBusStopId8Di...', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopId8DigitList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(30): BaseApi->run()
+#11 {main}
+2020-10-07T18:11:01+09:00 ERR (3): Exception end -----------------------------------------------------------------

@@ -19066,3 +19066,2685 @@ Stack trace:
   }
 }
 
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624889b5]string(59) "###### PROCESS RUN (/kamimine/ajax/getVariables.php) ######"
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624889b5]string(59) "###### PROCESS END (/kamimine/ajax/getVariables.php) ######"
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9ec4]string(60) "###### PROCESS RUN (/kamimine/ajax/getCourseList.php) ######"
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9ce5]string(59) "###### PROCESS RUN (/kamimine/ajax/getNewsTelop.php) ######"
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9d48]string(69) "###### PROCESS RUN (/kamimine/ajax/getBusStopId8DigitList.php) ######"
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624cbd60]string(63) "###### PROCESS RUN (/kamimine/ajax/checkServiceTime.php) ######"
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624cf941]string(61) "###### PROCESS RUN (/kamimine/ajax/getBusLocation.php) ######"
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9d48]array(3) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(1) "0"
+}
+
+2020-10-07T18:11:00+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9ce5]string(59) "###### PROCESS END (/kamimine/ajax/getNewsTelop.php) ######"
+
+2020-10-07T18:11:01+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9ec4]string(60) "###### PROCESS END (/kamimine/ajax/getCourseList.php) ######"
+
+2020-10-07T18:11:01+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9d48]object(Zend_Db_Statement_Exception)#35 (8) {
+  ["_previous":"Zend_Exception":private]=>
+  NULL
+  ["message":protected]=>
+  string(205) "SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+  ["line":protected]=>
+  int(234)
+  ["trace":"Exception":private]=>
+  array(11) {
+    [0]=>
+    array(6) {
+      ["file"]=>
+      string(61) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php"
+      ["line"]=>
+      int(303)
+      ["function"]=>
+      string(8) "_execute"
+      ["class"]=>
+      string(21) "Zend_Db_Statement_Pdo"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(1) {
+        [0]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [1]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+      ["line"]=>
+      int(480)
+      ["function"]=>
+      string(7) "execute"
+      ["class"]=>
+      string(17) "Zend_Db_Statement"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(1) {
+        [0]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [2]=>
+    array(6) {
+      ["file"]=>
+      string(72) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php"
+      ["line"]=>
+      int(238)
+      ["function"]=>
+      string(5) "query"
+      ["class"]=>
+      string(24) "Zend_Db_Adapter_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [3]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+      ["line"]=>
+      int(737)
+      ["function"]=>
+      string(5) "query"
+      ["class"]=>
+      string(28) "Zend_Db_Adapter_Pdo_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [4]=>
+    array(6) {
+      ["file"]=>
+      string(46) "/var/www/html/kamimine/base/base/BaseModel.php"
+      ["line"]=>
+      int(62)
+      ["function"]=>
+      string(8) "fetchAll"
+      ["class"]=>
+      string(24) "Zend_Db_Adapter_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [5]=>
+    array(6) {
+      ["file"]=>
+      string(47) "/var/www/html/kamimine/models/t_sbt_busstop.php"
+      ["line"]=>
+      int(102)
+      ["function"]=>
+      string(8) "fetchAll"
+      ["class"]=>
+      string(9) "BaseModel"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [6]=>
+    array(4) {
+      ["function"]=>
+      string(22) "getBusStopId8DigitList"
+      ["class"]=>
+      string(13) "t_sbt_busstop"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        &string(3) "KMM"
+        [1]=>
+        &string(3) "001"
+        [2]=>
+        &string(1) "0"
+      }
+    }
+    [7]=>
+    array(6) {
+      ["file"]=>
+      string(50) "/var/www/html/kamimine/base/cllib/ModelManager.php"
+      ["line"]=>
+      int(36)
+      ["function"]=>
+      string(10) "invokeArgs"
+      ["class"]=>
+      string(16) "ReflectionMethod"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        object(t_sbt_busstop)#30 (5) {
+          ["logger":protected]=>
+          object(LogWriter)#2 (4) {
+            ["logger":"LogWriter":private]=>
+            object(Zend_Log)#5 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#3 (3) {
+                  ["_stream":protected]=>
+                  resource(27) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#4 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["debuglogger":"LogWriter":private]=>
+            object(Zend_Log)#8 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#6 (3) {
+                  ["_stream":protected]=>
+                  resource(28) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#7 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["user_id":"LogWriter":private]=>
+            NULL
+            ["transaction_id":"LogWriter":private]=>
+            string(28) "20201007181100-5f7d8624c9d48"
+          }
+          ["db":protected]=>
+          object(Zend_Db_Adapter_Pdo_Mysql)#20 (12) {
+            ["_pdoType":protected]=>
+            string(5) "mysql"
+            ["_numericDataTypes":protected]=>
+            array(16) {
+              [0]=>
+              int(0)
+              [1]=>
+              int(1)
+              [2]=>
+              int(2)
+              ["INT"]=>
+              int(0)
+              ["INTEGER"]=>
+              int(0)
+              ["MEDIUMINT"]=>
+              int(0)
+              ["SMALLINT"]=>
+              int(0)
+              ["TINYINT"]=>
+              int(0)
+              ["BIGINT"]=>
+              int(1)
+              ["SERIAL"]=>
+              int(1)
+              ["DEC"]=>
+              int(2)
+              ["DECIMAL"]=>
+              int(2)
+              ["DOUBLE"]=>
+              int(2)
+              ["DOUBLE PRECISION"]=>
+              int(2)
+              ["FIXED"]=>
+              int(2)
+              ["FLOAT"]=>
+              int(2)
+            }
+            ["_defaultStmtClass":protected]=>
+            string(21) "Zend_Db_Statement_Pdo"
+            ["_config":protected]=>
+            array(8) {
+              ["host"]=>
+              string(5) "mysql"
+              ["username"]=>
+              string(8) "kamimine"
+              ["password"]=>
+              string(10) "kamimine01"
+              ["dbname"]=>
+              string(11) "kamimine_db"
+              ["charset"]=>
+              NULL
+              ["persistent"]=>
+              bool(false)
+              ["options"]=>
+              array(3) {
+                ["caseFolding"]=>
+                int(0)
+                ["autoQuoteIdentifiers"]=>
+                bool(true)
+                ["fetchMode"]=>
+                int(2)
+              }
+              ["driver_options"]=>
+              array(0) {
+              }
+            }
+            ["_fetchMode":protected]=>
+            int(2)
+            ["_profiler":protected]=>
+            object(Zend_Db_Profiler)#21 (4) {
+              ["_queryProfiles":protected]=>
+              array(0) {
+              }
+              ["_enabled":protected]=>
+              bool(false)
+              ["_filterElapsedSecs":protected]=>
+              NULL
+              ["_filterTypes":protected]=>
+              NULL
+            }
+            ["_defaultProfilerClass":protected]=>
+            string(16) "Zend_Db_Profiler"
+            ["_connection":protected]=>
+            object(PDO)#22 (0) {
+            }
+            ["_caseFolding":protected]=>
+            int(0)
+            ["_autoQuoteIdentifiers":protected]=>
+            bool(true)
+            ["_allowSerialization":protected]=>
+            bool(true)
+            ["_autoReconnectOnUnserialize":protected]=>
+            bool(false)
+          }
+          ["userId":"BaseModel":private]=>
+          string(3) "API"
+          ["transactionId":"BaseModel":private]=>
+          string(28) "20201007181100-5f7d8624c9d48"
+          ["journal":"BaseModel":private]=>
+          object(JournalWriter)#9 (6) {
+            ["access_logger":"JournalWriter":private]=>
+            object(Zend_Log)#12 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#10 (3) {
+                  ["_stream":protected]=>
+                  resource(29) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#11 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["sql_logger":"JournalWriter":private]=>
+            object(Zend_Log)#15 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#13 (3) {
+                  ["_stream":protected]=>
+                  resource(30) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#14 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["user_id":"JournalWriter":private]=>
+            NULL
+            ["transaction_id":"JournalWriter":private]=>
+            string(28) "20201007181100-5f7d8624c9d48"
+            ["controller":"JournalWriter":private]=>
+            NULL
+            ["action":"JournalWriter":private]=>
+            NULL
+          }
+        }
+        [1]=>
+        &array(3) {
+          [0]=>
+          string(3) "KMM"
+          [1]=>
+          string(3) "001"
+          [2]=>
+          string(1) "0"
+        }
+      }
+    }
+    [8]=>
+    array(6) {
+      ["file"]=>
+      string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+      ["line"]=>
+      int(16)
+      ["function"]=>
+      string(6) "invoke"
+      ["class"]=>
+      string(12) "ModelManager"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        &string(13) "t_sbt_busstop"
+        [1]=>
+        &string(22) "getBusStopId8DigitList"
+        [2]=>
+        &array(3) {
+          [0]=>
+          string(3) "KMM"
+          [1]=>
+          string(3) "001"
+          [2]=>
+          string(1) "0"
+        }
+      }
+    }
+    [9]=>
+    array(6) {
+      ["file"]=>
+      string(44) "/var/www/html/kamimine/base/base/BaseApi.php"
+      ["line"]=>
+      int(72)
+      ["function"]=>
+      string(4) "main"
+      ["class"]=>
+      string(22) "getBusStopId8DigitList"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(0) {
+      }
+    }
+    [10]=>
+    array(6) {
+      ["file"]=>
+      string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+      ["line"]=>
+      int(30)
+      ["function"]=>
+      string(3) "run"
+      ["class"]=>
+      string(7) "BaseApi"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(0) {
+      }
+    }
+  }
+  ["previous":"Exception":private]=>
+  object(PDOException)#34 (8) {
+    ["message":protected]=>
+    string(205) "SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    string(5) "HY000"
+    ["file":protected]=>
+    string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+    ["line":protected]=>
+    int(228)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(6) {
+        ["file"]=>
+        string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+        ["line"]=>
+        int(228)
+        ["function"]=>
+        string(7) "execute"
+        ["class"]=>
+        string(12) "PDOStatement"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(61) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php"
+        ["line"]=>
+        int(303)
+        ["function"]=>
+        string(8) "_execute"
+        ["class"]=>
+        string(21) "Zend_Db_Statement_Pdo"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+        ["line"]=>
+        int(480)
+        ["function"]=>
+        string(7) "execute"
+        ["class"]=>
+        string(17) "Zend_Db_Statement"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(72) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php"
+        ["line"]=>
+        int(238)
+        ["function"]=>
+        string(5) "query"
+        ["class"]=>
+        string(24) "Zend_Db_Adapter_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+        ["line"]=>
+        int(737)
+        ["function"]=>
+        string(5) "query"
+        ["class"]=>
+        string(28) "Zend_Db_Adapter_Pdo_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(46) "/var/www/html/kamimine/base/base/BaseModel.php"
+        ["line"]=>
+        int(62)
+        ["function"]=>
+        string(8) "fetchAll"
+        ["class"]=>
+        string(24) "Zend_Db_Adapter_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(47) "/var/www/html/kamimine/models/t_sbt_busstop.php"
+        ["line"]=>
+        int(102)
+        ["function"]=>
+        string(8) "fetchAll"
+        ["class"]=>
+        string(9) "BaseModel"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [7]=>
+      array(4) {
+        ["function"]=>
+        string(22) "getBusStopId8DigitList"
+        ["class"]=>
+        string(13) "t_sbt_busstop"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(3) "KMM"
+          [1]=>
+          &string(3) "001"
+          [2]=>
+          &string(1) "0"
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(50) "/var/www/html/kamimine/base/cllib/ModelManager.php"
+        ["line"]=>
+        int(36)
+        ["function"]=>
+        string(10) "invokeArgs"
+        ["class"]=>
+        string(16) "ReflectionMethod"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          object(t_sbt_busstop)#30 (5) {
+            ["logger":protected]=>
+            object(LogWriter)#2 (4) {
+              ["logger":"LogWriter":private]=>
+              object(Zend_Log)#5 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#3 (3) {
+                    ["_stream":protected]=>
+                    resource(27) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#4 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["debuglogger":"LogWriter":private]=>
+              object(Zend_Log)#8 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#6 (3) {
+                    ["_stream":protected]=>
+                    resource(28) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#7 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["user_id":"LogWriter":private]=>
+              NULL
+              ["transaction_id":"LogWriter":private]=>
+              string(28) "20201007181100-5f7d8624c9d48"
+            }
+            ["db":protected]=>
+            object(Zend_Db_Adapter_Pdo_Mysql)#20 (12) {
+              ["_pdoType":protected]=>
+              string(5) "mysql"
+              ["_numericDataTypes":protected]=>
+              array(16) {
+                [0]=>
+                int(0)
+                [1]=>
+                int(1)
+                [2]=>
+                int(2)
+                ["INT"]=>
+                int(0)
+                ["INTEGER"]=>
+                int(0)
+                ["MEDIUMINT"]=>
+                int(0)
+                ["SMALLINT"]=>
+                int(0)
+                ["TINYINT"]=>
+                int(0)
+                ["BIGINT"]=>
+                int(1)
+                ["SERIAL"]=>
+                int(1)
+                ["DEC"]=>
+                int(2)
+                ["DECIMAL"]=>
+                int(2)
+                ["DOUBLE"]=>
+                int(2)
+                ["DOUBLE PRECISION"]=>
+                int(2)
+                ["FIXED"]=>
+                int(2)
+                ["FLOAT"]=>
+                int(2)
+              }
+              ["_defaultStmtClass":protected]=>
+              string(21) "Zend_Db_Statement_Pdo"
+              ["_config":protected]=>
+              array(8) {
+                ["host"]=>
+                string(5) "mysql"
+                ["username"]=>
+                string(8) "kamimine"
+                ["password"]=>
+                string(10) "kamimine01"
+                ["dbname"]=>
+                string(11) "kamimine_db"
+                ["charset"]=>
+                NULL
+                ["persistent"]=>
+                bool(false)
+                ["options"]=>
+                array(3) {
+                  ["caseFolding"]=>
+                  int(0)
+                  ["autoQuoteIdentifiers"]=>
+                  bool(true)
+                  ["fetchMode"]=>
+                  int(2)
+                }
+                ["driver_options"]=>
+                array(0) {
+                }
+              }
+              ["_fetchMode":protected]=>
+              int(2)
+              ["_profiler":protected]=>
+              object(Zend_Db_Profiler)#21 (4) {
+                ["_queryProfiles":protected]=>
+                array(0) {
+                }
+                ["_enabled":protected]=>
+                bool(false)
+                ["_filterElapsedSecs":protected]=>
+                NULL
+                ["_filterTypes":protected]=>
+                NULL
+              }
+              ["_defaultProfilerClass":protected]=>
+              string(16) "Zend_Db_Profiler"
+              ["_connection":protected]=>
+              object(PDO)#22 (0) {
+              }
+              ["_caseFolding":protected]=>
+              int(0)
+              ["_autoQuoteIdentifiers":protected]=>
+              bool(true)
+              ["_allowSerialization":protected]=>
+              bool(true)
+              ["_autoReconnectOnUnserialize":protected]=>
+              bool(false)
+            }
+            ["userId":"BaseModel":private]=>
+            string(3) "API"
+            ["transactionId":"BaseModel":private]=>
+            string(28) "20201007181100-5f7d8624c9d48"
+            ["journal":"BaseModel":private]=>
+            object(JournalWriter)#9 (6) {
+              ["access_logger":"JournalWriter":private]=>
+              object(Zend_Log)#12 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#10 (3) {
+                    ["_stream":protected]=>
+                    resource(29) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#11 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["sql_logger":"JournalWriter":private]=>
+              object(Zend_Log)#15 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#13 (3) {
+                    ["_stream":protected]=>
+                    resource(30) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#14 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["user_id":"JournalWriter":private]=>
+              NULL
+              ["transaction_id":"JournalWriter":private]=>
+              string(28) "20201007181100-5f7d8624c9d48"
+              ["controller":"JournalWriter":private]=>
+              NULL
+              ["action":"JournalWriter":private]=>
+              NULL
+            }
+          }
+          [1]=>
+          &array(3) {
+            [0]=>
+            string(3) "KMM"
+            [1]=>
+            string(3) "001"
+            [2]=>
+            string(1) "0"
+          }
+        }
+      }
+      [9]=>
+      array(6) {
+        ["file"]=>
+        string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+        ["line"]=>
+        int(16)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(12) "ModelManager"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(13) "t_sbt_busstop"
+          [1]=>
+          &string(22) "getBusStopId8DigitList"
+          [2]=>
+          &array(3) {
+            [0]=>
+            string(3) "KMM"
+            [1]=>
+            string(3) "001"
+            [2]=>
+            string(1) "0"
+          }
+        }
+      }
+      [10]=>
+      array(6) {
+        ["file"]=>
+        string(44) "/var/www/html/kamimine/base/base/BaseApi.php"
+        ["line"]=>
+        int(72)
+        ["function"]=>
+        string(4) "main"
+        ["class"]=>
+        string(22) "getBusStopId8DigitList"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [11]=>
+      array(6) {
+        ["file"]=>
+        string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+        ["line"]=>
+        int(30)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(7) "BaseApi"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(0) {
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+    ["errorInfo"]=>
+    array(3) {
+      [0]=>
+      string(5) "HY000"
+      [1]=>
+      int(3065)
+      [2]=>
+      string(168) "Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT"
+    }
+  }
+}
+
+2020-10-07T18:11:01+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624c9d48]object(Zend_Db_Statement_Exception)#35 (8) {
+  ["_previous":"Zend_Exception":private]=>
+  NULL
+  ["message":protected]=>
+  string(205) "SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT"
+  ["string":"Exception":private]=>
+  string(3261) "exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(102): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopId8DigitList('KMM', '001', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(16): ModelManager->invoke('t_sbt_busstop', 'getBusStopId8Di...', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopId8DigitList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(30): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(102): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopId8DigitList('KMM', '001', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(16): ModelManager->invoke('t_sbt_busstop', 'getBusStopId8Di...', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopId8DigitList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopId8DigitList.php(30): BaseApi->run()
+#11 {main}"
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+  ["line":protected]=>
+  int(234)
+  ["trace":"Exception":private]=>
+  array(11) {
+    [0]=>
+    array(6) {
+      ["file"]=>
+      string(61) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php"
+      ["line"]=>
+      int(303)
+      ["function"]=>
+      string(8) "_execute"
+      ["class"]=>
+      string(21) "Zend_Db_Statement_Pdo"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(1) {
+        [0]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [1]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+      ["line"]=>
+      int(480)
+      ["function"]=>
+      string(7) "execute"
+      ["class"]=>
+      string(17) "Zend_Db_Statement"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(1) {
+        [0]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [2]=>
+    array(6) {
+      ["file"]=>
+      string(72) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php"
+      ["line"]=>
+      int(238)
+      ["function"]=>
+      string(5) "query"
+      ["class"]=>
+      string(24) "Zend_Db_Adapter_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [3]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+      ["line"]=>
+      int(737)
+      ["function"]=>
+      string(5) "query"
+      ["class"]=>
+      string(28) "Zend_Db_Adapter_Pdo_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [4]=>
+    array(6) {
+      ["file"]=>
+      string(46) "/var/www/html/kamimine/base/base/BaseModel.php"
+      ["line"]=>
+      int(62)
+      ["function"]=>
+      string(8) "fetchAll"
+      ["class"]=>
+      string(24) "Zend_Db_Adapter_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [5]=>
+    array(6) {
+      ["file"]=>
+      string(47) "/var/www/html/kamimine/models/t_sbt_busstop.php"
+      ["line"]=>
+      int(102)
+      ["function"]=>
+      string(8) "fetchAll"
+      ["class"]=>
+      string(9) "BaseModel"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+        [1]=>
+        &array(1) {
+          [":lang_cd"]=>
+          string(2) "ja"
+        }
+      }
+    }
+    [6]=>
+    array(4) {
+      ["function"]=>
+      string(22) "getBusStopId8DigitList"
+      ["class"]=>
+      string(13) "t_sbt_busstop"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        &string(3) "KMM"
+        [1]=>
+        &string(3) "001"
+        [2]=>
+        &string(1) "0"
+      }
+    }
+    [7]=>
+    array(6) {
+      ["file"]=>
+      string(50) "/var/www/html/kamimine/base/cllib/ModelManager.php"
+      ["line"]=>
+      int(36)
+      ["function"]=>
+      string(10) "invokeArgs"
+      ["class"]=>
+      string(16) "ReflectionMethod"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        object(t_sbt_busstop)#30 (5) {
+          ["logger":protected]=>
+          object(LogWriter)#2 (4) {
+            ["logger":"LogWriter":private]=>
+            object(Zend_Log)#5 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#3 (3) {
+                  ["_stream":protected]=>
+                  resource(27) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#4 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["debuglogger":"LogWriter":private]=>
+            object(Zend_Log)#8 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#6 (3) {
+                  ["_stream":protected]=>
+                  resource(28) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#7 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["user_id":"LogWriter":private]=>
+            NULL
+            ["transaction_id":"LogWriter":private]=>
+            string(28) "20201007181100-5f7d8624c9d48"
+          }
+          ["db":protected]=>
+          object(Zend_Db_Adapter_Pdo_Mysql)#20 (12) {
+            ["_pdoType":protected]=>
+            string(5) "mysql"
+            ["_numericDataTypes":protected]=>
+            array(16) {
+              [0]=>
+              int(0)
+              [1]=>
+              int(1)
+              [2]=>
+              int(2)
+              ["INT"]=>
+              int(0)
+              ["INTEGER"]=>
+              int(0)
+              ["MEDIUMINT"]=>
+              int(0)
+              ["SMALLINT"]=>
+              int(0)
+              ["TINYINT"]=>
+              int(0)
+              ["BIGINT"]=>
+              int(1)
+              ["SERIAL"]=>
+              int(1)
+              ["DEC"]=>
+              int(2)
+              ["DECIMAL"]=>
+              int(2)
+              ["DOUBLE"]=>
+              int(2)
+              ["DOUBLE PRECISION"]=>
+              int(2)
+              ["FIXED"]=>
+              int(2)
+              ["FLOAT"]=>
+              int(2)
+            }
+            ["_defaultStmtClass":protected]=>
+            string(21) "Zend_Db_Statement_Pdo"
+            ["_config":protected]=>
+            array(8) {
+              ["host"]=>
+              string(5) "mysql"
+              ["username"]=>
+              string(8) "kamimine"
+              ["password"]=>
+              string(10) "kamimine01"
+              ["dbname"]=>
+              string(11) "kamimine_db"
+              ["charset"]=>
+              NULL
+              ["persistent"]=>
+              bool(false)
+              ["options"]=>
+              array(3) {
+                ["caseFolding"]=>
+                int(0)
+                ["autoQuoteIdentifiers"]=>
+                bool(true)
+                ["fetchMode"]=>
+                int(2)
+              }
+              ["driver_options"]=>
+              array(0) {
+              }
+            }
+            ["_fetchMode":protected]=>
+            int(2)
+            ["_profiler":protected]=>
+            object(Zend_Db_Profiler)#21 (4) {
+              ["_queryProfiles":protected]=>
+              array(0) {
+              }
+              ["_enabled":protected]=>
+              bool(false)
+              ["_filterElapsedSecs":protected]=>
+              NULL
+              ["_filterTypes":protected]=>
+              NULL
+            }
+            ["_defaultProfilerClass":protected]=>
+            string(16) "Zend_Db_Profiler"
+            ["_connection":protected]=>
+            object(PDO)#22 (0) {
+            }
+            ["_caseFolding":protected]=>
+            int(0)
+            ["_autoQuoteIdentifiers":protected]=>
+            bool(true)
+            ["_allowSerialization":protected]=>
+            bool(true)
+            ["_autoReconnectOnUnserialize":protected]=>
+            bool(false)
+          }
+          ["userId":"BaseModel":private]=>
+          string(3) "API"
+          ["transactionId":"BaseModel":private]=>
+          string(28) "20201007181100-5f7d8624c9d48"
+          ["journal":"BaseModel":private]=>
+          object(JournalWriter)#9 (6) {
+            ["access_logger":"JournalWriter":private]=>
+            object(Zend_Log)#12 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#10 (3) {
+                  ["_stream":protected]=>
+                  resource(29) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#11 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["sql_logger":"JournalWriter":private]=>
+            object(Zend_Log)#15 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#13 (3) {
+                  ["_stream":protected]=>
+                  resource(30) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#14 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["user_id":"JournalWriter":private]=>
+            NULL
+            ["transaction_id":"JournalWriter":private]=>
+            string(28) "20201007181100-5f7d8624c9d48"
+            ["controller":"JournalWriter":private]=>
+            NULL
+            ["action":"JournalWriter":private]=>
+            NULL
+          }
+        }
+        [1]=>
+        &array(3) {
+          [0]=>
+          string(3) "KMM"
+          [1]=>
+          string(3) "001"
+          [2]=>
+          string(1) "0"
+        }
+      }
+    }
+    [8]=>
+    array(6) {
+      ["file"]=>
+      string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+      ["line"]=>
+      int(16)
+      ["function"]=>
+      string(6) "invoke"
+      ["class"]=>
+      string(12) "ModelManager"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        &string(13) "t_sbt_busstop"
+        [1]=>
+        &string(22) "getBusStopId8DigitList"
+        [2]=>
+        &array(3) {
+          [0]=>
+          string(3) "KMM"
+          [1]=>
+          string(3) "001"
+          [2]=>
+          string(1) "0"
+        }
+      }
+    }
+    [9]=>
+    array(6) {
+      ["file"]=>
+      string(44) "/var/www/html/kamimine/base/base/BaseApi.php"
+      ["line"]=>
+      int(72)
+      ["function"]=>
+      string(4) "main"
+      ["class"]=>
+      string(22) "getBusStopId8DigitList"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(0) {
+      }
+    }
+    [10]=>
+    array(6) {
+      ["file"]=>
+      string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+      ["line"]=>
+      int(30)
+      ["function"]=>
+      string(3) "run"
+      ["class"]=>
+      string(7) "BaseApi"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(0) {
+      }
+    }
+  }
+  ["previous":"Exception":private]=>
+  object(PDOException)#34 (8) {
+    ["message":protected]=>
+    string(205) "SQLSTATE[HY000]: General error: 3065 Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    string(5) "HY000"
+    ["file":protected]=>
+    string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+    ["line":protected]=>
+    int(228)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(6) {
+        ["file"]=>
+        string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+        ["line"]=>
+        int(228)
+        ["function"]=>
+        string(7) "execute"
+        ["class"]=>
+        string(12) "PDOStatement"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(61) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php"
+        ["line"]=>
+        int(303)
+        ["function"]=>
+        string(8) "_execute"
+        ["class"]=>
+        string(21) "Zend_Db_Statement_Pdo"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+        ["line"]=>
+        int(480)
+        ["function"]=>
+        string(7) "execute"
+        ["class"]=>
+        string(17) "Zend_Db_Statement"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(72) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php"
+        ["line"]=>
+        int(238)
+        ["function"]=>
+        string(5) "query"
+        ["class"]=>
+        string(24) "Zend_Db_Adapter_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+        ["line"]=>
+        int(737)
+        ["function"]=>
+        string(5) "query"
+        ["class"]=>
+        string(28) "Zend_Db_Adapter_Pdo_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(46) "/var/www/html/kamimine/base/base/BaseModel.php"
+        ["line"]=>
+        int(62)
+        ["function"]=>
+        string(8) "fetchAll"
+        ["class"]=>
+        string(24) "Zend_Db_Adapter_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(47) "/var/www/html/kamimine/models/t_sbt_busstop.php"
+        ["line"]=>
+        int(102)
+        ["function"]=>
+        string(8) "fetchAll"
+        ["class"]=>
+        string(9) "BaseModel"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(450) "                SELECT  DISTINCT
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
+                        BSL.busstop_name 
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd    = :lang_cd
+                ORDER BY BSL.busstop_kana, BSL.busstop_name"
+          [1]=>
+          &array(1) {
+            [":lang_cd"]=>
+            string(2) "ja"
+          }
+        }
+      }
+      [7]=>
+      array(4) {
+        ["function"]=>
+        string(22) "getBusStopId8DigitList"
+        ["class"]=>
+        string(13) "t_sbt_busstop"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(3) "KMM"
+          [1]=>
+          &string(3) "001"
+          [2]=>
+          &string(1) "0"
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(50) "/var/www/html/kamimine/base/cllib/ModelManager.php"
+        ["line"]=>
+        int(36)
+        ["function"]=>
+        string(10) "invokeArgs"
+        ["class"]=>
+        string(16) "ReflectionMethod"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          object(t_sbt_busstop)#30 (5) {
+            ["logger":protected]=>
+            object(LogWriter)#2 (4) {
+              ["logger":"LogWriter":private]=>
+              object(Zend_Log)#5 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#3 (3) {
+                    ["_stream":protected]=>
+                    resource(27) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#4 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["debuglogger":"LogWriter":private]=>
+              object(Zend_Log)#8 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#6 (3) {
+                    ["_stream":protected]=>
+                    resource(28) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#7 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["user_id":"LogWriter":private]=>
+              NULL
+              ["transaction_id":"LogWriter":private]=>
+              string(28) "20201007181100-5f7d8624c9d48"
+            }
+            ["db":protected]=>
+            object(Zend_Db_Adapter_Pdo_Mysql)#20 (12) {
+              ["_pdoType":protected]=>
+              string(5) "mysql"
+              ["_numericDataTypes":protected]=>
+              array(16) {
+                [0]=>
+                int(0)
+                [1]=>
+                int(1)
+                [2]=>
+                int(2)
+                ["INT"]=>
+                int(0)
+                ["INTEGER"]=>
+                int(0)
+                ["MEDIUMINT"]=>
+                int(0)
+                ["SMALLINT"]=>
+                int(0)
+                ["TINYINT"]=>
+                int(0)
+                ["BIGINT"]=>
+                int(1)
+                ["SERIAL"]=>
+                int(1)
+                ["DEC"]=>
+                int(2)
+                ["DECIMAL"]=>
+                int(2)
+                ["DOUBLE"]=>
+                int(2)
+                ["DOUBLE PRECISION"]=>
+                int(2)
+                ["FIXED"]=>
+                int(2)
+                ["FLOAT"]=>
+                int(2)
+              }
+              ["_defaultStmtClass":protected]=>
+              string(21) "Zend_Db_Statement_Pdo"
+              ["_config":protected]=>
+              array(8) {
+                ["host"]=>
+                string(5) "mysql"
+                ["username"]=>
+                string(8) "kamimine"
+                ["password"]=>
+                string(10) "kamimine01"
+                ["dbname"]=>
+                string(11) "kamimine_db"
+                ["charset"]=>
+                NULL
+                ["persistent"]=>
+                bool(false)
+                ["options"]=>
+                array(3) {
+                  ["caseFolding"]=>
+                  int(0)
+                  ["autoQuoteIdentifiers"]=>
+                  bool(true)
+                  ["fetchMode"]=>
+                  int(2)
+                }
+                ["driver_options"]=>
+                array(0) {
+                }
+              }
+              ["_fetchMode":protected]=>
+              int(2)
+              ["_profiler":protected]=>
+              object(Zend_Db_Profiler)#21 (4) {
+                ["_queryProfiles":protected]=>
+                array(0) {
+                }
+                ["_enabled":protected]=>
+                bool(false)
+                ["_filterElapsedSecs":protected]=>
+                NULL
+                ["_filterTypes":protected]=>
+                NULL
+              }
+              ["_defaultProfilerClass":protected]=>
+              string(16) "Zend_Db_Profiler"
+              ["_connection":protected]=>
+              object(PDO)#22 (0) {
+              }
+              ["_caseFolding":protected]=>
+              int(0)
+              ["_autoQuoteIdentifiers":protected]=>
+              bool(true)
+              ["_allowSerialization":protected]=>
+              bool(true)
+              ["_autoReconnectOnUnserialize":protected]=>
+              bool(false)
+            }
+            ["userId":"BaseModel":private]=>
+            string(3) "API"
+            ["transactionId":"BaseModel":private]=>
+            string(28) "20201007181100-5f7d8624c9d48"
+            ["journal":"BaseModel":private]=>
+            object(JournalWriter)#9 (6) {
+              ["access_logger":"JournalWriter":private]=>
+              object(Zend_Log)#12 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#10 (3) {
+                    ["_stream":protected]=>
+                    resource(29) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#11 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["sql_logger":"JournalWriter":private]=>
+              object(Zend_Log)#15 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#13 (3) {
+                    ["_stream":protected]=>
+                    resource(30) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#14 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["user_id":"JournalWriter":private]=>
+              NULL
+              ["transaction_id":"JournalWriter":private]=>
+              string(28) "20201007181100-5f7d8624c9d48"
+              ["controller":"JournalWriter":private]=>
+              NULL
+              ["action":"JournalWriter":private]=>
+              NULL
+            }
+          }
+          [1]=>
+          &array(3) {
+            [0]=>
+            string(3) "KMM"
+            [1]=>
+            string(3) "001"
+            [2]=>
+            string(1) "0"
+          }
+        }
+      }
+      [9]=>
+      array(6) {
+        ["file"]=>
+        string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+        ["line"]=>
+        int(16)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(12) "ModelManager"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(13) "t_sbt_busstop"
+          [1]=>
+          &string(22) "getBusStopId8DigitList"
+          [2]=>
+          &array(3) {
+            [0]=>
+            string(3) "KMM"
+            [1]=>
+            string(3) "001"
+            [2]=>
+            string(1) "0"
+          }
+        }
+      }
+      [10]=>
+      array(6) {
+        ["file"]=>
+        string(44) "/var/www/html/kamimine/base/base/BaseApi.php"
+        ["line"]=>
+        int(72)
+        ["function"]=>
+        string(4) "main"
+        ["class"]=>
+        string(22) "getBusStopId8DigitList"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [11]=>
+      array(6) {
+        ["file"]=>
+        string(54) "/var/www/html/kamimine/ajax/getBusStopId8DigitList.php"
+        ["line"]=>
+        int(30)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(7) "BaseApi"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(0) {
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+    ["errorInfo"]=>
+    array(3) {
+      [0]=>
+      string(5) "HY000"
+      [1]=>
+      int(3065)
+      [2]=>
+      string(168) "Expression #1 of ORDER BY clause is not in SELECT list, references column 'kamimine_db.BSL.busstop_kana' which is not in SELECT list; this is incompatible with DISTINCT"
+    }
+  }
+}
+
+2020-10-07T18:11:01+09:00 DEBUG (7): [U:,T:20201007181100-5f7d8624cbd60]string(63) "###### PROCESS END (/kamimine/ajax/checkServiceTime.php) ######"
+
