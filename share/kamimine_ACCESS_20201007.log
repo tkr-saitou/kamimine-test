@@ -26,3 +26,8 @@
 2020-10-07T18:00:25+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201007180024-5f7d83a8ed462] STATUS: 0 API
 2020-10-07T18:00:25+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201007180024-5f7d83a8ec741] STATUS: 1 API
 2020-10-07T18:00:25+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201007180024-5f7d83a8e979b] STATUS: -1 Exception
+2020-10-07T18:11:00+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201007181100-5f7d8624889b5] STATUS: 0 API
+2020-10-07T18:11:00+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201007181100-5f7d8624c9ce5] STATUS: 0 API
+2020-10-07T18:11:01+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201007181100-5f7d8624c9ec4] STATUS: 0 API
+2020-10-07T18:11:01+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201007181100-5f7d8624cbd60] STATUS: 1 API
+2020-10-07T18:11:01+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201007181100-5f7d8624c9d48] STATUS: -1 Exception
