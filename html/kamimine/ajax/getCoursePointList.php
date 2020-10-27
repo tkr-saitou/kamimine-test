@@ -13,6 +13,7 @@ class getCoursePointList extends BaseApi {
         // ポリライン描画用の点列一覧を取得
         $args = array(BUSCOMPANY_ID, $buscategory_cd, $course_id);
         $routePointList = $this->db->invoke('t_sbt_route_course', 'getCoursePointList', $args);
+        $this->logger->writeDebug("$routePointList");
         if (count($routePointList) == 0) exit("{\"status\":0, \"route\":[]}");
 
         $route = array();

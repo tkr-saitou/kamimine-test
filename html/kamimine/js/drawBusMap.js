@@ -99,19 +99,20 @@ drawmap.mapInitialize = function(lat, lng, fullscreen) {
 		fullscreenControl : fullscreen,
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	};
+
 	map = new google.maps.Map(mapDiv, mapOpts);
 	google.maps.event.addListener(map, 'zoom_changed', function() {
-    		changeIconSize(map.getZoom());
-    		changePolylineWeight(map.getZoom());
+		changeIconSize(map.getZoom());
+		changePolylineWeight(map.getZoom());
 	});
 
     // 以下の処理はmap初期化の中ではなく、別で呼ぶべき→移動
 	// 本日最新のバスロケ表示
 	//drawmap.setBusLocation(0, 0);
 	// 全バス停表示
-    // drawmap.drawBusStopMarkers(0, 0);
+    drawmap.drawBusStopMarkers(0, 0);
 	// 全路線表示
-    //	drawmap.drawCoursePolyline(0, 0);
+		drawmap.drawCoursePolyline(0, 0);
 
 }
 
@@ -184,7 +185,7 @@ function changePolylineWeight(level) {
 // DBのプローブ情報より最新のバス情報を取得→バスアイコンのマーカー表示
 // ************************************************************
 drawmap.drawBusMarkerIcon = function(buscategory_cd, course_id) {
-	//自動更新時はmapClear()しないのでバス停のみ削除 
+	//自動更新時はmapClear()しないのでバス停のみ削除
 	busList.forEach(function(marker, idx) {
 		marker.setMap(null);
 	});
@@ -195,12 +196,12 @@ drawmap.drawBusMarkerIcon = function(buscategory_cd, course_id) {
 			$.each(response.bus, function(i, bus) {
 				createBusMarker(response.bus[i]);
 			});
-		}	
+		}
 	});
 }
 // 複数系統に属するバスのアイコンを表示する
 drawmap.drawMultipleBusMarkerIcon = function(buscategory_cd, courseList) {
-	//自動更新時はmapClear()しないのでバス停のみ削除 
+	//自動更新時はmapClear()しないのでバス停のみ削除
 	busList.forEach(function(marker, idx) {
 		marker.setMap(null);
 	});
@@ -212,7 +213,7 @@ drawmap.drawMultipleBusMarkerIcon = function(buscategory_cd, courseList) {
 			    $.each(response.bus, function(i, bus) {
 				    createBusMarker(response.bus[i]);
 			    });
-		    }	
+		    }
 	    });
     }
 }
@@ -221,12 +222,12 @@ drawmap.drawMultipleBusMarkerIcon = function(buscategory_cd, courseList) {
 function createBusMarker(bus) {
 	if (bus.lat == 0 && bus.lng == 0) return;
 	var delay = getBusDelayIcon(bus);
-	var angle = getBusAngleIcon(bus); 
+	var angle = getBusAngleIcon(bus);
     var opts = {
         id: bus.device_id,
 		position: new google.maps.LatLng(bus.lat, bus.lng),
 		icon: "./images/bus/bus_" + angle + "_" + delay + ".png",
-		text: bus.text, 
+		text: bus.text,
 		map: map,
 		zIndex: 10
 	}
@@ -235,7 +236,6 @@ function createBusMarker(bus) {
 }
 // 遅延別バスアイコン番号取得
 function getBusDelayIcon(bus) {
-    //console.log(bus);
 	if (bus.delay < 5) { // 5分未満は遅延無
 		return "blue";
 	} else if (5 <= bus.delay && bus.delay < 10) { // 5分程度遅延
@@ -288,12 +288,12 @@ function getBusAngleIcon(bus) {
 // DBよりバス停リストを取得してマーカーを表示する
 // ************************************************************
 drawmap.drawBusStopMarkers = function(areaCd, routeCd, displaySet, initFlg) {
-    if (initFlg) {
-        busstopList.forEach(function(marker, idx) {
-	    	marker.setMap(null);
-    	});
-	    busstopList = [];
-    }
+	if (initFlg) {
+		busstopList.forEach(function(marker, idx) {
+			marker.setMap(null);
+		});
+		busstopList = [];
+	}
     var opts =  {"areaCd": areaCd, "routeCd": routeCd};
     tci.runApi("./ajax/getBusStopList.php", opts, function(obj) {
 		if (obj.status == 0) {
@@ -309,7 +309,7 @@ drawmap.drawBusStopMarkers = function(areaCd, routeCd, displaySet, initFlg) {
 //                    drawmap.changeBusStopIcon(displaySet[key]["toBsCd"], areaCd, 2, false);
 //                }
             }
-		}	
+		}
 	});
 }
 
@@ -364,7 +364,7 @@ drawmap.changeBusStopIcon = function(bscd, areacd, bsType, initFlg) {
 				defaultIcon = "./images/busstop-normal.png";
 				icon = "./images/busstop-red.png";
 			}
-		}	
+		}
 	} else {
 		if (map.getZoom() < 14) {
 			defaultIcon = "./images/busstop-normal.png";
@@ -414,7 +414,7 @@ function drawLandmarks(areaCd, routeCd) {
 			$.each(obj.landmark, function(i, landmark) {
 				createLandmarkMarker(landmark, areaCd);
 			});
-		}	
+		}
 	});
 }
 // 主要施設マーカーの設置
@@ -432,7 +432,7 @@ function createLandmarkMarker(landmark, areaCd) {
 		map: map,
 		zIndex: 5
 	};
-	
+
 	var lmMarker = createMarker(opts);
 	landmarkList.push(lmMarker);
 }
@@ -441,24 +441,32 @@ function createLandmarkMarker(landmark, areaCd) {
 // DBより路線（Course）の点列のリストを取得→ポリライン描画
 // ************************************************************
 drawmap.drawCoursePolyline = function(areaCd, routeCd, initFlg) {
-    if (initFlg) {
-        routeList.forEach(function(marker, idx) {
-	    	marker.setMap(null);
-	    });
-	    routeList = [];
-    }
-    var opts = {"areaCd": areaCd, "routeCd": routeCd};
-    tci.runApi("./ajax/getCoursePointList.php", opts, function(obj) {
+	if (initFlg) {
+		routeList.forEach(function(marker, idx) {
+			marker.setMap(null);
+		});
+		routeList = [];
+	}
+	var opts = {"areaCd": 0, "routeCd": 0};
+
+	tci.runApi("./ajax/getCoursePointList.php", opts, function(obj) {
+
+		console.log(obj);
 		if (obj.status == 0) {
 			$.each(obj.route, function(i, route) {
-				drawRoutePolyline(i, route);
+				if (i == routeCd || routeCd == 0) {
+					opacity = 1;
+				} else {
+					opacity = 0.3;
+				}
+				drawRoutePolyline(i, route, opacity);
 			});
-		}	
+		}
 	});
 }
 
 // 路線ポリラインの描画
-function drawRoutePolyline(course_id, route) {
+function drawRoutePolyline(course_id, route, opacity) {
 	var course_name = route.course_name;
 	var coordinates = [];
 	$.each(route.points, function(i, point) {
@@ -468,7 +476,8 @@ function drawRoutePolyline(course_id, route) {
 	var routeLine = new google.maps.Polyline({
 		path: coordinates,
 		strokeColor: color,
-		strokeWeight: 4
+		strokeWeight: 4,
+		strokeOpacity: opacity,
 	});
 	routeLine.set("id", course_id);
 	routeLine.setMap(map);
@@ -478,16 +487,23 @@ function drawRoutePolyline(course_id, route) {
 		infoWnd.open(routeLine.getMap(), routeLine);
 	});
 	routeList.push(routeLine);
+	// if course
 }
 
 function getRouteColor(syscd) {
-	if (typeof signage_enabled === "undefined")  {
-		return "#32B16C";
-	}
-	if (routeColorList[syscd]) {
-		return routeColorList[syscd];
-	}
-	return "#32B16C";
+    if (syscd == 01) {
+      return "#ff0000";
+    } else if (syscd == 02) {
+      return "#0000ff";
+    } else if (syscd == 03) {
+      return "#ffff00";
+    } else if (syscd == 04) {
+      return "#008000";
+    } else if (syscd == 05) {
+      return "#ff1493";
+    } else {
+      return;
+    }
 }
 
 drawmap.setRouteColor = function(syscd, color) {

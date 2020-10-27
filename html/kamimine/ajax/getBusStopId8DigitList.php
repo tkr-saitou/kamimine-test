@@ -12,7 +12,7 @@ class getBusStopId8DigitList extends BaseApi {
 
         // バス停取得
         $args = array(BUSCOMPANY_ID, $buscategory_cd, $course_id);
-        $this->logger->writeDebug($args);
+        // $this->logger->writeDebug($args);
         $busStopSelectList = $this->db->invoke('t_sbt_busstop', 'getBusStopId8DigitList', $args);
         if (count($busStopSelectList) == 0) exit("{\"status\":0, \"busstop\":[]}");
 

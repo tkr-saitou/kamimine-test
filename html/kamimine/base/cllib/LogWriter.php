@@ -50,7 +50,7 @@ class LogWriter {
 		$this->logger->err("[U:".$this->user_id.",T:".$this->transaction_id."]".$str);
 		$this->logger->err("Exception end -----------------------------------------------------------------");
         // DEBUGログにも出力
-        $this->writeDebug($str);
+        // $this->writeDebug($str);
 	}
 
 	/**

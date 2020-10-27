@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------------
- * グローバル変数 
+ * グローバル変数
  * -------------------------------------------------------------------------------*/
 var isAutoLoading = false;
 var updateTimer;
@@ -204,14 +204,18 @@ function registerListener(init_coordinates) {
 		// 更新時刻更新
 		changeUpdTime();
 	});
-	
+
 	// 出発バス停が選択されたとき
-	$('#fromBS').change(function() {
+	$('#fromBS').change(function(busstopId, courseId) {
+			console.log(this);
         if ($(this).val() == 0) {
             $('#fromBSText').html('出発<span>するバス停をえらぶ</span>');
         } else {
-            $('#fromBSText').html($('#fromBS option:selected').text());
-        }
+						$('#fromBSText').html($('#fromBS option:selected').text());
+						var op = [":courseId", "busstopId"]
+						tci.runApi("./ajax/getArrivalList.php", op, function(obj) {
+						});
+				}
 		var fromBsCd = $(this).val();
 		// バス停の色変更
 		drawmap.changeBusStopIcon(fromBsCd, buscategory_cd, 1, true);
@@ -219,10 +223,14 @@ function registerListener(init_coordinates) {
 
 	// 到着バス停が選択されたとき
 	$('#toBS').change(function() {
+				console.log(this);
         if ($(this).val() == 0) {
             $('#toBSText').html('到着<span>するバス停をえらぶ</span>');
         } else {
-            $('#toBSText').html($('#toBS option:selected').text());
+						$('#toBSText').html($('#toBS option:selected').text());
+						var op = [":courseId", "busstopId"]
+						tci.runApi("./ajax/getDepartureList.php", op, function(obj) {
+						});
         }
 		var toBsCd = $(this).val();
 		// バス停の色変更
@@ -254,7 +262,7 @@ function registerListener(init_coordinates) {
 		var bsname = $("#bsname_" + id).html();
 		$("#fromBS").val(bscd);
         $('#fromBSText').html($('#fromBS option:selected').text());
-		//$(".custom_select_text#fromBS").children("span").html(bsname);
+		$(".custom_select_text#fromBS").children("span").html(bsname);
 		drawmap.changeBusStopIcon(bscd, buscategory_cd, 1, true);
 		//$('.custom_select#fromLM').hide();
 		//$('.custom_select#fromBS').show();
@@ -334,28 +342,28 @@ function registerListener(init_coordinates) {
 		$('.custom_select .selector#fromBS').val(0);
 		$(".custom_select_text#fromBS").children("span").html("");
 		$('.custom_select#fromLM').show();
-		showLandmark();	
+		showLandmark();
 	});
 	$('#fromBSselector').live("click",function(){
 		$('.custom_select#fromLM').hide();
 		$('.custom_select .selector#fromLM').val(0);
 		$(".custom_select_text#fromLM").children("span").html("");
 		$('.custom_select#fromBS').show();
-		hideLandmark();	
+		hideLandmark();
 	});
 	$('#toLMselector').live("click",function(){
 		$('.custom_select#toBS').hide();
 		$('.custom_select .selector#toBS').val(0);
 		$(".custom_select_text#toBS").children("span").html("");
 		$('.custom_select#toLM').show();
-		showLandmark();	
+		showLandmark();
 	});
 	$('#toBSselector').live("click",function(){
 		$('.custom_select#toLM').hide();
 		$('.custom_select .selector#toLM').val(0);
 		$(".custom_select_text#toLM").children("span").html("");
 		$('.custom_select#toBS').show();
-		hideLandmark();	
+		hideLandmark();
 	});
     */
 
@@ -431,7 +439,7 @@ function updateBusLocation() {
 function showLandmark() {
 	var areacd = $('.selector#area').val();
 	var routecd = $('.selector#route').val();
-	drawmap.drawLandmarks(areacd, routecd);	
+	drawmap.drawLandmarks(areacd, routecd);
 }
 
 // 主要施設の非表示
@@ -504,6 +512,7 @@ function setBusStopSelect(buscategory_cd, course_id) {
 	$('#toBS').append('<option value="0" selected="selected"></option>');
     var opts = {"buscategory_cd": buscategory_cd, "course_id": course_id};
     tci.runApi("./ajax/getBusStopId8DigitList.php", opts, function(response) {
+			console.log(response);
 		if (response.status == 0) {
 			$.each(response.busstop, function(i, busstop) {
                 // 出発バス停ドロップダウン選択肢
@@ -577,7 +586,7 @@ function searchOptionsIsHide(flg) {
  */
 function searchLocation(pos) {
     if(DEMO) {
-        doSearch(defaultLat, defaultLng); 
+        doSearch(defaultLat, defaultLng);
     } else {
         doSearch(pos.coords.latitude, pos.coords.longitude);
     }
@@ -599,7 +608,7 @@ function doSearch(lat,lng) {
     var course_id = $('#course_id').val();
     var opts = {
 		buscategory_cd: buscategory_cd,
-		course_id: course_id, 
+		course_id: course_id,
 		fromBsCd: $('#fromBS').val(),
 		fromLmCd: $('#fromLM').val(),
 		toBsCd: $('#toBS').val(),
@@ -685,7 +694,7 @@ function doSearch(lat,lng) {
             tci.showErrModal(obj.errMsg);
 		} else { // 予期せぬエラー
             tci.systemErr();
-        } 
+        }
         tci.showIndicator(false);
 	});
 }
@@ -782,3 +791,458 @@ function getTransferLink(opts, no) {
     });
 }
 */
+
+
+// // -----------５０音順番
+// var TKBS = {};
+
+// TKBS.inherits = function(childCtor, parentCtor) {
+//   function tempCtor() {};
+//   tempCtor.prototype = parentCtor.prototype;
+//   childCtor.superClass_ = parentCtor.prototype;
+//   childCtor.prototype = new tempCtor();
+//   childCtor.prototype.constructor = childCtor;
+// };
+
+// TKBS.escape = function(string) {
+//   if (typeof string !== 'string') {
+//     return string;
+//   }
+//   return string.replace(/[&'`"<>]/g, function(match) {
+//     return {
+//       '&': '&amp;',
+//       "'": '&#x27;',
+//       '`': '&#x60;',
+//       '"': '&quot;',
+//       '<': '&lt;',
+//       '>': '&gt;',
+//     }[match]
+//   });
+// }
+
+// TKBS.rosenColors = {
+//   1: '#5FC35B',
+//   2: '#5FC35B',
+//   3: '#BB61A1',
+//   4: '#BB61A1',
+//   5: '#EA0316',
+//   6: '#EA0316',
+//   7: '#00ACED',
+//   8: '#00ACED',
+//   9: '#DD3489',
+//   10: '#DD3489',
+//   11: '#D38400',
+//   12: '#D38400',
+//   13: '#106AC6',
+//   14: '#106AC6'
+// };
+
+// /*
+//  * データ格納用
+//  */
+// TKBS.Session = function(data) {
+//   this.allRosens = []; //全路線
+//   this.allBusstops = []; //全バス停
+//   this.allLandmarks = []; //全主要施設
+
+//   this.rosens = []; //路線の選択肢
+//   this.departures = []; //出発バス停の選択肢
+//   this.arrivals = []; //到着バス停の選択肢
+
+//   /*
+//    * search option:
+//    *  rosen, departure, arrival, hour, minute, departureLandmark, arrivalLandmark
+//    */
+//   this.option = {};
+// }
+
+// TKBS.Session.prototype.init = function(data) {
+//   this.allRosens = data.rosens; //全路線
+//   this.allBusstops = data.busstops; //全バス停
+//   this.allLandmarks = data.landmarks; //全主要施設
+
+//   this.allBusstops.forEach(function(busstop) {
+//     busstop.landmarks = [];
+//   });
+
+//   var self = this;
+//   this.allLandmarks.forEach(function(landmark) {
+//     landmark.busstops.forEach(function(busstopCd) {
+//       self.findBusstop(busstopCd).landmarks.push(landmark.cd);
+//     });
+//   });
+
+//   this.clear();
+// }
+
+// TKBS.Session.prototype.clear = function() {
+//   this.rosens = this.allRosens.map(function(value, index, array) {
+//     return value.cd;
+//   });
+//   this.departures = this.allBusstops.map(function(value, index, array) {
+//     return value.cd;
+//   });
+//   this.arrivals = this.departures;
+
+//   this.option = {};
+// }
+
+// TKBS.Session.prototype.findRosen = function(routeCd) {
+//   for (var i = 0; i < this.allRosens.length; i++) {
+//     var rosen = this.allRosens[i];
+//     if (rosen.cd == routeCd) {
+//       return rosen;
+//     }
+//   }
+//   return null;
+// };
+
+// TKBS.Session.prototype.findBusstop = function(busstopCd) {
+//   for (var i = 0; i < this.allBusstops.length; i++) {
+//     var busstop = this.allBusstops[i];
+//     if (busstop.cd == busstopCd) {
+//       return busstop;
+//     }
+//   }
+//   return null;
+// };
+
+// TKBS.Session.prototype.findLandmark = function(landmarkCd) {
+//   for (var i = 0; i < this.allLandmarks.length; i++) {
+//     var landmark = this.allLandmarks[i];
+//     if (landmark.cd == landmarkCd) {
+//       return landmark;
+//     }
+//   }
+//   return null;
+// };
+
+// TKBS.Session.prototype.canBeDeparture = function(busstopCd) {
+//   return this.departures.indexOf(busstopCd) >= 0;
+// }
+
+// TKBS.Session.prototype.canBeArrival = function(busstopCd) {
+//   return this.arrivals.indexOf(busstopCd) >= 0;
+// }
+
+
+// TKBS.AccordionHelper = function(id, option) {
+
+//   this.element = $('#' + id);
+//   this.onSelect = option.select;
+//   this.onHide = option.hide;
+//   this.onResize = option.resize;
+
+//   this.element.append('<span class="acc-text">' + option.title);
+//   this.element.append('<img class="tooltip" src="images/question.png" title="' + option.info + '"></span>');
+//   this.element.append('<div class="accordion"></div>');
+
+//   var titles = [{
+//     layer1: "あ〜こ",
+//     layer2: ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ"]
+//   }, {
+//     layer1: "さ〜と",
+//     layer2: ["さ", "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と"]
+//   }, {
+//     layer1: "な〜ほ",
+//     layer2: ["な", "に", "ぬ", "ね", "の", "は", "ひ", "ふ", "へ", "ほ"]
+//   }, {
+//     layer1: "ま〜わ",
+//     layer2: ["ま", "み", "む", "め", "も", "や", "ゆ", "よ", "わ"]
+//   }];
+
+//   var html = '';
+//   titles.forEach(function(e) {
+//     html += '<div class="acc-layer1">';
+//     html += '<div class="index-group">' + e.layer1 + '</div>';
+//     e.layer2.forEach(function(e) {
+//       html += '<div class="acc-layer2">';
+//       html += '<div class="index index-' + this.getKanaCode(e) + '">' + e + '</div>';
+//       html += '</div>';
+//     }, this);
+//     html += '</div>';
+//   }, this);
+//   html += '<div class="acc-back"><a href="javascript:void(0)" class="back">戻る</a></div>'
+//   this.element.children('.accordion').append(html).find('.back').click(this.onHide);
+
+//   var self = this;
+//   this.element.find('.index-group').click(function() {
+//     $(this).siblings('.acc-layer2').slideToggle('fast', self.onResize);
+//   });
+//   this.element.find('.index').click(function(e) {
+//     $(this).siblings('.acc-layer3').slideToggle('fast', self.onResize);
+//     e.stopPropagation();
+//   });
+// };
+
+// TKBS.inherits(TKBS.AccordionHelper, TKBS.Panel);
+
+// TKBS.AccordionHelper.prototype.addItem = function(cd, kana, name) {
+
+//   var target = this.element.find('.acc-layer2 > .' + 'index-' + this.getKanaCode(kana));
+
+//   target.parent().append('<div class="acc-layer3 ' + cd + '">' + TKBS.escape(name) + '</div>');
+
+//   var self = this;
+//   this.element.find('.' + cd).click(function() {
+//     self.onSelect(cd);
+//   });
+// };
+
+// TKBS.AccordionHelper.prototype.removeItems = function() {
+//   this.element.find('.acc-layer3').remove();
+// };
+
+// TKBS.AccordionHelper.prototype.refresh = function() {
+//   //アコーディオン:子要素がない場合は非活性
+//   this.element.find('.acc-layer2:not(:has(.acc-layer3))').children().css({
+//     'color': '#FFF',
+//     'background-color': '#D9D9D9',
+//     'cursor': 'default'
+//   });
+//   this.element.find('.acc-layer2:has(.acc-layer3)').children().css({
+//     'color': '#000000',
+//     'background-color': '#9987CB',
+//     'cursor': 'pointer'
+//   });
+//   this.element.find('.acc-layer3').click(function(e) {
+//     e.stopPropagation();
+//   });
+// };
+
+// TKBS.AccordionHelper.prototype.show = function() {
+//   TKBS.Panel.prototype.show.call(this);
+//   this.onResize();
+// };
+
+// TKBS.AccordionHelper.prototype.hide = function() {
+//   TKBS.Panel.prototype.hide.call(this);
+//   this.element.find('.acc-layer2').css('display', 'none');
+//   this.element.find('.acc-layer3').css('display', 'none');
+//   this.onResize();
+// };
+
+// TKBS.AccordionHelper.prototype.getKanaCode = function(kana) {
+//   var kanaList = [
+//     "あ", "い", "う", "え", "お",
+//     "か", "き", "く", "け", "こ",
+//     "さ", "し", "す", "せ", "そ",
+//     "た", "ち", "つ", "て", "と",
+//     "な", "に", "ぬ", "ね", "の",
+//     "は", "ひ", "ふ", "へ", "ほ",
+//     "ま", "み", "む", "め", "も",
+//     "や", "ゆ", "よ", "わ"
+//   ];
+//   var codeList = [
+//     "a", "i", "u", "e", "o",
+//     "ka", "ki", "ku", "ke", "ko",
+//     "sa", "si", "su", "se", "so",
+//     "ta", "ti", "tu", "te", "to",
+//     "na", "ni", "nu", "ne", "no",
+//     "ha", "hi", "hu", "he", "ho",
+//     "ma", "mi", "mu", "me", "mo",
+//     "ya", "yu", "yo", "wa"
+//   ];
+//   return codeList[kanaList.indexOf(kana)];
+// };
+
+/*
+//  * DialogHelper
+//  */
+// TKBS.DialogHelper = function(id) {
+//   this.element = $('#' + id);
+//   this.element.dialog({
+//     autoOpen: false
+//   });
+// };
+
+// TKBS.DialogHelper.prototype.addMessage = function(message) {
+//   this.element.append('<p>' + message + '</p>');
+// };
+
+// TKBS.DialogHelper.prototype.addItem = function(cd, name, callback) {
+//   var id = 'dialog-' + cd;
+
+//   this.element.append('<div id="' + id + '" class="dialog-btn" >' + TKBS.escape(name) + '</div>');
+
+//   this.element.find('#' + id).click(function() {
+//     callback();
+//   });
+// };
+
+// TKBS.DialogHelper.prototype.clear = function() {
+//   this.element.empty();
+// };
+
+// TKBS.DialogHelper.prototype.show = function(title) {
+//   if (this.isOpen()) {
+//     return;
+//   }
+//   var self = this;
+//   this.element.dialog({
+//     title: title,
+//     modal: true,
+//     buttons: {
+//       'キャンセル': function() {
+//         self.hide();
+//       }
+//     }
+//   }).dialog('open');
+// };
+
+// TKBS.DialogHelper.prototype.hide = function() {
+//   this.element.dialog('close');
+// };
+
+// TKBS.DialogHelper.prototype.showInfo = function(message, callback) {
+//   if (this.isOpen()) {
+//     return;
+//   }
+//   this.clear();
+//   this.addMessage(message);
+//   var self = this;
+//   this.element.dialog({
+//     title: '情報',
+//     modal: true,
+//     buttons: {
+//       'ＯＫ': function() {
+//         self.hide();
+//         if (callback) {
+//           callback();
+//         }
+//       },
+//     }
+//   }).dialog('open');
+// };
+
+// TKBS.DialogHelper.prototype.showError = function(message, callback) {
+//   if (this.isOpen()) {
+//     return;
+//   }
+//   this.clear();
+//   this.addMessage(message);
+//   var self = this;
+//   this.element.dialog({
+//     title: 'エラー',
+//     modal: true,
+//     buttons: {
+//       'ＯＫ': function() {
+//         self.hide();
+//         if (callback) {
+//           callback();
+//         }
+//       },
+//     }
+//   }).dialog('open');
+// };
+
+// TKBS.DialogHelper.prototype.showConfirm = function(message, callback) {
+//   if (this.isOpen()) {
+//     return;
+//   }
+//   this.clear();
+//   this.addMessage(message);
+//   var self = this;
+//   this.element.dialog({
+//     title: '確認',
+//     modal: true,
+//     buttons: {
+//       'ＯＫ': function() {
+//         self.hide();
+//         if (callback) {
+//           callback();
+//         }
+//       },
+//       'キャンセル': function() {
+//         self.hide();
+//       }
+//     }
+//   }).dialog('open');
+// };
+
+// TKBS.DialogHelper.prototype.isOpen = function() {
+//   return this.element.dialog('isOpen');
+// };
+
+// /*
+//  * ResultPanel
+//  */
+// TKBS.ResultPanel = function(id, option) {
+//   this.element = $('#' + id);
+//   this.element.append('<div class="title"></div>');
+//   this.element.append('<div class="r-content"></div>');
+//   this.body = this.element.find('.r-content');
+//   this.onResize = option.resize;
+// };
+
+// TKBS.inherits(TKBS.ResultPanel, TKBS.Panel);
+
+// TKBS.ResultPanel.prototype.show = function() {
+//   TKBS.Panel.prototype.show.call(this);
+//   this.onResize();
+// };
+
+// TKBS.ResultPanel.prototype.hide = function() {
+//   TKBS.Panel.prototype.hide.call(this);
+//   this.onResize();
+// };
+
+// TKBS.ResultPanel.prototype.setTitle = function(title) {
+//   this.element.children('.title').text(title);
+// };
+
+// TKBS.ResultPanel.prototype.setResults = function(data) {
+//   var now = new Date();
+//   var h = ('0' + now.getHours()).slice(-2)
+//   var m = ('0' + now.getMinutes()).slice(-2);
+
+//   this.setTitle('運行状況 ' + h + ':' + m + '現在');
+//   this.body.empty();
+//   data.forEach(function(e, i, arr) {
+//     this.addResult(e);
+//   }, this);
+// };
+
+// TKBS.ResultPanel.prototype.addResult = function(result) {
+//   var result = '<div class="r-rosen">' + TKBS.escape(result.rosen.name) + '</div>' +
+//     '<div class="r-detail">' +
+//     '<div class="r-departure">' + TKBS.escape(result.departure.name) + '（定刻 ' + formatDia(result.departure.dia) + ' 発）遅延 ' + TKBS.escape(result.delay) + ' 分</div>' +
+//     createArrivalInfo(result) + createTransferInfo(result) + '</div>';
+
+//   this.body.append(result);
+
+//   function createArrivalInfo(result) {
+//     if (result.arrival == null || result.arrival.cd == 0) {
+//       return '';
+//     }
+//     var color = TKBS.rosenColors[result.rosen.cd];
+//     var html = '<div class="r-time r-rosen-color" style="border-left-color: ' + color + '">所要時間 ' + TKBS.escape(result.duration) + ' 分</div>' +
+//       '<div class="r-arrival">' + TKBS.escape(result.arrival.name) + '（定刻 ' + formatDia(result.arrival.dia) + ' 着）</div>';
+//     return html;
+//   }
+
+//   function createTransferInfo(result) {
+//     if (result.transfer == null) {
+//       return '';
+//     }
+//     var html = '';
+//     result.transfer.forEach(function(e, i, arr) {
+//       if (i == 0) {
+//         html += '<div class="r-transfer"><span>■乗換情報</span><ul>';
+//       }
+//       html += '<li><a href="' + TKBS.escape(e.url) + '" target="_blank">' + TKBS.escape(e.link) + '</a></li>';
+//       if (i == arr.length - 1) {
+//         html += '</ul></div>';
+//       }
+//     });
+//     return html;
+//   }
+
+//   function formatDia(dia) {
+//     if (dia.length == 8) { // 00:00:00
+//       return dia.slice(0, -3);
+//     } else {
+//       return dia;
+//     }
+//   }
+// };

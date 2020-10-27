@@ -3,18 +3,29 @@
 require_once ('../base/base/BaseModel.php');
 require_once ('../base/cllib/Util.php');
 
-class t_sbt_busstop extends BaseModel {
 
+
+class t_sbt_busstop extends BaseModel
+{
+    public function findAllByDepartureOnRosen($buscompany_id, $busstop_id, $course_id) {
+        return $this->getBusStopList($buscompany_id, $busstop_id, $course_id, 1);
+    }
+    public function findAllByArrivalOnRosen($buscompany_id, $busstop_id, $course_id)
+    {
+        return $this->getBusStopList($buscompany_id, $busstop_id, $course_id, -1);
+    }
     /**
      * バス停一覧を取得
      */
-    public function getBusStopList($buscompany_id, $buscategory_cd, $course_id) {
+    public function getBusStopList($buscompany_id, $buscategory_cd, $course_id, $busstop_id, $orientation)
+    {
         $sql = <<< SQL
             SELECT  DISTINCT
                     BS.busstop_id,
                     BSL.busstop_name,
                     BS.lat,
-                    BS.lng
+                    BS.lng,
+                    VDIA.stop_seq
             FROM    t_sbt_busstop BS
                     LEFT JOIN t_sbt_busstop_lang BSL
                         ON BSL.busstop_id = BS.busstop_id
@@ -25,6 +36,8 @@ class t_sbt_busstop extends BaseModel {
                     LEFT JOIN v_sbt_busstop_category VBSC
                         ON VBSC.buscompany_id = :buscompany_id
                         AND VBSC.busstop_id = BS.busstop_id
+                    -- INNER JOIN t_sbt_calendar AS C
+                    --     ON VDIA.ybkbn = C.ybkbn
             WHERE   1 = 1
 SQL;
         $param = array(":buscompany_id" => $buscompany_id, ":lang_cd" => 'ja');
@@ -35,23 +48,244 @@ SQL;
         if ($course_id != 0) {
             $sql .= " AND VDIA.course_id = :course_id";
             $param[":course_id"] = $course_id;
-        }
-        $sql .= " ORDER BY VDIA.stop_seq"; 
 
-        return $this->fetchAll($sql, $param);
+        }
+        // <!-- 路 なし出 なし 到 なし アクション 出 -->
+        if ($course_id == 0 && $busstop_id == 0) {
+            $sql .= "AND C.srvdate = CURDATE()";
+                    "AND VDIA.first_last_flg <> 'L' ";
+        }
+        // <!-- 路 なし出 なし 到 なし アクション 到 -->
+        // else if ($course_id == 0 && $busstop_id == 0) {
+        //     $sql .= "AND C.srvdate = CURDATE()"
+        //             "AND VDIA.first_last_flg <> 'F' ";
+        // }
+        // <!-- 路 ◯  出 なし 到 なし  アクション 出 -->
+        else if ($course_id != 0 && $busstop_id == 0) {
+            $param = array(":course_id" => $course_id);
+            $sql .= "AND C.srvdate = CURDATE()";
+                    "AND VDIA.course_id = :course_id";
+                    "AND VDIA.first_last_flg <> 'L' ";
     }
+
+        // <!-- 路 ◯  出 なし 到 なし  アクション 到 -->
+        else if ($course_id != 0 && $busstop_id == 0) {
+            $param = array(":course_id" => $course_id);
+            $sql .= "AND C.srvdate = CURDATE()";
+                    "AND VDIA.course_id = :course_id";
+                    "AND VDIA.first_last_flg <> 'F' ";
+        }
+        // <!-- 路 ◯  出 ◯ 到 なし  アクション 到 -->//
+        else if ($course_id != 0 && $busstop_id != 0){
+            $param = array(":busstop_id" => $busstop_id, ":course_id" => $course_id);
+            $op = $orientation > 0 ? '>' : '<';
+            $sql .= "AND C.srvdate = CURDATE()";
+                    "AND VDIA.course_id = :course_id";
+                    "AND VDIA.first_last_flg <> 'F' ";
+                    "AND VDIA.stop_seq  $op :stop_seq; ";
+            }
+        // <!-- 路 ◯  出 なし  到 ◯  アクション 出 -->
+        else if ($course_id != 0 && $busstop_id != 0){
+            $param = array(":busstop_id" => $busstop_id, ":course_id" => $course_id);
+            $op = $orientation > 0 ? '>' : '<';
+            $sql .= "AND C.srvdate = CURDATE()";
+                    "AND VDIA.course_id = :course_id";
+                    "AND VDIA.first_last_flg <> 'L' ";
+                    "AND VDIA.stop_seq  $op :stop_seq; ";
+            }
+        $sql .= " ORDER BY VDIA.stop_seq";
+
+        // <!-- 路 なし 出 なし 到 なし  アクション 出 -->
+//         if ($course_id == 0 && $busstop_id == 0 ) {
+//         $sql = <<< SQL
+//             SELECT  DISTINCT
+//                     BS.busstop_id,
+//                     BSL.busstop_name,
+//                     BS.lat,
+//                     BS.lng,
+//                     VDIA.stop_seq
+//             FROM    t_sbt_busstop BS
+//                     LEFT JOIN t_sbt_busstop_lang BSL
+//                         ON BSL.busstop_id = BS.busstop_id
+//                         AND BSL.lang_cd = :lang_cd
+//                     LEFT JOIN v_sbt_busdia VDIA
+//                         ON VDIA.buscompany_id = :buscompany_id
+//                         AND VDIA.busstop_id = BS.busstop_id
+//                     LEFT JOIN v_sbt_busstop_category VBSC
+//                         ON VBSC.buscompany_id = :buscompany_id
+//                         AND VBSC.busstop_id = BS.busstop_id
+//                     INNER JOIN t_sbt_calendar AS C
+//                     ON VDIA.ybkbn = C.ybkbn
+//             WHERE   1 = 1
+// SQL;
+//         $param = array(":buscompany_id" => $buscompany_id, ":lang_cd" => 'ja');
+//         $sql .= "AND C.srvdate = CURDATE()";
+//                 "AND VDIA.first_last_flg <> 'L' ";
+//         }
+
+//         // <!-- 路 なし出 なし 到 なし アクション 到 -->
+//         if ($course_id == 0 && $busstop_id == 0) {
+//             $sql = <<< SQL
+//             SELECT  DISTINCT
+//                     BS.busstop_id,
+//                     BSL.busstop_name,
+//                     BS.lat,
+//                     BS.lng,
+//                     VDIA.stop_seq
+//             FROM    t_sbt_busstop BS
+//                     LEFT JOIN t_sbt_busstop_lang BSL
+//                         ON BSL.busstop_id = BS.busstop_id
+//                         AND BSL.lang_cd = :lang_cd
+//                     LEFT JOIN v_sbt_busdia VDIA
+//                         ON VDIA.buscompany_id = :buscompany_id
+//                         AND VDIA.busstop_id = BS.busstop_id
+//                     LEFT JOIN v_sbt_busstop_category VBSC
+//                         ON VBSC.buscompany_id = :buscompany_id
+//                         AND VBSC.busstop_id = BS.busstop_id
+//                     INNER JOIN t_sbt_calendar AS C
+//                     ON VDIA.ybkbn = C.ybkbn
+//             WHERE   1 = 1
+// SQL;
+//             $param = array(":buscompany_id" => $buscompany_id, ":lang_cd" => 'ja');
+//             $sql .= "AND C.srvdate = CURDATE()"
+//                     "AND VDIA.first_last_flg <> 'F'";
+//         }
+
+//         // <!-- 路 ◯  出 なし 到 なし  アクション 出 -->
+//         else if ($course_id != 0 && $busstop_id == 0) {
+//         $sql = <<< SQL
+//             SELECT  DISTINCT
+//                     BS.busstop_id,
+//                     BSL.busstop_name,
+//                     BS.lat,
+//                     BS.lng,
+//                     VDIA.stop_seq
+//             FROM    t_sbt_busstop BS
+//                     LEFT JOIN t_sbt_busstop_lang BSL
+//                         ON BSL.busstop_id = BS.busstop_id
+//                         AND BSL.lang_cd = :lang_cd
+//                     LEFT JOIN v_sbt_busdia VDIA
+//                         ON VDIA.buscompany_id = :buscompany_id
+//                         AND VDIA.busstop_id = BS.busstop_id
+//                     LEFT JOIN v_sbt_busstop_category VBSC
+//                         ON VBSC.buscompany_id = :buscompany_id
+//                         AND VBSC.busstop_id = BS.busstop_id
+//                     INNER JOIN t_sbt_calendar AS C
+//                     ON VDIA.ybkbn = C.ybkbn
+//             WHERE   1 = 1
+//     SQL;
+//                 $param = array(":buscompany_id" => $buscompany_id, ":lang_cd" => 'ja');
+//                 $sql .= "AND C.srvdate = CURDATE()";
+//                         "AND VDIA.course_id = :course_id";
+//                         "AND VDIA.first_last_flg <> 'L' ";
+//         }
+// //         // <!-- 路 ◯  出 なし 到 なし  アクション 到 -->
+//         else if ($course_id != 0 && $busstop_id == 0) {
+//         $sql = <<< SQL
+//             SELECT  DISTINCT
+//                     BS.busstop_id,
+//                     BSL.busstop_name,
+//                     BS.lat,
+//                     BS.lng,
+//                     VDIA.stop_seq
+//             FROM    t_sbt_busstop BS
+//                     LEFT JOIN t_sbt_busstop_lang BSL
+//                         ON BSL.busstop_id = BS.busstop_id
+//                         AND BSL.lang_cd = :lang_cd
+//                     LEFT JOIN v_sbt_busdia VDIA
+//                         ON VDIA.buscompany_id = :buscompany_id
+//                         AND VDIA.busstop_id = BS.busstop_id
+//                     LEFT JOIN v_sbt_busstop_category VBSC
+//                         ON VBSC.buscompany_id = :buscompany_id
+//                         AND VBSC.busstop_id = BS.busstop_id
+//                     INNER JOIN t_sbt_calendar AS C
+//                     ON VDIA.ybkbn = C.ybkbn
+//             WHERE   1 = 1
+// SQL;
+//             $param = array(":buscompany_id" => $buscompany_id, ":lang_cd" => 'ja');
+//             $sql .= "AND C.srvdate = CURDATE()";
+//                     "AND VDIA.course_id = :course_id";
+//                     "AND VDIA.first_last_flg <> 'F' ";
+//         }
+
+//         // <!-- 路 ◯  出 ◯ 到 なし  アクション　到 -->//
+//         else if ($course_id != 0 && $busstop_id != 0) {
+//             $sql = <<< SQL
+//                 SELECT  DISTINCT
+//                         BS.busstop_id,
+//                         BSL.busstop_name,
+//                         BS.lat,
+//                         BS.lng,
+//                         VDIA.stop_seq
+//                 FROM    t_sbt_busstop BS
+//                         LEFT JOIN t_sbt_busstop_lang BSL
+//                             ON BSL.busstop_id = BS.busstop_id
+//                             AND BSL.lang_cd = :lang_cd
+//                         LEFT JOIN v_sbt_busdia VDIA
+//                             ON VDIA.buscompany_id = :buscompany_id
+//                             AND VDIA.busstop_id = BS.busstop_id
+//                         LEFT JOIN v_sbt_busstop_category VBSC
+//                             ON VBSC.buscompany_id = :buscompany_id
+//                             AND VBSC.busstop_id = BS.busstop_id
+//                         INNER JOIN t_sbt_calendar AS C
+//                         ON VDIA.ybkbn = C.ybkbn
+//                 WHERE   1 = 1
+// SQL;
+//                 $param = array(":buscompany_id" => $buscompany_id, ":lang_cd" => 'ja');
+//                 $sql .= "AND C.srvdate = CURDATE()";
+//                         "AND VDIA.course_id = :course_id";
+//                         "AND VDIA.first_last_flg <> 'F' ";
+//                         "AND VDIA.stop_seq  > :stop_seq; ";
+//             }
+
+//         // <!-- 路 ◯  出 なし  到 ◯  アクション　出 -->
+//         else if ($course_id != 0 && $busstop_id != 0) {
+//             $sql = <<< SQL
+//                 SELECT  DISTINCT
+//                         BS.busstop_id,
+//                         BSL.busstop_name,
+//                         BS.lat,
+//                         BS.lng,
+//                         VDIA.stop_seq
+//                 FROM    t_sbt_busstop BS
+//                         LEFT JOIN t_sbt_busstop_lang BSL
+//                             ON BSL.busstop_id = BS.busstop_id
+//                             AND BSL.lang_cd = :lang_cd
+//                         LEFT JOIN v_sbt_busdia VDIA
+//                             ON VDIA.buscompany_id = :buscompany_id
+//                             AND VDIA.busstop_id = BS.busstop_id
+//                         LEFT JOIN v_sbt_busstop_category VBSC
+//                             ON VBSC.buscompany_id = :buscompany_id
+//                             AND VBSC.busstop_id = BS.busstop_id
+//                         INNER JOIN t_sbt_calendar AS C
+//                         ON VDIA.ybkbn = C.ybkbn
+//                 WHERE   1 = 1
+// SQL;
+//                 $param = array(":buscompany_id" => $buscompany_id, ":lang_cd" => 'ja');
+//                 $sql .= "AND C.srvdate = CURDATE()";
+//                         "AND VDIA.course_id = :course_id";
+//                         "AND VDIA.first_last_flg <> 'L' ";
+//                         "AND VDIA.stop_seq  < :stop_seq; ";
+//         }
+        return $this->fetchAll($sql, $param);
+
+    }
+
+
+
 
     /**
      * バス停選択肢一覧を取得
      * 末尾2桁を除いた8桁の
      * バス停コードの末尾の２桁は同一名バス停の連番
      */
-    public function getBusStopId8DigitList($buscompany_id, $buscategory_cd, $course_id) {
+    public function getBusStopId8DigitList($buscompany_id, $buscategory_cd, $course_id, $busstop_id, $orientation) {
         if ($course_id == 0) { // コースID未指定時。ダイヤはJOINしない
             $sql = <<< SQL
                 SELECT  DISTINCT
-                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
-                        BSL.busstop_name 
+                        SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8,
+                        BSL.busstop_name,
+                        BSL.busstop_kana
                 FROM    t_sbt_busstop BS
                         LEFT JOIN t_sbt_busstop_lang BSL
                             ON BSL.busstop_id = BS.busstop_id
@@ -62,8 +296,8 @@ SQL;
         } else { // コースID指定時
             // コース内のバス停をすべて回る便(stop_seqが最大の便)のうち、時刻表が最も早い便のバス停を停車順に取得
             $sql = <<< SQL
-                SELECT  SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8, 
-                        BSL.busstop_name 
+                SELECT  SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) busstop_id8,
+                        BSL.busstop_name
                 FROM    t_sbt_busstop BS
                         LEFT JOIN t_sbt_busstop_lang BSL
                             ON BSL.busstop_id = BS.busstop_id
@@ -75,30 +309,31 @@ SQL;
                             ON VBSC.buscompany_id = :buscompany_id
                             AND VBSC.busstop_id    = BS.busstop_id
                 WHERE   VDIA.bin_no = (
-                            SELECT  MIN(bin_no) 
-                            FROM    v_sbt_busdia 
-                            WHERE   buscompany_id = :buscompany_id 
-                                    AND course_id = :course_id 
+                            SELECT  MIN(bin_no)
+                            FROM    v_sbt_busdia
+                            WHERE   buscompany_id = :buscompany_id
+                                    AND course_id = :course_id
                                     AND stop_seq = (
-                                        SELECT  MAX(stop_seq) 
-                                        FROM    v_sbt_busdia 
+                                        SELECT  MAX(stop_seq)
+                                        FROM    v_sbt_busdia
                                         WHERE   buscompany_id = :buscompany_id
                                                 AND course_id = :course_id
                                     )
                         )
 SQL;
             $param = array(
-                ":buscompany_id"    => $buscompany_id, 
-                ":lang_cd"          => 'ja', 
+                ":buscompany_id"    => $buscompany_id,
+                ":lang_cd"          => 'ja',
                 ":course_id"        => $course_id
             );
             if ($buscategory_cd != 0) {
                 $sql .= " AND VBSC.buscategory_cd = :buscategory_cd";
                 $param[":buscategory_cd"] = $buscategory_cd;
             }
+
             $sql .= " ORDER BY VDIA.stop_seq, SUBSTRING(BS.busstop_id, 1, CHAR_LENGTH(BS.busstop_id) - 2) ";
         }
-        
+
         return $this->fetchAll($sql, $param);
 /*
         $rs = $this->fetchAll($sql, $param);
@@ -113,11 +348,14 @@ SQL;
                     break;
                 }
             }
-            if ($flg) $busStopId8DigitList[] = $row; 
+            if ($flg) $busStopId8DigitList[] = $row;
         }
         return $busStopId8DigitList;
 */
     }
+
+
+
 
     /**
      * 現在地から半径100m以内のバス停一覧を取得
@@ -146,8 +384,8 @@ SQL;
     public function getLastBusstopList($buscompany_id, $busstop_id, $course_id) {
         if ($course_id == 0) { // コース未指定の場合
             $sql = <<<SQL
-                select  di1.buscompany_id, 
-                        di1.course_id, 
+                select  di1.buscompany_id,
+                        di1.course_id,
                         di1.busstop_id origin_busstop_id,
                         SUBSTRING(di2.busstop_id, 1, CHAR_LENGTH(di2.busstop_id) - 2) busstop_id,
                         count(*) cnt
@@ -164,7 +402,7 @@ SQL;
                 group by di1.buscompany_id,di1.course_id,di1.busstop_id,di2.busstop_id
 SQL;
             $param = array(
-                ":buscompany_id"    => $buscompany_id, 
+                ":buscompany_id"    => $buscompany_id,
                 ":busstop_id"   => $busstop_id
             );
         } else {
@@ -175,18 +413,23 @@ SQL;
                 INNER JOIN v_sbt_busdia DIA2
                   ON DIA.buscompany_id = DIA2.buscompany_id
                  AND DIA.course_id     = DIA2.course_id
-                 AND SUBSTRING(DIA2.busstop_id, 1, CHAR_LENGTH(DIA2.busstop_id) - 2) = :busstop_id 
+                 AND SUBSTRING(DIA2.busstop_id, 1, CHAR_LENGTH(DIA2.busstop_id) - 2) = :busstop_id
                  AND DIA.stop_seq      > DIA2.stop_seq
-                WHERE DIA.buscompany_id  = :buscompany_id 
+                WHERE DIA.buscompany_id  = :buscompany_id
                   AND SUBSTRING(DIA.busstop_id, 1, CHAR_LENGTH(DIA.busstop_id) - 2) != :busstop_id
                   AND DIA.course_id      = :course_id
                   AND DIA.first_last_flg = 'L'
 SQL;
             $param = array(
-                ":buscompany_id"    => $buscompany_id, 
+                ":buscompany_id"    => $buscompany_id,
                 ":course_id"        => $course_id,
                 ":busstop_id"   => $busstop_id
             );
+            // if ($busstop_id != 0) {
+            //     $op = $orientation > 0 ? '>' : '<';
+            //     $sql .= " AND BS.busstop_id {$orientation} [t_sbt_busstop]";
+            //     $param[":busstop_id"] = $busstop_id;}
+
         }
 
         return $this->fetchAll($sql, $param);
@@ -221,7 +464,7 @@ SQL;
     public function getBusstopID($buscompany_id, $busstop_id8digit, $course_id) {
         $sql = <<< SQL
             SELECT busstop_id
-            FROM v_sbt_busdia 
+            FROM v_sbt_busdia
             WHERE buscompany_id = :buscompany_id
               AND course_id = :course_id
               AND busstop_id LIKE :busstop_id"%"

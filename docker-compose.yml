@@ -4,8 +4,9 @@ services:
   mysql:
     container_name: "mysql"
     image: mysql:5.7
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     ports:
-      - '3306:3306' #デバッグ用
+      - '3306:3306' #デバッグ用command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
       - ./sql/data:/var/lib/mysql
