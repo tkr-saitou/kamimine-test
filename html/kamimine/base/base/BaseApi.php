@@ -51,7 +51,7 @@ abstract class BaseApi {
             // 使用Class読み込み
             $this->logger = new LogWriter(null,$transactionId);
 
-            $this->logger->writeDebug("###### PROCESS RUN (".$_SERVER["PHP_SELF"].") ######");
+            // $this->logger->writeDebug("###### PROCESS RUN (".$_SERVER["PHP_SELF"].") ######");
             $this->journal = new JournalWriter($transactionId);
             $this->datam = new DataManager();
             $this->db = new ModelManager($this->datam->getConnection(),"API",$transactionId,$this->logger,$this->journal);
@@ -62,7 +62,7 @@ abstract class BaseApi {
             if($_GET['TYPE'] != self::TYPE_DOWNLOAD) {
                 if ($_SERVER["REQUEST_METHOD"] != "POST") {
                     // POSTでなければ
-                    $this->logger->writeDebug("Request Method is not POST!");
+                    // $this->logger->writeDebug("Request Method is not POST!");
                     $this->journal->apiResult("1","Request Method is not POST!");
                     exit("{\"status\":1}");
                 }

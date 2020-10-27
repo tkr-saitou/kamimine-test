@@ -1,0 +1,168 @@
+2020-10-22T09:39:55+09:00 INFO (6): [U:,T:20201022093955-5f90d4db23f30]query:             INSERT INTO t_sbt_search_history VALUES(
+                        :search_datetime,
+                        :access_point,
+                        :device,
+                        :browser,
+                        :class,
+                        :buscompany_id,
+                        :course_id,
+                        :origin_busstop_id,
+                        :destination_busstop_id,
+                        :result_count
+            );
+2020-10-22T09:39:55+09:00 INFO (6): [U:,T:20201022093955-5f90d4db23f30]Array
+(
+    [:search_datetime] => 2020-10-22 9:39:55
+    [:access_point] => 192.168.48.1
+    [:device] => Mac
+    [:browser] => Chrome
+    [:class] => searchBus
+    [:buscompany_id] => KMM
+    [:course_id] => 02
+    [:origin_busstop_id] => 00000108
+    [:destination_busstop_id] => 00000132
+    [:result_count] => 0
+)
+
+2020-10-22T09:39:55+09:00 INFO (6): [U:,T:20201022093955-5f90d4db23f30]commit
+2020-10-22T09:39:55+09:00 INFO (6): [U:,T:20201022093955-5f90d4db23f30]
+2020-10-22T09:40:06+09:00 INFO (6): [U:,T:20201022094006-5f90d4e67b3d4]query:             INSERT INTO t_sbt_search_history VALUES(
+                        :search_datetime,
+                        :access_point,
+                        :device,
+                        :browser,
+                        :class,
+                        :buscompany_id,
+                        :course_id,
+                        :origin_busstop_id,
+                        :destination_busstop_id,
+                        :result_count
+            );
+2020-10-22T09:40:06+09:00 INFO (6): [U:,T:20201022094006-5f90d4e67b3d4]Array
+(
+    [:search_datetime] => 2020-10-22 9:40:06
+    [:access_point] => 192.168.48.1
+    [:device] => Mac
+    [:browser] => Chrome
+    [:class] => searchBus
+    [:buscompany_id] => KMM
+    [:course_id] => 02
+    [:origin_busstop_id] => 00000101
+    [:destination_busstop_id] => 
+    [:result_count] => 0
+)
+
+2020-10-22T09:40:06+09:00 INFO (6): [U:,T:20201022094006-5f90d4e67b3d4]commit
+2020-10-22T09:40:06+09:00 INFO (6): [U:,T:20201022094006-5f90d4e67b3d4]
+2020-10-22T09:40:10+09:00 INFO (6): [U:,T:20201022094010-5f90d4ea3a2cb]query:             INSERT INTO t_sbt_search_history VALUES(
+                        :search_datetime,
+                        :access_point,
+                        :device,
+                        :browser,
+                        :class,
+                        :buscompany_id,
+                        :course_id,
+                        :origin_busstop_id,
+                        :destination_busstop_id,
+                        :result_count
+            );
+2020-10-22T09:40:10+09:00 INFO (6): [U:,T:20201022094010-5f90d4ea3a2cb]Array
+(
+    [:search_datetime] => 2020-10-22 9:40:10
+    [:access_point] => 192.168.48.1
+    [:device] => Mac
+    [:browser] => Chrome
+    [:class] => searchBus
+    [:buscompany_id] => KMM
+    [:course_id] => 02
+    [:origin_busstop_id] => 00000101
+    [:destination_busstop_id] => 00000108
+    [:result_count] => 0
+)
+
+2020-10-22T09:40:10+09:00 INFO (6): [U:,T:20201022094010-5f90d4ea3a2cb]commit
+2020-10-22T09:40:10+09:00 INFO (6): [U:,T:20201022094010-5f90d4ea3a2cb]
+2020-10-22T09:40:13+09:00 INFO (6): [U:,T:20201022094013-5f90d4edde490]query:             INSERT INTO t_sbt_search_history VALUES(
+                        :search_datetime,
+                        :access_point,
+                        :device,
+                        :browser,
+                        :class,
+                        :buscompany_id,
+                        :course_id,
+                        :origin_busstop_id,
+                        :destination_busstop_id,
+                        :result_count
+            );
+2020-10-22T09:40:13+09:00 INFO (6): [U:,T:20201022094013-5f90d4edde490]Array
+(
+    [:search_datetime] => 2020-10-22 9:40:13
+    [:access_point] => 192.168.48.1
+    [:device] => Mac
+    [:browser] => Chrome
+    [:class] => searchBus
+    [:buscompany_id] => KMM
+    [:course_id] => 02
+    [:origin_busstop_id] => 00000101
+    [:destination_busstop_id] => 00000111
+    [:result_count] => 0
+)
+
+2020-10-22T09:40:13+09:00 INFO (6): [U:,T:20201022094013-5f90d4edde490]commit
+2020-10-22T09:40:13+09:00 INFO (6): [U:,T:20201022094013-5f90d4edde490]
+2020-10-22T09:40:17+09:00 INFO (6): [U:,T:20201022094017-5f90d4f1dd303]query:             INSERT INTO t_sbt_search_history VALUES(
+                        :search_datetime,
+                        :access_point,
+                        :device,
+                        :browser,
+                        :class,
+                        :buscompany_id,
+                        :course_id,
+                        :origin_busstop_id,
+                        :destination_busstop_id,
+                        :result_count
+            );
+2020-10-22T09:40:17+09:00 INFO (6): [U:,T:20201022094017-5f90d4f1dd303]Array
+(
+    [:search_datetime] => 2020-10-22 9:40:17
+    [:access_point] => 192.168.48.1
+    [:device] => Mac
+    [:browser] => Chrome
+    [:class] => searchBus
+    [:buscompany_id] => KMM
+    [:course_id] => 02
+    [:origin_busstop_id] => 00000101
+    [:destination_busstop_id] => 00000132
+    [:result_count] => 0
+)
+
+2020-10-22T09:40:17+09:00 INFO (6): [U:,T:20201022094017-5f90d4f1dd303]commit
+2020-10-22T09:40:17+09:00 INFO (6): [U:,T:20201022094017-5f90d4f1dd303]
+2020-10-22T09:41:15+09:00 INFO (6): [U:,T:20201022094115-5f90d52b2e0f4]query:             INSERT INTO t_sbt_search_history VALUES(
+                        :search_datetime,
+                        :access_point,
+                        :device,
+                        :browser,
+                        :class,
+                        :buscompany_id,
+                        :course_id,
+                        :origin_busstop_id,
+                        :destination_busstop_id,
+                        :result_count
+            );
+2020-10-22T09:41:15+09:00 INFO (6): [U:,T:20201022094115-5f90d52b2e0f4]Array
+(
+    [:search_datetime] => 2020-10-22 9:41:15
+    [:access_point] => 192.168.48.1
+    [:device] => Mac
+    [:browser] => Chrome
+    [:class] => searchBus
+    [:buscompany_id] => KMM
+    [:course_id] => 04
+    [:origin_busstop_id] => 00000101
+    [:destination_busstop_id] => 00000123
+    [:result_count] => 0
+)
+
+2020-10-22T09:41:15+09:00 INFO (6): [U:,T:20201022094115-5f90d52b2e0f4]commit
+2020-10-22T09:41:15+09:00 INFO (6): [U:,T:20201022094115-5f90d52b2e0f4]

@@ -1,0 +1,249 @@
+2020-10-26T17:06:49+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026170648-5f968398e4951] STATUS: 0 API
+2020-10-26T17:06:49+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026170649-5f96839929c6c] STATUS: 0 API
+2020-10-26T17:06:49+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026170649-5f9683992b8ca] STATUS: 0 API
+2020-10-26T17:06:49+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026170649-5f9683992d4d4] STATUS: 0 API
+2020-10-26T17:06:49+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026170649-5f96839929c0f] STATUS: 0 API
+2020-10-26T17:06:49+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026170649-5f9683992b5c1] STATUS: 0 API
+2020-10-26T17:06:49+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026170649-5f96839929c0c] STATUS: 0 API
+2020-10-26T17:06:53+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026170653-5f96839de914e] STATUS: 0 API
+2020-10-26T17:06:54+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026170654-5f96839e12526] STATUS: 0 API
+2020-10-26T17:06:54+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026170654-5f96839e116c9] STATUS: 0 API
+2020-10-26T17:06:54+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026170654-5f96839e14a6c] STATUS: 0 API
+2020-10-26T17:06:54+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026170654-5f96839e1586e] STATUS: 0 API
+2020-10-26T17:06:54+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026170654-5f96839e1793d] STATUS: 0 API
+2020-10-26T17:06:54+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026170654-5f96839e17c17] STATUS: 0 API
+2020-10-26T17:06:56+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026170655-5f96839fe9781] STATUS: 0 API
+2020-10-26T17:06:56+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026170655-5f96839fead3e] STATUS: 0 API
+2020-10-26T17:06:56+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026170655-5f96839feae69] STATUS: 0 API
+2020-10-26T17:10:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026171030-5f9684768e8fd] STATUS: 0 API
+2020-10-26T17:10:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026171030-5f968476b76a0] STATUS: 0 API
+2020-10-26T17:10:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026171030-5f968476b6a76] STATUS: 0 API
+2020-10-26T17:10:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026171030-5f968476b7f8a] STATUS: 0 API
+2020-10-26T17:10:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026171030-5f968476b7e5c] STATUS: 0 API
+2020-10-26T17:10:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026171030-5f968476bae6b] STATUS: 0 API
+2020-10-26T17:10:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026171030-5f968476baa21] STATUS: 0 API
+2020-10-26T17:31:03+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026173103-5f9689478bb9e] STATUS: 0 API
+2020-10-26T17:31:03+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026173103-5f968947ae058] STATUS: 0 API
+2020-10-26T17:31:03+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026173103-5f968947b08f0] STATUS: 1 API
+2020-10-26T17:31:03+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026173103-5f968947b28d9] STATUS: 0 API
+2020-10-26T17:31:03+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026173103-5f968947ae0cc] STATUS: 0 API
+2020-10-26T17:31:03+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026173103-5f968947baf07] STATUS: 0 API
+2020-10-26T17:31:04+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026173103-5f968947baa8d] STATUS: 0 API
+2020-10-26T18:09:14+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026180914-5f96923ac748f] STATUS: 0 API
+2020-10-26T18:09:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026180914-5f96923aefad9] STATUS: 0 API
+2020-10-26T18:09:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026180914-5f96923af10d2] STATUS: 1 API
+2020-10-26T18:09:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026180914-5f96923aee24b] STATUS: 0 API
+2020-10-26T18:09:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026180914-5f96923aed62b] STATUS: 0 API
+2020-10-26T18:09:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026180914-5f96923af0740] STATUS: -1 Exception
+2020-10-26T18:09:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026180914-5f96923af2a99] STATUS: 0 API
+2020-10-26T18:09:18+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026180917-5f96923dec303] STATUS: 0 API
+2020-10-26T18:09:18+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026180917-5f96923dec5d7] STATUS: 0 API
+2020-10-26T18:09:18+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026180917-5f96923deaa2a] STATUS: 0 API
+2020-10-26T18:09:24+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026180924-5f9692441aafd] STATUS: 0 API
+2020-10-26T18:09:24+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026180924-5f969244485c2] STATUS: 0 API
+2020-10-26T18:09:24+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026180924-5f96924449ffe] STATUS: 1 API
+2020-10-26T18:09:24+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026180924-5f9692444875b] STATUS: 0 API
+2020-10-26T18:09:24+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026180924-5f969244497d8] STATUS: 0 API
+2020-10-26T18:09:24+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026180924-5f9692444b711] STATUS: -1 Exception
+2020-10-26T18:09:24+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026180924-5f9692444b30d] STATUS: 0 API
+2020-10-26T18:09:50+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026180950-5f96925e5de1f] STATUS: 0 API
+2020-10-26T18:09:50+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026180950-5f96925e80cbd] STATUS: 0 API
+2020-10-26T18:09:50+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026180950-5f96925e82812] STATUS: 1 API
+2020-10-26T18:09:50+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026180950-5f96925e81b1c] STATUS: 0 API
+2020-10-26T18:09:50+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026180950-5f96925e8312c] STATUS: 0 API
+2020-10-26T18:09:50+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026180950-5f96925e87c85] STATUS: 0 API
+2020-10-26T18:09:50+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026180950-5f96925e897db] STATUS: 0 API
+2020-10-26T18:16:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026181633-5f9693f176b80] STATUS: 0 API
+2020-10-26T18:16:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026181633-5f9693f1a0fd2] STATUS: 1 API
+2020-10-26T18:16:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026181633-5f9693f19ff2f] STATUS: 0 API
+2020-10-26T18:16:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026181633-5f9693f1a1223] STATUS: 0 API
+2020-10-26T18:16:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026181633-5f9693f1a0b65] STATUS: 0 API
+2020-10-26T18:16:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026181633-5f9693f1a1ec5] STATUS: 0 API
+2020-10-26T18:16:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026181633-5f9693f1a28b9] STATUS: 0 API
+2020-10-26T18:16:35+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026181635-5f9693f3cae10] STATUS: 0 API
+2020-10-26T18:16:35+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026181635-5f9693f3cf074] STATUS: 0 API
+2020-10-26T18:16:35+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026181635-5f9693f3cc077] STATUS: 0 API
+2020-10-26T18:16:39+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026181639-5f9693f7a6df8] STATUS: 0 API
+2020-10-26T18:16:39+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026181639-5f9693f7a736a] STATUS: 0 API
+2020-10-26T18:16:39+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026181639-5f9693f7a737b] STATUS: 0 API
+2020-10-26T19:07:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026190746-5f969ff2598d0] STATUS: 0 API
+2020-10-26T19:07:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026190746-5f969ff27cea5] STATUS: 1 API
+2020-10-26T19:07:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026190746-5f969ff27d996] STATUS: 0 API
+2020-10-26T19:07:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026190746-5f969ff27fa25] STATUS: 0 API
+2020-10-26T19:07:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026190746-5f969ff27ced0] STATUS: 0 API
+2020-10-26T19:07:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026190746-5f969ff28111d] STATUS: 0 API
+2020-10-26T19:07:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026190746-5f969ff280d24] STATUS: 0 API
+2020-10-26T19:18:34+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getCoursePointList.php,20201026191834-5f96a27a10c95] STATUS: 1 Request Method is not POST!
+2020-10-26T19:19:08+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026191908-5f96a29c1af32] STATUS: 0 API
+2020-10-26T19:19:08+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026191908-5f96a29c3c5c8] STATUS: 0 API
+2020-10-26T19:19:08+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026191908-5f96a29c3e0fd] STATUS: 0 API
+2020-10-26T19:19:08+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026191908-5f96a29c3fcb9] STATUS: 1 API
+2020-10-26T19:19:08+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026191908-5f96a29c3ed26] STATUS: 0 API
+2020-10-26T19:19:11+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026191911-5f96a29fbca63] STATUS: 0 API
+2020-10-26T19:19:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026191911-5f96a29fe884e] STATUS: 0 API
+2020-10-26T19:19:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026191911-5f96a29fed67e] STATUS: 1 API
+2020-10-26T19:19:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026191911-5f96a29fe9530] STATUS: 0 API
+2020-10-26T19:19:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026191911-5f96a29fec08e] STATUS: 0 API
+2020-10-26T19:24:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026192416-5f96a3d000f6b] STATUS: 0 API
+2020-10-26T19:24:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026192416-5f96a3d0240eb] STATUS: 0 API
+2020-10-26T19:24:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026192416-5f96a3d024a0d] STATUS: 0 API
+2020-10-26T19:24:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026192416-5f96a3d022ce1] STATUS: 1 API
+2020-10-26T19:24:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026192416-5f96a3d022a41] STATUS: 0 API
+2020-10-26T19:24:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026192416-5f96a3d025246] STATUS: 0 API
+2020-10-26T19:24:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026192416-5f96a3d027ade] STATUS: 0 API
+2020-10-26T19:27:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026192720-5f96a48812baa] STATUS: 0 API
+2020-10-26T19:27:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026192720-5f96a4881581d] STATUS: 0 API
+2020-10-26T19:27:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026192720-5f96a4881302b] STATUS: 0 API
+2020-10-26T19:37:59+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/get.php,20201026193759-5f96a707ee8e1] STATUS: 1 Request Method is not POST!
+2020-10-26T19:39:29+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026193929-5f96a76195739] STATUS: 1 Request Method is not POST!
+2020-10-26T19:39:57+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026193957-5f96a77d13134] STATUS: 0 API
+2020-10-26T19:39:57+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026193957-5f96a77d36d0f] STATUS: 0 API
+2020-10-26T19:39:57+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026193957-5f96a77d37cff] STATUS: 1 API
+2020-10-26T19:39:57+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026193957-5f96a77d3805d] STATUS: 0 API
+2020-10-26T19:39:57+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026193957-5f96a77d36c8b] STATUS: 0 API
+2020-10-26T19:39:57+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026193957-5f96a77d3b6db] STATUS: 0 API
+2020-10-26T19:39:57+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026193957-5f96a77d39d74] STATUS: 0 API
+2020-10-26T19:40:25+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026194025-5f96a7990bb65] STATUS: 0 API
+2020-10-26T19:40:25+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026194025-5f96a7990d99c] STATUS: 0 API
+2020-10-26T19:40:25+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026194025-5f96a799091bf] STATUS: 0 API
+2020-10-26T19:47:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026194715-5f96a933550eb] STATUS: 0 API
+2020-10-26T19:47:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026194715-5f96a9335563f] STATUS: 0 API
+2020-10-26T19:47:15+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026194715-5f96a933556b5] STATUS: 0 API
+2020-10-26T19:50:11+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026195011-5f96a9e3dfd41] STATUS: 0 API
+2020-10-26T19:50:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026195012-5f96a9e40abba] STATUS: 0 API
+2020-10-26T19:50:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026195012-5f96a9e40d638] STATUS: 0 API
+2020-10-26T19:50:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026195012-5f96a9e40d48b] STATUS: 0 API
+2020-10-26T19:50:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026195012-5f96a9e4103e1] STATUS: 0 API
+2020-10-26T19:50:12+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026195012-5f96a9e40ead5] STATUS: 0 API
+2020-10-26T19:50:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026195016-5f96a9e80be0b] STATUS: 0 API
+2020-10-26T19:50:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026195016-5f96a9e82bb27] STATUS: 0 API
+2020-10-26T19:50:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026195016-5f96a9e82f70c] STATUS: 0 API
+2020-10-26T19:50:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026195016-5f96a9e830485] STATUS: 0 API
+2020-10-26T19:50:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026195016-5f96a9e832f47] STATUS: 0 API
+2020-10-26T19:50:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026195016-5f96a9e8340c6] STATUS: 0 API
+2020-10-26T19:50:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026195020-5f96a9ec691a6] STATUS: 0 API
+2020-10-26T19:50:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026195020-5f96a9ec8d3b3] STATUS: 0 API
+2020-10-26T19:50:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026195020-5f96a9ec8d99b] STATUS: 0 API
+2020-10-26T19:50:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026195020-5f96a9ec8cccf] STATUS: 0 API
+2020-10-26T19:50:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026195020-5f96a9ec96625] STATUS: 0 API
+2020-10-26T19:50:20+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026195020-5f96a9ec927c6] STATUS: 0 API
+2020-10-26T19:50:36+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026195036-5f96a9fc8386e] STATUS: 0 API
+2020-10-26T19:50:36+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026195036-5f96a9fca4523] STATUS: 0 API
+2020-10-26T19:50:36+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026195036-5f96a9fcaada1] STATUS: 0 API
+2020-10-26T19:50:36+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026195036-5f96a9fcaaabf] STATUS: 1 API
+2020-10-26T19:50:36+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026195036-5f96a9fca80b9] STATUS: 0 API
+2020-10-26T19:50:36+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026195036-5f96a9fca8387] STATUS: 0 API
+2020-10-26T19:50:36+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026195036-5f96a9fca8d26] STATUS: 0 API
+2020-10-26T19:50:49+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195049-5f96aa09a7d8e] STATUS: 1 Request Method is not POST!
+2020-10-26T19:54:33+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195432-5f96aae8f0f7f] STATUS: 1 Request Method is not POST!
+2020-10-26T19:57:02+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195702-5f96ab7e93ec2] STATUS: 1 Request Method is not POST!
+2020-10-26T19:57:03+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195703-5f96ab7fd25c3] STATUS: 1 Request Method is not POST!
+2020-10-26T19:57:04+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195704-5f96ab80e4b57] STATUS: 1 Request Method is not POST!
+2020-10-26T19:57:14+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195714-5f96ab8a4e126] STATUS: 1 Request Method is not POST!
+2020-10-26T19:57:42+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195742-5f96aba6a833e] STATUS: 1 Request Method is not POST!
+2020-10-26T19:58:51+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195851-5f96abeb3f58d] STATUS: 1 Request Method is not POST!
+2020-10-26T19:58:51+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195851-5f96abeb6f8e3] STATUS: 1 Request Method is not POST!
+2020-10-26T19:58:53+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195853-5f96abed3822b] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:06+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195906-5f96abfae0875] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:07+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195907-5f96abfbe19b0] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:08+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195908-5f96abfc65486] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:08+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195908-5f96abfca2959] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:30+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195930-5f96ac1216bff] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:31+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195931-5f96ac1320297] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:33+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195933-5f96ac1547fd8] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:34+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195934-5f96ac16cf6fe] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:35+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195935-5f96ac178a419] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:36+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195936-5f96ac182ff2d] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:36+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195936-5f96ac18b1aa8] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:39+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195939-5f96ac1bb02d9] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:40+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195940-5f96ac1c56be6] STATUS: 1 Request Method is not POST!
+2020-10-26T19:59:41+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026195941-5f96ac1dc69f8] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:02+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200002-5f96ac32a4714] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:15+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200015-5f96ac3fbc65a] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:16+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200016-5f96ac404b016] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:16+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200016-5f96ac409f4b8] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:17+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200017-5f96ac410a088] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:17+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200017-5f96ac4127e1b] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:17+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200017-5f96ac4150abc] STATUS: 1 Request Method is not POST!
+2020-10-26T20:00:17+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200017-5f96ac4178b52] STATUS: 1 Request Method is not POST!
+2020-10-26T20:01:51+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200151-5f96ac9fe14f2] STATUS: 1 Request Method is not POST!
+2020-10-26T20:01:52+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200152-5f96aca09f438] STATUS: 1 Request Method is not POST!
+2020-10-26T20:01:53+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200153-5f96aca1ba6db] STATUS: 1 Request Method is not POST!
+2020-10-26T20:01:54+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200154-5f96aca2b9812] STATUS: 1 Request Method is not POST!
+2020-10-26T20:01:55+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200155-5f96aca32a2be] STATUS: 1 Request Method is not POST!
+2020-10-26T20:03:25+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200325-5f96acfd84071] STATUS: 1 Request Method is not POST!
+2020-10-26T20:03:26+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200326-5f96acfe3b921] STATUS: 1 Request Method is not POST!
+2020-10-26T20:03:41+09:00 INFO (6): [localhost,Mac,Chrome,GET,/kamimine/ajax/getArrivalList.php,20201026200341-5f96ad0d4b955] STATUS: 1 Request Method is not POST!
+2020-10-26T20:14:28+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026201428-5f96af9487a6a] STATUS: 0 API
+2020-10-26T20:14:28+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026201428-5f96af94a806a] STATUS: 0 API
+2020-10-26T20:14:28+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026201428-5f96af94abb1b] STATUS: 1 API
+2020-10-26T20:14:28+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026201428-5f96af94ac305] STATUS: 0 API
+2020-10-26T20:14:28+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026201428-5f96af94aa1dc] STATUS: 0 API
+2020-10-26T20:14:28+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026201428-5f96af94ad6b9] STATUS: 0 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026201428-5f96af94af54d] STATUS: 0 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026201429-5f96af9578ff5] STATUS: 0 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026201429-5f96af95a4e60] STATUS: 0 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026201429-5f96af95a897e] STATUS: 1 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026201429-5f96af95a31d5] STATUS: 0 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026201429-5f96af95a7019] STATUS: 0 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026201429-5f96af95a8931] STATUS: 0 API
+2020-10-26T20:14:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026201429-5f96af95a8ea7] STATUS: 0 API
+2020-10-26T20:14:30+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026201430-5f96af96de1e9] STATUS: 0 API
+2020-10-26T20:14:31+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026201431-5f96af970e54b] STATUS: 0 API
+2020-10-26T20:14:31+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026201431-5f96af970ee9d] STATUS: 0 API
+2020-10-26T20:14:31+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026201431-5f96af9711a6b] STATUS: 1 API
+2020-10-26T20:14:31+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026201431-5f96af9710221] STATUS: 0 API
+2020-10-26T20:14:31+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026201431-5f96af9716a2b] STATUS: 0 API
+2020-10-26T20:14:31+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026201431-5f96af971296e] STATUS: 0 API
+2020-10-26T20:14:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026201446-5f96afa658dbf] STATUS: 0 API
+2020-10-26T20:14:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026201446-5f96afa656821] STATUS: 0 API
+2020-10-26T20:14:46+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026201446-5f96afa657cb3] STATUS: 0 API
+2020-10-26T20:23:10+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026202310-5f96b19e044f0] STATUS: 0 API
+2020-10-26T20:23:10+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026202310-5f96b19e28d24] STATUS: 0 API
+2020-10-26T20:23:10+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026202310-5f96b19e2bac3] STATUS: 0 API
+2020-10-26T20:23:10+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026202310-5f96b19e2e7b5] STATUS: 0 API
+2020-10-26T20:23:10+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026202310-5f96b19e329d2] STATUS: 1 API
+2020-10-26T20:23:10+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026202310-5f96b19e38d4b] STATUS: 0 API
+2020-10-26T20:23:10+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026202310-5f96b19e39cc3] STATUS: 0 API
+2020-10-26T20:23:13+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026202313-5f96b1a17d181] STATUS: 0 API
+2020-10-26T20:23:13+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026202313-5f96b1a180153] STATUS: 0 API
+2020-10-26T20:23:13+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026202313-5f96b1a17d5d8] STATUS: 0 API
+2020-10-26T20:33:31+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026203331-5f96b40bad006] STATUS: 0 API
+2020-10-26T20:33:32+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026203331-5f96b40bdb360] STATUS: 0 API
+2020-10-26T20:33:32+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026203331-5f96b40be03d0] STATUS: 1 API
+2020-10-26T20:33:32+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026203331-5f96b40be0c74] STATUS: 0 API
+2020-10-26T20:33:32+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026203331-5f96b40be2744] STATUS: 0 API
+2020-10-26T20:33:32+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026203331-5f96b40be458c] STATUS: 0 API
+2020-10-26T20:33:32+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026203331-5f96b40be6459] STATUS: 0 API
+2020-10-26T20:33:35+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026203335-5f96b40f49967] STATUS: 0 API
+2020-10-26T20:33:35+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026203335-5f96b40f47f47] STATUS: 0 API
+2020-10-26T20:33:35+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026203335-5f96b40f49bd7] STATUS: 0 API
+2020-10-26T20:34:09+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026203409-5f96b431c2300] STATUS: 0 API
+2020-10-26T20:34:09+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026203409-5f96b431bee46] STATUS: 0 API
+2020-10-26T20:34:09+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026203409-5f96b431c0e0f] STATUS: 0 API
+2020-10-26T20:42:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026204216-5f96b6187cd9f] STATUS: 0 API
+2020-10-26T20:42:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026204216-5f96b6187ea87] STATUS: 0 API
+2020-10-26T20:42:16+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026204216-5f96b6187e7ec] STATUS: 0 API
+2020-10-26T20:49:33+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026204933-5f96b7cdc4ff5] STATUS: 0 API
+2020-10-26T20:49:34+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026204933-5f96b7cdec2ab] STATUS: 0 API
+2020-10-26T20:49:34+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026204933-5f96b7cdf16a9] STATUS: 1 API
+2020-10-26T20:49:34+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026204933-5f96b7cdef693] STATUS: 0 API
+2020-10-26T20:49:34+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026204933-5f96b7cdeddeb] STATUS: 0 API
+2020-10-26T20:49:34+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026204933-5f96b7cdf2b06] STATUS: 0 API
+2020-10-26T20:49:34+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026204934-5f96b7ce0126d] STATUS: 0 API
+2020-10-26T20:53:22+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026205322-5f96b8b2c2439] STATUS: 0 API
+2020-10-26T20:53:22+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026205322-5f96b8b2c1055] STATUS: 0 API
+2020-10-26T20:53:22+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026205322-5f96b8b2c10ba] STATUS: 0 API
+2020-10-26T20:53:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026205329-5f96b8b922f68] STATUS: 0 API
+2020-10-26T20:53:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026205329-5f96b8b923717] STATUS: 0 API
+2020-10-26T20:53:29+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026205329-5f96b8b921eae] STATUS: 0 API
+2020-10-26T21:07:47+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getVariables.php,20201026210747-5f96bc13b8add] STATUS: 0 API
+2020-10-26T21:07:48+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCourseList.php,20201026210747-5f96bc13e46ad] STATUS: 0 API
+2020-10-26T21:07:48+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/checkServiceTime.php,20201026210747-5f96bc13e4ea5] STATUS: 1 API
+2020-10-26T21:07:48+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026210747-5f96bc13e4757] STATUS: 0 API
+2020-10-26T21:07:48+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getNewsTelop.php,20201026210747-5f96bc13e476d] STATUS: 0 API
+2020-10-26T21:07:48+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026210747-5f96bc13eee29] STATUS: 0 API
+2020-10-26T21:07:48+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026210747-5f96bc13ebfdc] STATUS: 0 API
+2020-10-26T21:07:53+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopId8DigitList.php,20201026210753-5f96bc190f37b] STATUS: 0 API
+2020-10-26T21:07:53+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getBusStopList.php,20201026210753-5f96bc190f0e0] STATUS: 0 API
+2020-10-26T21:07:53+09:00 INFO (6): [localhost,Mac,Chrome,POST,/kamimine/ajax/getCoursePointList.php,20201026210753-5f96bc190c2ef] STATUS: 0 API

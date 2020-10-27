@@ -20,7 +20,7 @@ class insertOpinion extends BaseApi {
             $device_browser['browser'],
             $opinion
         );
-        $this->logger->writeDebug($args);
+        // $this->logger->writeDebug($args);
         $this->db->invoke('t_sbt_opinion', 'insert', $args);
         $this->db->commit();
         

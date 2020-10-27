@@ -103,7 +103,7 @@ class BaseCtrl extends Zend_Controller_Action {
         // 調査用
         //$this->logger->writeDebug(getallheaders());
         //$this->logger->writeDebug($_SERVER['HTTP_USER_AGENT']);
-        //$this->logger->writeDebug($_SESSION);
+        //$this->logger->($_SESSION);
 
 		// Session格納
 		if(empty($this->session->get("tciUserName"))) {
@@ -170,7 +170,7 @@ class BaseCtrl extends Zend_Controller_Action {
 		$this->view->assign('tcimap_js', $this->basehtml->get_tcimapjs());
 
         // DEBUGログ出力
-        $this->logger->writeDebug("+- PROCESS END -----------------------------------------------");
+        // $this->logger->writeDebug("+- PROCESS END -----------------------------------------------");
 	}
 
     /* ユーティリティ ---------------------------------------------------------------------------- */

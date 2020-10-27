@@ -11,7 +11,7 @@ class getBusTimetable extends BaseApi {
 		$busstop_id = $_POST["busstop_id"];
         $lang_cd = "ja";
 		$data["busdia"] = $this->db->invoke('t_sbt_busdia', 'getTimetable', array($busstop_id, $lang_cd));
-        $this->logger->writeDebug($data);
+        // $this->logger->writeDebug($data);
         $data["name"] = $this->db->invoke('t_sbt_busstop', 'getBusstopName', array($busstop_id, $lang_cd));
         $data["buscompany_id"] = $data["busdia"][0]["buscompany_id"];
         $data["ybkbn"] = $this->db->invoke('t_sbt_busdia', 'getYbkbn', array($data["buscompany_id"]));       

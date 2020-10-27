@@ -64,14 +64,14 @@ SQL;
     }
 
     /**
-     * 指定便の最終バス停を取得 
+     * 指定便の最終バス停を取得
      */
     public function getLastBusstop($buscompany_id, $bin_no) {
         $sql = <<< SQL
-            SELECT  SUBSTRING(busstop_id, 1, CHAR_LENGTH(busstop_id) - 2) busstop_id 
+            SELECT  SUBSTRING(busstop_id, 1, CHAR_LENGTH(busstop_id) - 2) busstop_id
             FROM    v_sbt_busdia AS X
 		    WHERE   buscompany_id = :buscompany_id
-                    AND bin_no = :bin_no 
+                    AND bin_no = :bin_no
 		            AND first_last_flg = 'L'
 SQL;
         $param = array(":buscompany_id" => $buscompany_id, ":bin_no" => $bin_no);
@@ -84,16 +84,16 @@ SQL;
      */
     public function getLastDiaTime($buscompany_id) {
         $sql = <<< SQL
-            SELECT  MAX(dia_time) AS max 
-            FROM    v_sbt_busdia 
+            SELECT  MAX(dia_time) AS max
+            FROM    v_sbt_busdia
             WHERE   buscompany_id = :buscompany_id
                     AND (
                         ybkbn = (
-                            SELECT  ybkbn 
-                            FROM    t_sbt_calendar 
+                            SELECT  ybkbn
+                            FROM    t_sbt_calendar
                             WHERE   buscompany_id = :buscompany_id
                                     AND srvdate = CURDATE()
-                        ) 
+                        )
                         OR ybkbn IS NULL
                     )
 SQL;
@@ -107,13 +107,13 @@ SQL;
      */
     public function getFirstDiaTime($buscompany_id) {
         $sql = <<< SQL
-            SELECT  MIN(dia_time) AS min 
-            FROM    v_sbt_busdia 
+            SELECT  MIN(dia_time) AS min
+            FROM    v_sbt_busdia
             WHERE   buscompany_id = :buscompany_id
                     AND (
                         ybkbn = (
-                            SELECT  ybkbn 
-                            FROM    t_sbt_calendar 
+                            SELECT  ybkbn
+                            FROM    t_sbt_calendar
                             WHERE   buscompany_id = :buscompany_id
                                     AND srvdate = CURDATE()
                         )
@@ -130,7 +130,7 @@ SQL;
      */
     public function getLastDiaTimeFromBin($buscompany_id, $bin_no) {
         $sql = <<< SQL
-            SELECT  MAX(dia_time) AS shift_end_time 
+            SELECT  MAX(dia_time) AS shift_end_time
             FROM    t_sbt_busdia
             WHERE   buscompany_id = :buscompany_id
                     AND bin_no = :bin_no
@@ -149,14 +149,14 @@ SQL;
     public function getCourseName($buscompany_id, $buscategory_cd, $course_id) {
         $sql = <<< SQL
             SELECT  DISTINCT
-                    course_name 
+                    course_name
             FROM    v_sbt_busdia VDIA
                     LEFT JOIN t_sbt_route_course_lang COL
                          ON COL.buscompany_id = :buscompany_id
                         AND COL.course_id     = VDIA.course_id
                         AND COL.lang_cd       = :lang_cd
             WHERE   VDIA.buscompany_id = :buscompany_id
-                    AND VDIA.buscategory_cd = :buscategory_cd 
+                    AND VDIA.buscategory_cd = :buscategory_cd
                     AND VDIA.course_id = :course_id
 SQL;
         $param = array(
@@ -175,8 +175,8 @@ SQL;
     public function getFirstBusStopData($buscompany_id, $bin_no) {
         $sql = <<< SQL
             SELECT  VDIA.busstop_id,
-                    busstop_name, 
-                    DATE_FORMAT(dia_time, '%H:%i') as dia_time 
+                    busstop_name,
+                    DATE_FORMAT(dia_time, '%H:%i') as dia_time
             FROM    v_sbt_busdia VDIA
                     LEFT JOIN t_sbt_busstop_lang BSL
                          ON BSL.busstop_id = VDIA.busstop_id
@@ -316,8 +316,8 @@ SQL;
 SQL;
         $param = array(
             ":buscompany_id"    => $buscompany_id,
-            ":busstop_id"       => $busstop_id, 
-            ":bin_no"           => $bin_no, 
+            ":busstop_id"       => $busstop_id,
+            ":bin_no"           => $bin_no,
             ":lang_cd"          => $lang_cd
         );
         return $this->fetchAll($sql, $param);
@@ -366,4 +366,90 @@ SQL;
 
         return $this->fetchOne($sql, $param);
     }
+
+    // public function findAllByDepartureOnRosen($buscompany_id, $busstop_id, $course_id) {
+    //     return $this->findAllByBusstopOnRosen($buscompany_id, $busstop_id, $course_id, 1);
+    // }
+    // public function findAllByArrivalOnRosen($buscompany_id, $busstop_id, $course_id)
+    // {
+    //     return $this->findAllByBusstopOnRosen($buscompany_id, $busstop_id, $course_id, -1);
+    // }
+    // 同一路線上で、指定したバス停より前、または後に停車するバス停
+    // $orientation >  0: 指定したバス停より後
+    //              <= 0: 指定したバス停より前
+    // バス停が指定されていない場合は、指定した路線上の全てのバス停
+//     private function findAllByBusstopOnRosen($buscompany_id, $busstop_id, $course_id, $orientation)
+//     {
+//         if ($busstop_id) { //バス停指定あり
+//             $op = $orientation > 0 ? '>' : '<';
+//             $max = $orientation > 0 ? false : true;
+//             $busstopOrder = $this->getBusstopOrder($buscompany_id, $busstop_id, $course_id, $max);
+//             $sql = <<<EOD
+//             SELECT
+//                 distinct D.busstop_id, D.stop_seq
+//             FROM
+//                 v_sbt_busdia AS D
+//             INNER JOIN
+//                 t_sbt_calendar AS C ON D.ybkbn = C.ybkbn
+//             WHERE
+//                 C.srvdate = CURDATE() AND
+//                 D.course_id = :course_id AND
+//                 SUBSTRING(D.busstop_id, 1, CHAR_LENGTH(D.busstop_id) - 2) != :busstop_id AND
+//                 D.stop_seq $op :stop_seq
+//             ORDER BY
+//                 D.stop_seq
+// EOD;
+//             $param = array(
+//                 ":busstop_id"       => $busstop_id,
+//                 ":course_id"        => $course_id,
+//                 ":stop_seq"         => $busstopOrder
+//             );
+//             var_dump($sql);
+//             return $this->fetchAll($sql, $param);
+//         }
+//         else{
+//             $sql = <<<EOD
+//             SELECT
+//             distinct D.busstop_id, D.stop_seq
+//           FROM
+//             v_sbt_busdia AS D
+//           INNER JOIN
+//             t_busstop AS B ON D.busstop_cd = B.busstop_cd AND B.flg = 0
+//           INNER JOIN
+//             t_calendar AS C ON D.week_cd = C.week_cd AND C.flg = 0
+//           WHERE
+//             C.cal_date = CURDATE() AND
+//             D.route_cd = ? AND
+//             D.flg = 0
+//           ORDER BY
+//             D.busstop_order
+// EOD;
+//         }
+//     }
+
+//     public function getBusstopOrder($buscompany_id, $busstop_id, $course_id, $max)
+//     {
+//         $order = $max ? 'DESC' : 'ASC';
+//         $sql = <<<EOD
+//         SELECT
+//             D.stop_seq
+//         FROM
+//             v_sbt_busdia AS D
+//         INNER JOIN
+//             t_sbt_calendar AS C ON D.ybkbn = C.ybkbn
+//         WHERE
+//             C.srvdate = CURDATE() AND
+//             D.course_id = :course_id AND
+//             SUBSTRING(D.busstop_id, 1, CHAR_LENGTH(D.busstop_id) - 2) = :busstop_id
+//         ORDER BY
+//             D.stop_seq $order
+//         LIMIT 1
+// EOD;
+//         $param = array(
+//             ":busstop_id"       => $busstop_id,
+//             ":course_id"        => $course_id,
+//         );
+//         return $this->fetchOne($sql, $param);
+//     }
+
 }

@@ -18,6 +18,9 @@ class getBusStopList extends BaseApi {
 	        "status"	=> 0,
 	        "busstop"	=> $busStopList
         );
+        // if ($busstop_id != 0) {
+        //     $data = t_sbt_busdia::findAllByDepartureOnRosen($buscompany_id, $busstop_id, $course_id);
+        // }
 $this->logger->writeDebug($busStopList);
         return $data;
     }

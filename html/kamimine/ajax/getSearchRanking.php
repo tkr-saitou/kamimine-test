@@ -14,7 +14,7 @@ class getSearchRanking extends BaseApi {
         // 分析対象データを取得
         $args = array(BUSCOMPANY_ID, $from, $to);
         $ranking = $this->db->invoke('t_sbt_search_history', 'getSearchRanking', $args);
-$this->logger->writeDebug($ranking);
+// $this->logger->writeDebug($ranking);
         // ランキング下位をまとめる処理
         $data = array();
         foreach ($ranking as $rank => $row) {

@@ -107,7 +107,7 @@ $common_head = '
 ';
 
 // 共通JS
-//$googlemap_api_key = 'AIzaSyC0pUVXPg2nlRgOezB47Q9qg6bgraj3Qhs';   //本番用
+//$googlemap_api_key = 'AIzaSyAOC6Y35_GMLE8eltJo-GFpSfoKx_jayfE';   //本番用
 $googlemap_api_key = 'AIzaSyAOC6Y35_GMLE8eltJo-GFpSfoKx_jayfE';   //本番用
 $common_js = '
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
