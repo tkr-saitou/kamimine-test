@@ -23,7 +23,7 @@ class s_user extends s_user_auto {
     }
 
     /**
-     * ユーザ取得 
+     * ユーザ取得
      */
     public function getUser($user_id) {
         $result = array();
@@ -32,7 +32,7 @@ class s_user extends s_user_auto {
             if($row['user_id'] == $user_Id) {
                 return $row;
             }
-        } 
+        }
         return null;
     }
 
@@ -60,7 +60,7 @@ class s_user extends s_user_auto {
             $param = array_merge($param, array("user_name" => $str));
         }
 
-        $this->logger->writeDebug($sql1.$sql2);
+        // $this->logger->writeDebug($sql1.$sql2);
 
         // DB検索
         $result = $this->fetchAll($sql1.$sql2, $param);
@@ -148,8 +148,8 @@ class s_user extends s_user_auto {
     public function selectOldUserTable($user_id) {
         $param = array();
         $sql = <<<SQL
-            SELECT * FROM t_user WHERE 1=1 
-             AND user_id = :user_id 
+            SELECT * FROM t_user WHERE 1=1
+             AND user_id = :user_id
 SQL;
         $param = array(
             ':user_id' => $user_id

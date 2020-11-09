@@ -1,0 +1,1656 @@
+<!-- 路 ◯  出 なし 到 なし  アクション 到 -->
+2020-11-02T11:08:15+09:00 DEBUG (7): [U:,T:20201102110815-5f9f6a0f6c21c]string(59) "###### PROCESS END (/kamimine/ajax/getVariables.php) ######"
+
+2020-11-02T11:08:15+09:00 DEBUG (7): [U:,T:20201102110815-5f9f6a0fa085c]string(60) "###### PROCESS END (/kamimine/ajax/getCourseList.php) ######"
+
+2020-11-02T11:08:15+09:00 DEBUG (7): [U:,T:20201102110815-5f9f6a0fad31e]string(63) "###### PROCESS END (/kamimine/ajax/checkServiceTime.php) ######"
+
+2020-11-02T11:08:15+09:00 DEBUG (7): [U:,T:20201102110815-5f9f6a0fa02e2]string(59) "###### PROCESS END (/kamimine/ajax/getNewsTelop.php) ######"
+
+2020-11-02T11:08:15+09:00 DEBUG (7): [U:,T:20201102110815-5f9f6a0fabb8a]string(61) "###### PROCESS END (/kamimine/ajax/getBusStopList.php) ######"
+
+2020-11-02T11:08:16+09:00 DEBUG (7): [U:,T:20201102110815-5f9f6a0fad96b]string(5) "Array"
+
+2020-11-02T11:08:16+09:00 DEBUG (7): [U:,T:20201102110815-5f9f6a0fad96b]string(65) "###### PROCESS END (/kamimine/ajax/getCoursePointList.php) ######"
+
+2020-11-02T11:08:18+09:00 DEBUG (7): [U:,T:20201102110818-5f9f6a123e2d3]string(61) "###### PROCESS END (/kamimine/ajax/getBusStopList.php) ######"
+
+2020-11-02T11:08:18+09:00 DEBUG (7): [U:,T:20201102110818-5f9f6a1244715]string(35) "################start##############"
+
+2020-11-02T11:08:18+09:00 DEBUG (7): [U:,T:20201102110818-5f9f6a1244715]array(6) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(2) "04"
+  [3]=>
+  string(1) "0"
+  [4]=>
+  string(1) "0"
+  [5]=>
+  string(1) "0"
+}
+
+2020-11-02T11:08:18+09:00 DEBUG (7): [U:,T:20201102110818-5f9f6a1244715]string(33) "################end##############"
+
+2020-11-02T11:08:18+09:00 DEBUG (7): [U:,T:20201102110818-5f9f6a124481a]string(5) "Array"
+
+2020-11-02T11:08:18+09:00 DEBUG (7): [U:,T:20201102110818-5f9f6a124481a]string(65) "###### PROCESS END (/kamimine/ajax/getCoursePointList.php) ######"
+
+
+
+
+fetch all
+2020-11-02T11:21:14+09:00 DEBUG (7): [U:,T:20201102112114-5f9f6d1acdb83]string(59) "###### PROCESS END (/kamimine/ajax/getVariables.php) ######"
+
+2020-11-02T11:21:15+09:00 DEBUG (7): [U:,T:20201102112115-5f9f6d1b15d42]string(60) "###### PROCESS END (/kamimine/ajax/getCourseList.php) ######"
+
+2020-11-02T11:21:15+09:00 DEBUG (7): [U:,T:20201102112115-5f9f6d1b180c3]string(63) "###### PROCESS END (/kamimine/ajax/checkServiceTime.php) ######"
+
+2020-11-02T11:21:15+09:00 DEBUG (7): [U:,T:20201102112115-5f9f6d1b1f80c]string(59) "###### PROCESS END (/kamimine/ajax/getNewsTelop.php) ######"
+
+2020-11-02T11:21:15+09:00 DEBUG (7): [U:,T:20201102112115-5f9f6d1b2e107]string(61) "###### PROCESS END (/kamimine/ajax/getBusStopList.php) ######"
+
+2020-11-02T11:21:15+09:00 DEBUG (7): [U:,T:20201102112115-5f9f6d1b2e6b7]string(5) "Array"
+
+2020-11-02T11:21:15+09:00 DEBUG (7): [U:,T:20201102112115-5f9f6d1b2e6b7]string(65) "###### PROCESS END (/kamimine/ajax/getCoursePointList.php) ######"
+
+2020-11-02T11:21:17+09:00 DEBUG (7): [U:,T:20201102112117-5f9f6d1d36064]string(35) "################start##############"
+
+2020-11-02T11:21:17+09:00 DEBUG (7): [U:,T:20201102112117-5f9f6d1d36064]array(6) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(2) "01"
+  [3]=>
+  string(1) "0"
+  [4]=>
+  string(1) "0"
+  [5]=>
+  string(1) "0"
+}
+
+2020-11-02T11:21:17+09:00 DEBUG (7): [U:,T:20201102112117-5f9f6d1d36064]string(33) "################end##############"
+
+2020-11-02T11:21:17+09:00 DEBUG (7): [U:,T:20201102112117-5f9f6d1d33e4b]string(61) "###### PROCESS END (/kamimine/ajax/getBusStopList.php) ######"
+
+2020-11-02T11:21:17+09:00 DEBUG (7): [U:,T:20201102112117-5f9f6d1d36064]string(69) "###### PROCESS END (/kamimine/ajax/getBusStopId8DigitList.php) ######"
+
+2020-11-02T11:21:17+09:00 DEBUG (7): [U:,T:20201102112117-5f9f6d1d35f33]string(5) "Array"
+
+2020-11-02T11:21:17+09:00 DEBUG (7): [U:,T:20201102112117-5f9f6d1d35f33]string(65) "###### PROCESS END (/kamimine/ajax/getCoursePointList.php) ######"
+
+2020-11-02T11:21:19+09:00 DEBUG (7): [U:,T:20201102112119-5f9f6d1f01c94]string(35) "################start##############"
+
+2020-11-02T11:21:19+09:00 DEBUG (7): [U:,T:20201102112119-5f9f6d1f01c94]array(6) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(2) "01"
+  [3]=>
+  string(1) "0"
+  [4]=>
+  string(8) "00000105"
+  [5]=>
+  string(1) "1"
+}
+
+2020-11-02T11:21:19+09:00 DEBUG (7): [U:,T:20201102112119-5f9f6d1f01c94]string(33) "################end##############"
+
+2020-11-02T11:21:19+09:00 DEBUG (7): [U:,T:20201102112119-5f9f6d1f01c94]string(69) "###### PROCESS END (/kamimine/ajax/getBusStopId8DigitList.php) ######"
+
+2020-11-02T11:21:19+09:00 DEBUG (7): [U:,T:20201102112119-5f9f6d1f1a78d]object(Zend_Db_Statement_Exception)#35 (8) {
+  ["_previous":"Zend_Exception":private]=>
+  NULL
+  ["message":protected]=>
+  string(100) "SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+  ["line":protected]=>
+  int(234)
+  ["trace":"Exception":private]=>
+  array(11) {
+    [0]=>
+    array(6) {
+      ["file"]=>
+      string(61) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php"
+      ["line"]=>
+      int(303)
+      ["function"]=>
+      string(8) "_execute"
+      ["class"]=>
+      string(21) "Zend_Db_Statement_Pdo"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(1) {
+        [0]=>
+        &array(3) {
+          [":buscompany_id"]=>
+          string(3) "KMM"
+          [":lang_cd"]=>
+          string(2) "ja"
+          [":course_id"]=>
+          string(2) "01"
+        }
+      }
+    }
+    [1]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+      ["line"]=>
+      int(480)
+      ["function"]=>
+      string(7) "execute"
+      ["class"]=>
+      string(17) "Zend_Db_Statement"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(1) {
+        [0]=>
+        &array(3) {
+          [":buscompany_id"]=>
+          string(3) "KMM"
+          [":lang_cd"]=>
+          string(2) "ja"
+          [":course_id"]=>
+          string(2) "01"
+        }
+      }
+    }
+    [2]=>
+    array(6) {
+      ["file"]=>
+      string(72) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php"
+      ["line"]=>
+      int(238)
+      ["function"]=>
+      string(5) "query"
+      ["class"]=>
+      string(24) "Zend_Db_Adapter_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+        [1]=>
+        &array(3) {
+          [":buscompany_id"]=>
+          string(3) "KMM"
+          [":lang_cd"]=>
+          string(2) "ja"
+          [":course_id"]=>
+          string(2) "01"
+        }
+      }
+    }
+    [3]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+      ["line"]=>
+      int(737)
+      ["function"]=>
+      string(5) "query"
+      ["class"]=>
+      string(28) "Zend_Db_Adapter_Pdo_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+        [1]=>
+        &array(3) {
+          [":buscompany_id"]=>
+          string(3) "KMM"
+          [":lang_cd"]=>
+          string(2) "ja"
+          [":course_id"]=>
+          string(2) "01"
+        }
+      }
+    }
+    [4]=>
+    array(6) {
+      ["file"]=>
+      string(46) "/var/www/html/kamimine/base/base/BaseModel.php"
+      ["line"]=>
+      int(62)
+      ["function"]=>
+      string(8) "fetchAll"
+      ["class"]=>
+      string(24) "Zend_Db_Adapter_Abstract"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+        [1]=>
+        &array(3) {
+          [":buscompany_id"]=>
+          string(3) "KMM"
+          [":lang_cd"]=>
+          string(2) "ja"
+          [":course_id"]=>
+          string(2) "01"
+        }
+      }
+    }
+    [5]=>
+    array(6) {
+      ["file"]=>
+      string(47) "/var/www/html/kamimine/models/t_sbt_busstop.php"
+      ["line"]=>
+      int(292)
+      ["function"]=>
+      string(8) "fetchAll"
+      ["class"]=>
+      string(9) "BaseModel"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+        [1]=>
+        &array(3) {
+          [":buscompany_id"]=>
+          string(3) "KMM"
+          [":lang_cd"]=>
+          string(2) "ja"
+          [":course_id"]=>
+          string(2) "01"
+        }
+      }
+    }
+    [6]=>
+    array(4) {
+      ["function"]=>
+      string(14) "getBusStopList"
+      ["class"]=>
+      string(13) "t_sbt_busstop"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(6) {
+        [0]=>
+        &string(3) "KMM"
+        [1]=>
+        &string(3) "001"
+        [2]=>
+        &string(2) "01"
+        [3]=>
+        &string(1) "0"
+        [4]=>
+        &string(8) "00000105"
+        [5]=>
+        &NULL
+      }
+    }
+    [7]=>
+    array(6) {
+      ["file"]=>
+      string(50) "/var/www/html/kamimine/base/cllib/ModelManager.php"
+      ["line"]=>
+      int(36)
+      ["function"]=>
+      string(10) "invokeArgs"
+      ["class"]=>
+      string(16) "ReflectionMethod"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        object(t_sbt_busstop)#30 (5) {
+          ["logger":protected]=>
+          object(LogWriter)#2 (4) {
+            ["logger":"LogWriter":private]=>
+            object(Zend_Log)#5 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#3 (3) {
+                  ["_stream":protected]=>
+                  resource(27) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#4 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["debuglogger":"LogWriter":private]=>
+            object(Zend_Log)#8 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#6 (3) {
+                  ["_stream":protected]=>
+                  resource(28) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#7 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["user_id":"LogWriter":private]=>
+            NULL
+            ["transaction_id":"LogWriter":private]=>
+            string(28) "20201102112119-5f9f6d1f1a78d"
+          }
+          ["db":protected]=>
+          object(Zend_Db_Adapter_Pdo_Mysql)#20 (12) {
+            ["_pdoType":protected]=>
+            string(5) "mysql"
+            ["_numericDataTypes":protected]=>
+            array(16) {
+              [0]=>
+              int(0)
+              [1]=>
+              int(1)
+              [2]=>
+              int(2)
+              ["INT"]=>
+              int(0)
+              ["INTEGER"]=>
+              int(0)
+              ["MEDIUMINT"]=>
+              int(0)
+              ["SMALLINT"]=>
+              int(0)
+              ["TINYINT"]=>
+              int(0)
+              ["BIGINT"]=>
+              int(1)
+              ["SERIAL"]=>
+              int(1)
+              ["DEC"]=>
+              int(2)
+              ["DECIMAL"]=>
+              int(2)
+              ["DOUBLE"]=>
+              int(2)
+              ["DOUBLE PRECISION"]=>
+              int(2)
+              ["FIXED"]=>
+              int(2)
+              ["FLOAT"]=>
+              int(2)
+            }
+            ["_defaultStmtClass":protected]=>
+            string(21) "Zend_Db_Statement_Pdo"
+            ["_config":protected]=>
+            array(8) {
+              ["host"]=>
+              string(5) "mysql"
+              ["username"]=>
+              string(8) "kamimine"
+              ["password"]=>
+              string(10) "kamimine01"
+              ["dbname"]=>
+              string(11) "kamimine_db"
+              ["charset"]=>
+              NULL
+              ["persistent"]=>
+              bool(false)
+              ["options"]=>
+              array(3) {
+                ["caseFolding"]=>
+                int(0)
+                ["autoQuoteIdentifiers"]=>
+                bool(true)
+                ["fetchMode"]=>
+                int(2)
+              }
+              ["driver_options"]=>
+              array(0) {
+              }
+            }
+            ["_fetchMode":protected]=>
+            int(2)
+            ["_profiler":protected]=>
+            object(Zend_Db_Profiler)#21 (4) {
+              ["_queryProfiles":protected]=>
+              array(0) {
+              }
+              ["_enabled":protected]=>
+              bool(false)
+              ["_filterElapsedSecs":protected]=>
+              NULL
+              ["_filterTypes":protected]=>
+              NULL
+            }
+            ["_defaultProfilerClass":protected]=>
+            string(16) "Zend_Db_Profiler"
+            ["_connection":protected]=>
+            object(PDO)#22 (0) {
+            }
+            ["_caseFolding":protected]=>
+            int(0)
+            ["_autoQuoteIdentifiers":protected]=>
+            bool(true)
+            ["_allowSerialization":protected]=>
+            bool(true)
+            ["_autoReconnectOnUnserialize":protected]=>
+            bool(false)
+          }
+          ["userId":"BaseModel":private]=>
+          string(3) "API"
+          ["transactionId":"BaseModel":private]=>
+          string(28) "20201102112119-5f9f6d1f1a78d"
+          ["journal":"BaseModel":private]=>
+          object(JournalWriter)#9 (6) {
+            ["access_logger":"JournalWriter":private]=>
+            object(Zend_Log)#12 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#10 (3) {
+                  ["_stream":protected]=>
+                  resource(29) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#11 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["sql_logger":"JournalWriter":private]=>
+            object(Zend_Log)#15 (11) {
+              ["_priorities":protected]=>
+              array(8) {
+                [0]=>
+                string(5) "EMERG"
+                [1]=>
+                string(5) "ALERT"
+                [2]=>
+                string(4) "CRIT"
+                [3]=>
+                string(3) "ERR"
+                [4]=>
+                string(4) "WARN"
+                [5]=>
+                string(6) "NOTICE"
+                [6]=>
+                string(4) "INFO"
+                [7]=>
+                string(5) "DEBUG"
+              }
+              ["_writers":protected]=>
+              array(1) {
+                [0]=>
+                object(Zend_Log_Writer_Stream)#13 (3) {
+                  ["_stream":protected]=>
+                  resource(30) of type (stream)
+                  ["_filters":protected]=>
+                  array(0) {
+                  }
+                  ["_formatter":protected]=>
+                  object(Zend_Log_Formatter_Simple)#14 (1) {
+                    ["_format":protected]=>
+                    string(51) "%timestamp% DEBUG (7): %message%
+"
+                  }
+                }
+              }
+              ["_filters":protected]=>
+              array(0) {
+              }
+              ["_extras":protected]=>
+              array(0) {
+              }
+              ["_defaultWriterNamespace":protected]=>
+              string(15) "Zend_Log_Writer"
+              ["_defaultFilterNamespace":protected]=>
+              string(15) "Zend_Log_Filter"
+              ["_defaultFormatterNamespace":protected]=>
+              string(18) "Zend_Log_Formatter"
+              ["_origErrorHandler":protected]=>
+              NULL
+              ["_registeredErrorHandler":protected]=>
+              bool(false)
+              ["_errorHandlerMap":protected]=>
+              bool(false)
+              ["_timestampFormat":protected]=>
+              string(1) "c"
+            }
+            ["user_id":"JournalWriter":private]=>
+            NULL
+            ["transaction_id":"JournalWriter":private]=>
+            string(28) "20201102112119-5f9f6d1f1a78d"
+            ["controller":"JournalWriter":private]=>
+            NULL
+            ["action":"JournalWriter":private]=>
+            NULL
+          }
+        }
+        [1]=>
+        &array(6) {
+          [0]=>
+          string(3) "KMM"
+          [1]=>
+          string(3) "001"
+          [2]=>
+          string(2) "01"
+          [3]=>
+          string(1) "0"
+          [4]=>
+          string(8) "00000105"
+          [5]=>
+          NULL
+        }
+      }
+    }
+    [8]=>
+    array(6) {
+      ["file"]=>
+      string(46) "/var/www/html/kamimine/ajax/getBusStopList.php"
+      ["line"]=>
+      int(18)
+      ["function"]=>
+      string(6) "invoke"
+      ["class"]=>
+      string(12) "ModelManager"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        &string(13) "t_sbt_busstop"
+        [1]=>
+        &string(14) "getBusStopList"
+        [2]=>
+        &array(6) {
+          [0]=>
+          string(3) "KMM"
+          [1]=>
+          string(3) "001"
+          [2]=>
+          string(2) "01"
+          [3]=>
+          string(1) "0"
+          [4]=>
+          string(8) "00000105"
+          [5]=>
+          NULL
+        }
+      }
+    }
+    [9]=>
+    array(6) {
+      ["file"]=>
+      string(44) "/var/www/html/kamimine/base/base/BaseApi.php"
+      ["line"]=>
+      int(72)
+      ["function"]=>
+      string(4) "main"
+      ["class"]=>
+      string(14) "getBusStopList"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(0) {
+      }
+    }
+    [10]=>
+    array(6) {
+      ["file"]=>
+      string(46) "/var/www/html/kamimine/ajax/getBusStopList.php"
+      ["line"]=>
+      int(35)
+      ["function"]=>
+      string(3) "run"
+      ["class"]=>
+      string(7) "BaseApi"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(0) {
+      }
+    }
+  }
+  ["previous":"Exception":private]=>
+  object(PDOException)#34 (8) {
+    ["message":protected]=>
+    string(100) "SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    string(5) "HY093"
+    ["file":protected]=>
+    string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+    ["line":protected]=>
+    int(228)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(6) {
+        ["file"]=>
+        string(65) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php"
+        ["line"]=>
+        int(228)
+        ["function"]=>
+        string(7) "execute"
+        ["class"]=>
+        string(12) "PDOStatement"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          array(3) {
+            [":buscompany_id"]=>
+            string(3) "KMM"
+            [":lang_cd"]=>
+            string(2) "ja"
+            [":course_id"]=>
+            string(2) "01"
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(61) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php"
+        ["line"]=>
+        int(303)
+        ["function"]=>
+        string(8) "_execute"
+        ["class"]=>
+        string(21) "Zend_Db_Statement_Pdo"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(3) {
+            [":buscompany_id"]=>
+            string(3) "KMM"
+            [":lang_cd"]=>
+            string(2) "ja"
+            [":course_id"]=>
+            string(2) "01"
+          }
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+        ["line"]=>
+        int(480)
+        ["function"]=>
+        string(7) "execute"
+        ["class"]=>
+        string(17) "Zend_Db_Statement"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(3) {
+            [":buscompany_id"]=>
+            string(3) "KMM"
+            [":lang_cd"]=>
+            string(2) "ja"
+            [":course_id"]=>
+            string(2) "01"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(72) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php"
+        ["line"]=>
+        int(238)
+        ["function"]=>
+        string(5) "query"
+        ["class"]=>
+        string(24) "Zend_Db_Adapter_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+          [1]=>
+          &array(3) {
+            [":buscompany_id"]=>
+            string(3) "KMM"
+            [":lang_cd"]=>
+            string(2) "ja"
+            [":course_id"]=>
+            string(2) "01"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(68) "/usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php"
+        ["line"]=>
+        int(737)
+        ["function"]=>
+        string(5) "query"
+        ["class"]=>
+        string(28) "Zend_Db_Adapter_Pdo_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+          [1]=>
+          &array(3) {
+            [":buscompany_id"]=>
+            string(3) "KMM"
+            [":lang_cd"]=>
+            string(2) "ja"
+            [":course_id"]=>
+            string(2) "01"
+          }
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(46) "/var/www/html/kamimine/base/base/BaseModel.php"
+        ["line"]=>
+        int(62)
+        ["function"]=>
+        string(8) "fetchAll"
+        ["class"]=>
+        string(24) "Zend_Db_Adapter_Abstract"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+          [1]=>
+          &array(3) {
+            [":buscompany_id"]=>
+            string(3) "KMM"
+            [":lang_cd"]=>
+            string(2) "ja"
+            [":course_id"]=>
+            string(2) "01"
+          }
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(47) "/var/www/html/kamimine/models/t_sbt_busstop.php"
+        ["line"]=>
+        int(292)
+        ["function"]=>
+        string(8) "fetchAll"
+        ["class"]=>
+        string(9) "BaseModel"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &string(1377) "                SELECT  DISTINCT
+                        BS.busstop_id,
+                        BSL.busstop_name,
+                        BS.lat,
+                        BS.lng,
+                        VDIA.stop_seq
+                FROM    t_sbt_busstop BS
+                        LEFT JOIN t_sbt_busstop_lang BSL
+                            ON BSL.busstop_id = BS.busstop_id
+                            AND BSL.lang_cd = :lang_cd
+                        LEFT JOIN v_sbt_busdia VDIA
+                            ON VDIA.buscompany_id = :buscompany_id
+                            AND VDIA.busstop_id = BS.busstop_id
+                        LEFT JOIN v_sbt_busstop_category VBSC
+                            ON VBSC.buscompany_id = :buscompany_id
+                            AND VBSC.busstop_id = BS.busstop_id
+                        INNER JOIN t_sbt_calendar AS C
+                        ON VDIA.ybkbn = C.ybkbn
+                WHERE   1 = 1
+                AND C.srvdate = CURDATE()
+                AND VDIA.course_id = :course_id
+                AND VDIA.first_last_flg <> 'L'
+                AND VDIA.stop_seq < ANY (
+                                SELECT  VDIA.stop_seq from v_sbt_busdia VDIA
+                                WHERE   VDIA.course_id = :course_id
+                                        AND VDIA.busstop_id :busstop_id
+                                        )"
+          [1]=>
+          &array(3) {
+            [":buscompany_id"]=>
+            string(3) "KMM"
+            [":lang_cd"]=>
+            string(2) "ja"
+            [":course_id"]=>
+            string(2) "01"
+          }
+        }
+      }
+      [7]=>
+      array(4) {
+        ["function"]=>
+        string(14) "getBusStopList"
+        ["class"]=>
+        string(13) "t_sbt_busstop"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(6) {
+          [0]=>
+          &string(3) "KMM"
+          [1]=>
+          &string(3) "001"
+          [2]=>
+          &string(2) "01"
+          [3]=>
+          &string(1) "0"
+          [4]=>
+          &string(8) "00000105"
+          [5]=>
+          &NULL
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(50) "/var/www/html/kamimine/base/cllib/ModelManager.php"
+        ["line"]=>
+        int(36)
+        ["function"]=>
+        string(10) "invokeArgs"
+        ["class"]=>
+        string(16) "ReflectionMethod"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          object(t_sbt_busstop)#30 (5) {
+            ["logger":protected]=>
+            object(LogWriter)#2 (4) {
+              ["logger":"LogWriter":private]=>
+              object(Zend_Log)#5 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#3 (3) {
+                    ["_stream":protected]=>
+                    resource(27) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#4 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["debuglogger":"LogWriter":private]=>
+              object(Zend_Log)#8 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#6 (3) {
+                    ["_stream":protected]=>
+                    resource(28) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#7 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["user_id":"LogWriter":private]=>
+              NULL
+              ["transaction_id":"LogWriter":private]=>
+              string(28) "20201102112119-5f9f6d1f1a78d"
+            }
+            ["db":protected]=>
+            object(Zend_Db_Adapter_Pdo_Mysql)#20 (12) {
+              ["_pdoType":protected]=>
+              string(5) "mysql"
+              ["_numericDataTypes":protected]=>
+              array(16) {
+                [0]=>
+                int(0)
+                [1]=>
+                int(1)
+                [2]=>
+                int(2)
+                ["INT"]=>
+                int(0)
+                ["INTEGER"]=>
+                int(0)
+                ["MEDIUMINT"]=>
+                int(0)
+                ["SMALLINT"]=>
+                int(0)
+                ["TINYINT"]=>
+                int(0)
+                ["BIGINT"]=>
+                int(1)
+                ["SERIAL"]=>
+                int(1)
+                ["DEC"]=>
+                int(2)
+                ["DECIMAL"]=>
+                int(2)
+                ["DOUBLE"]=>
+                int(2)
+                ["DOUBLE PRECISION"]=>
+                int(2)
+                ["FIXED"]=>
+                int(2)
+                ["FLOAT"]=>
+                int(2)
+              }
+              ["_defaultStmtClass":protected]=>
+              string(21) "Zend_Db_Statement_Pdo"
+              ["_config":protected]=>
+              array(8) {
+                ["host"]=>
+                string(5) "mysql"
+                ["username"]=>
+                string(8) "kamimine"
+                ["password"]=>
+                string(10) "kamimine01"
+                ["dbname"]=>
+                string(11) "kamimine_db"
+                ["charset"]=>
+                NULL
+                ["persistent"]=>
+                bool(false)
+                ["options"]=>
+                array(3) {
+                  ["caseFolding"]=>
+                  int(0)
+                  ["autoQuoteIdentifiers"]=>
+                  bool(true)
+                  ["fetchMode"]=>
+                  int(2)
+                }
+                ["driver_options"]=>
+                array(0) {
+                }
+              }
+              ["_fetchMode":protected]=>
+              int(2)
+              ["_profiler":protected]=>
+              object(Zend_Db_Profiler)#21 (4) {
+                ["_queryProfiles":protected]=>
+                array(0) {
+                }
+                ["_enabled":protected]=>
+                bool(false)
+                ["_filterElapsedSecs":protected]=>
+                NULL
+                ["_filterTypes":protected]=>
+                NULL
+              }
+              ["_defaultProfilerClass":protected]=>
+              string(16) "Zend_Db_Profiler"
+              ["_connection":protected]=>
+              object(PDO)#22 (0) {
+              }
+              ["_caseFolding":protected]=>
+              int(0)
+              ["_autoQuoteIdentifiers":protected]=>
+              bool(true)
+              ["_allowSerialization":protected]=>
+              bool(true)
+              ["_autoReconnectOnUnserialize":protected]=>
+              bool(false)
+            }
+            ["userId":"BaseModel":private]=>
+            string(3) "API"
+            ["transactionId":"BaseModel":private]=>
+            string(28) "20201102112119-5f9f6d1f1a78d"
+            ["journal":"BaseModel":private]=>
+            object(JournalWriter)#9 (6) {
+              ["access_logger":"JournalWriter":private]=>
+              object(Zend_Log)#12 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#10 (3) {
+                    ["_stream":protected]=>
+                    resource(29) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#11 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["sql_logger":"JournalWriter":private]=>
+              object(Zend_Log)#15 (11) {
+                ["_priorities":protected]=>
+                array(8) {
+                  [0]=>
+                  string(5) "EMERG"
+                  [1]=>
+                  string(5) "ALERT"
+                  [2]=>
+                  string(4) "CRIT"
+                  [3]=>
+                  string(3) "ERR"
+                  [4]=>
+                  string(4) "WARN"
+                  [5]=>
+                  string(6) "NOTICE"
+                  [6]=>
+                  string(4) "INFO"
+                  [7]=>
+                  string(5) "DEBUG"
+                }
+                ["_writers":protected]=>
+                array(1) {
+                  [0]=>
+                  object(Zend_Log_Writer_Stream)#13 (3) {
+                    ["_stream":protected]=>
+                    resource(30) of type (stream)
+                    ["_filters":protected]=>
+                    array(0) {
+                    }
+                    ["_formatter":protected]=>
+                    object(Zend_Log_Formatter_Simple)#14 (1) {
+                      ["_format":protected]=>
+                      string(51) "%timestamp% DEBUG (7): %message%
+"
+                    }
+                  }
+                }
+                ["_filters":protected]=>
+                array(0) {
+                }
+                ["_extras":protected]=>
+                array(0) {
+                }
+                ["_defaultWriterNamespace":protected]=>
+                string(15) "Zend_Log_Writer"
+                ["_defaultFilterNamespace":protected]=>
+                string(15) "Zend_Log_Filter"
+                ["_defaultFormatterNamespace":protected]=>
+                string(18) "Zend_Log_Formatter"
+                ["_origErrorHandler":protected]=>
+                NULL
+                ["_registeredErrorHandler":protected]=>
+                bool(false)
+                ["_errorHandlerMap":protected]=>
+                bool(false)
+                ["_timestampFormat":protected]=>
+                string(1) "c"
+              }
+              ["user_id":"JournalWriter":private]=>
+              NULL
+              ["transaction_id":"JournalWriter":private]=>
+              string(28) "20201102112119-5f9f6d1f1a78d"
+              ["controller":"JournalWriter":private]=>
+              NULL
+              ["action":"JournalWriter":private]=>
+              NULL
+            }
+          }
+          [1]=>
+          &array(6) {
+            [0]=>
+            string(3) "KMM"
+            [1]=>
+            string(3) "001"
+            [2]=>
+            string(2) "01"
+            [3]=>
+            string(1) "0"
+            [4]=>
+            string(8) "00000105"
+            [5]=>
+            NULL
+          }
+        }
+      }
+      [9]=>
+      array(6) {
+        ["file"]=>
+        string(46) "/var/www/html/kamimine/ajax/getBusStopList.php"
+        ["line"]=>
+        int(18)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(12) "ModelManager"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(13) "t_sbt_busstop"
+          [1]=>
+          &string(14) "getBusStopList"
+          [2]=>
+          &array(6) {
+            [0]=>
+            string(3) "KMM"
+            [1]=>
+            string(3) "001"
+            [2]=>
+            string(2) "01"
+            [3]=>
+            string(1) "0"
+            [4]=>
+            string(8) "00000105"
+            [5]=>
+            NULL
+          }
+        }
+      }
+      [10]=>
+      array(6) {
+        ["file"]=>
+        string(44) "/var/www/html/kamimine/base/base/BaseApi.php"
+        ["line"]=>
+        int(72)
+        ["function"]=>
+        string(4) "main"
+        ["class"]=>
+        string(14) "getBusStopList"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [11]=>
+      array(6) {
+        ["file"]=>
+        string(46) "/var/www/html/kamimine/ajax/getBusStopList.php"
+        ["line"]=>
+        int(35)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(7) "BaseApi"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(0) {
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+    ["errorInfo"]=>
+    array(2) {
+      [0]=>
+      string(5) "HY093"
+      [1]=>
+      int(0)
+    }
+  }
+}
+

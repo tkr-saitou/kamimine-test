@@ -1,0 +1,448 @@
+2020-11-02T11:29:56+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T11:29:56+09:00 ERR (3): [U:,T:20201102112956-5f9f6f245237a]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(295): BaseModel->fetchAll(NULL, NULL)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '00000103', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(295): BaseModel->fetchAll(NULL, NULL)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '00000103', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-11-02T11:29:56+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T11:32:49+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T11:32:49+09:00 ERR (3): [U:,T:20201102113249-5f9f6fd196e64]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(296): BaseModel->fetchAll(NULL, NULL)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '0', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(296): BaseModel->fetchAll(NULL, NULL)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '0', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-11-02T11:32:49+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T11:32:52+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T11:32:52+09:00 ERR (3): [U:,T:20201102113251-5f9f6fd3f39bb]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(296): BaseModel->fetchAll(NULL, NULL)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '00000103', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(296): BaseModel->fetchAll(NULL, NULL)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '00000103', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-11-02T11:32:52+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T15:57:23+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T15:57:23+09:00 ERR (3): [U:,T:20201102155722-5f9fadd2c8967]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T15:57:23+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T15:57:28+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T15:57:28+09:00 ERR (3): [U:,T:20201102155728-5f9fadd8712c9]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll(NULL, NULL)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '00000104', '00000104')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll(NULL, NULL)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '01', '00000104', '00000104')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T15:57:28+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T16:29:23+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T16:29:23+09:00 ERR (3): [U:,T:20201102162923-5f9fb553256cf]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T16:29:23+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T16:39:34+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T16:39:34+09:00 ERR (3): [U:,T:20201102163934-5f9fb7b68e787]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T16:39:34+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T16:39:37+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T16:39:37+09:00 ERR (3): [U:,T:20201102163936-5f9fb7b8d62f9]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T16:39:37+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T17:27:40+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T17:27:40+09:00 ERR (3): [U:,T:20201102172740-5f9fc2fca3d1b]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T17:27:40+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T17:27:51+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T17:27:51+09:00 ERR (3): [U:,T:20201102172750-5f9fc306e448d]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll(NULL, NULL)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '00000108', '00000107')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(NULL, NULL)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(NULL, NULL)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll(NULL, NULL)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll(NULL, NULL)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '00000108', '00000107')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T17:27:51+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T17:27:57+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T17:27:57+09:00 ERR (3): [U:,T:20201102172757-5f9fc30d24dc4]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '04', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '04', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T17:27:57+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T17:28:10+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T17:28:10+09:00 ERR (3): [U:,T:20201102172810-5f9fc31a50062]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T17:28:10+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-11-02T17:28:14+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-11-02T17:28:14+09:00 ERR (3): [U:,T:20201102172814-5f9fc31e0ce23]exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '05', '0', '0')
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SQL;
+             = array(":buscompany_id" => KMM, ":lang_cd" => 'ja');
+        ' at line 22' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(310): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '05', '0', '0')
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(17): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(34): BaseApi->run()
+#11 {main}
+2020-11-02T17:28:14+09:00 ERR (3): Exception end -----------------------------------------------------------------

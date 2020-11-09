@@ -43,17 +43,17 @@ class SessionManager {
             }
         } else {
             // 新規セッションの開始
-            $this->logger->writeDebug("Session Info --------------------------------------------");
-            $this->logger->writeDebug("session_id [".session_id()."]");
-            $this->logger->writeDebug("session_name [".session_name()."]");
-            $this->logger->writeDebug("session_statue [".session_status()."]");
-            $this->logger->writeDebug("session_module_name [".session_module_name()."]");
-            $this->logger->writeDebug("session_save_path [".session_save_path()."]");
-            $this->logger->writeDebug("session_cache_limiter [".session_cache_limiter()."]");
-            $this->logger->writeDebug("session_cache_expire [".session_cache_expire()."]");
-            $this->logger->writeDebug("session_get_cookie_params");
-            $this->logger->writeDebug(session_get_cookie_params());
-            $this->logger->writeDebug("Session Info --------------------------------------------");
+            // $this->logger->writeDebug("Session Info --------------------------------------------");
+            // $this->logger->writeDebug("session_id [".session_id()."]");
+            // $this->logger->writeDebug("session_name [".session_name()."]");
+            // $this->logger->writeDebug("session_statue [".session_status()."]");
+            // $this->logger->writeDebug("session_module_name [".session_module_name()."]");
+            // $this->logger->writeDebug("session_save_path [".session_save_path()."]");
+            // $this->logger->writeDebug("session_cache_limiter [".session_cache_limiter()."]");
+            // $this->logger->writeDebug("session_cache_expire [".session_cache_expire()."]");
+            // $this->logger->writeDebug("session_get_cookie_params");
+            // $this->logger->writeDebug(session_get_cookie_params());
+            // $this->logger->writeDebug("Session Info --------------------------------------------");
         }
         // セッションタイムアウト判定用時刻設定
         $_SESSION['tci_session_timeout_time'] = time() + SESSION_TIMEOUT;
@@ -149,7 +149,7 @@ class SessionManager {
         if(($key = array_search($namespace, $namespaceList)) !== false) {
             unset($namespaceList[$key]);
             $this->set('tciNamespaceList',$namespaceList);
-        } 
+        }
 	}
 
 	/*

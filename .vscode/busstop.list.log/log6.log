@@ -1,0 +1,59 @@
+<!-- 路 ◯  出 なし  到 ◯  アクション 出 -->
+2020-11-02T10:49:37+09:00 DEBUG (7): [U:,T:20201102104937-5f9f65b14cd11]string(59) "###### PROCESS END (/kamimine/ajax/getVariables.php) ######"
+
+2020-11-02T10:49:37+09:00 DEBUG (7): [U:,T:20201102104937-5f9f65b1878d8]string(60) "###### PROCESS END (/kamimine/ajax/getCourseList.php) ######"
+
+2020-11-02T10:49:37+09:00 DEBUG (7): [U:,T:20201102104937-5f9f65b18c14b]string(63) "###### PROCESS END (/kamimine/ajax/checkServiceTime.php) ######"
+
+2020-11-02T10:49:37+09:00 DEBUG (7): [U:,T:20201102104937-5f9f65b18a7f4]string(59) "###### PROCESS END (/kamimine/ajax/getNewsTelop.php) ######"
+
+2020-11-02T10:49:37+09:00 DEBUG (7): [U:,T:20201102104937-5f9f65b190941]string(5) "Array"
+
+2020-11-02T10:49:37+09:00 DEBUG (7): [U:,T:20201102104937-5f9f65b190941]string(65) "###### PROCESS END (/kamimine/ajax/getCoursePointList.php) ######"
+
+2020-11-02T10:49:40+09:00 DEBUG (7): [U:,T:20201102104940-5f9f65b448204]string(35) "################start##############"
+
+2020-11-02T10:49:40+09:00 DEBUG (7): [U:,T:20201102104940-5f9f65b448204]array(6) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(2) "04"
+  [3]=>
+  string(1) "0"
+  [4]=>
+  string(1) "0"
+  [5]=>
+  string(1) "0"
+}
+
+2020-11-02T10:49:40+09:00 DEBUG (7): [U:,T:20201102104940-5f9f65b448204]string(33) "################end##############"
+
+2020-11-02T10:49:40+09:00 DEBUG (7): [U:,T:20201102104940-5f9f65b448204]string(69) "###### PROCESS END (/kamimine/ajax/getBusStopId8DigitList.php) ######"
+
+2020-11-02T10:49:40+09:00 DEBUG (7): [U:,T:20201102104940-5f9f65b447832]string(5) "Array"
+
+2020-11-02T10:49:40+09:00 DEBUG (7): [U:,T:20201102104940-5f9f65b447832]string(65) "###### PROCESS END (/kamimine/ajax/getCoursePointList.php) ######"
+
+2020-11-02T10:49:53+09:00 DEBUG (7): [U:,T:20201102104953-5f9f65c11caab]string(35) "################start##############"
+
+2020-11-02T10:49:53+09:00 DEBUG (7): [U:,T:20201102104953-5f9f65c11caab]array(6) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(2) "04"
+  [3]=>
+  string(1) "0"
+  [4]=>
+  string(8) "00000114"
+  [5]=>
+  string(1) "1"
+}
+
+2020-11-02T10:49:53+09:00 DEBUG (7): [U:,T:20201102104953-5f9f65c11caab]string(33) "################end##############"
+
+2020-11-02T10:49:53+09:00 DEBUG (7): [U:,T:20201102104953-5f9f65c11caab]string(69) "###### PROCESS END (/kamimine/ajax/getBusStopId8DigitList.php) ######"
+
