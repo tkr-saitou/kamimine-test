@@ -1,0 +1,224 @@
+2020-10-29T17:45:06+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-29T17:45:06+09:00 ERR (3): [U:,T:20201029174506-5f9a811281fd0]exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '05', '0', '00000132', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '05', '0', '00000132', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-10-29T17:45:06+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-10-29T18:12:33+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-29T18:12:33+09:00 ERR (3): [U:,T:20201029181233-5f9a8781a03d6]exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '00000111', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '00000111', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-10-29T18:12:33+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-10-29T18:12:40+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-29T18:12:40+09:00 ERR (3): [U:,T:20201029181240-5f9a8788b9b84]exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '00000111', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '00000111', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-10-29T18:12:40+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-10-29T18:12:43+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-29T18:12:43+09:00 ERR (3): [U:,T:20201029181243-5f9a878bd1f69]exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '00000132', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '02', '0', '00000132', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-10-29T18:12:43+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-10-29T18:14:53+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-29T18:14:53+09:00 ERR (3): [U:,T:20201029181453-5f9a880d94eae]exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '00000107', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '00000107', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-10-29T18:14:53+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-10-29T18:15:01+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-29T18:15:01+09:00 ERR (3): [U:,T:20201029181501-5f9a8815aaf53]exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '00000104', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '00000104', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-10-29T18:15:01+09:00 ERR (3): Exception end -----------------------------------------------------------------
+2020-10-29T18:15:07+09:00 ERR (3): Exception start ---------------------------------------------------------------
+2020-10-29T18:15:07+09:00 ERR (3): [U:,T:20201029181507-5f9a881b35417]exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#4 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#5 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#6 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#7 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '00000102', NULL)
+#8 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#9 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#10 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#11 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#12 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement/Pdo.php:234
+Stack trace:
+#0 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#2 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('               ...', Array)
+#3 /usr/share/ZendFramework-1.12.3/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query('               ...', Array)
+#4 /var/www/html/kamimine/base/base/BaseModel.php(62): Zend_Db_Adapter_Abstract->fetchAll('               ...', Array)
+#5 /var/www/html/kamimine/models/t_sbt_busstop.php(297): BaseModel->fetchAll('               ...', Array)
+#6 [internal function]: t_sbt_busstop->getBusStopList('KMM', '001', '03', '0', '00000102', NULL)
+#7 /var/www/html/kamimine/base/cllib/ModelManager.php(36): ReflectionMethod->invokeArgs(Object(t_sbt_busstop), Array)
+#8 /var/www/html/kamimine/ajax/getBusStopList.php(18): ModelManager->invoke('t_sbt_busstop', 'getBusStopList', Array)
+#9 /var/www/html/kamimine/base/base/BaseApi.php(72): getBusStopList->main()
+#10 /var/www/html/kamimine/ajax/getBusStopList.php(35): BaseApi->run()
+#11 {main}
+2020-10-29T18:15:07+09:00 ERR (3): Exception end -----------------------------------------------------------------

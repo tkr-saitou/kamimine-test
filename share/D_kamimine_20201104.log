@@ -1,0 +1,75 @@
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e51d5b]string(59) "###### PROCESS END (/kamimine/ajax/getVariables.php) ######"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e87d53]string(35) "################koooo##############"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e87d53]array(6) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(1) "0"
+  [3]=>
+  NULL
+  [4]=>
+  string(1) "0"
+  [5]=>
+  string(1) "0"
+}
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e8560b]string(60) "###### PROCESS END (/kamimine/ajax/getCourseList.php) ######"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e87d53]string(34) "################oooo##############"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e90c94]string(35) "################koooo##############"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e90c94]array(6) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(3) "001"
+  [2]=>
+  string(1) "0"
+  [3]=>
+  string(1) "0"
+  [4]=>
+  NULL
+  [5]=>
+  string(1) "1"
+}
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e90c94]string(34) "################oooo##############"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e8d93b]string(63) "###### PROCESS END (/kamimine/ajax/checkServiceTime.php) ######"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e87d53]string(69) "###### PROCESS END (/kamimine/ajax/getBusStopId8DigitList.php) ######"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e93d4a]string(59) "###### PROCESS END (/kamimine/ajax/getNewsTelop.php) ######"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e95106]array(5) {
+  [0]=>
+  string(3) "KMM"
+  [1]=>
+  string(1) "0"
+  [2]=>
+  string(1) "0"
+  [3]=>
+  NULL
+  [4]=>
+  NULL
+}
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e95106]string(19) "start##############"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e95106]string(3) "0  "
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e95106]string(17) "end##############"
+
+2020-11-04T16:24:14+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e90c94]string(69) "###### PROCESS END (/kamimine/ajax/getBusStopId8DigitList.php) ######"
+
+2020-11-04T16:24:15+09:00 DEBUG (7): [U:,T:20201104162415-5fa2571f0d67a]string(5) "Array"
+
+2020-11-04T16:24:15+09:00 DEBUG (7): [U:,T:20201104162415-5fa2571f0d67a]string(65) "###### PROCESS END (/kamimine/ajax/getCoursePointList.php) ######"
+
+2020-11-04T16:24:15+09:00 DEBUG (7): [U:,T:20201104162414-5fa2571e95106]string(61) "###### PROCESS END (/kamimine/ajax/getBusStopList.php) ######"
+

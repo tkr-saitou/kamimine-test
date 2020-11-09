@@ -178,11 +178,9 @@ function registerListener(init_coordinates) {
 	$('#course_id').change(function() {
 		var course_id = $(this).val();
 		var center = init_coordinates;
-		//if (areaCd == 101) {
-		//	center = init_coordinates;
-		//} else if (areaCd == 102) {
-		//	center = LETTER_CENTER;
-		//}
+		// var fromBS = document.getElementById("fromBS").value;
+		// var toBS = document.getElementById("toBS").value;
+
         // 検索条件：路線ドロップダウン
         if ($(this).val() == 0) {
             $('#courseText').html('路線<span>をえらぶ</span>');
@@ -194,11 +192,11 @@ function registerListener(init_coordinates) {
         // バスアイコン再描画
 		drawmap.drawBusMarkerIcon(buscategory_cd, course_id);
         // バス停マーカーリスト再描画
-		drawmap.drawBusStopMarkers(buscategory_cd, course_id, null, true);
+		drawmap.drawBusStopMarkers(buscategory_cd, course_id, null, true, 0, 0);
         // 路線ポリライン再描画
 		drawmap.drawCoursePolyline(buscategory_cd, course_id, true);
 		// 検索条件：バス停ドロップダウン再設定
-		setBusStopSelect(buscategory_cd, course_id);
+		setBusStopSelect(buscategory_cd, course_id, 0, 0);
 		// 検索条件：ランドマークドロップダウン再設定
 		//setLandmarkSelect(buscategory_cd, course_id);
 		// 更新時刻更新
@@ -206,35 +204,50 @@ function registerListener(init_coordinates) {
 	});
 
 	// 出発バス停が選択されたとき
-	$('#fromBS').change(function(busstopId, courseId) {
+	$('#fromBS').change(function() {
 			console.log(this);
         if ($(this).val() == 0) {
             $('#fromBSText').html('出発<span>するバス停をえらぶ</span>');
         } else {
 						$('#fromBSText').html($('#fromBS option:selected').text());
-						var op = [":courseId", "busstopId"]
-						tci.runApi("./ajax/getArrivalList.php", op, function(obj) {
-						});
 				}
 		var fromBsCd = $(this).val();
+		var toBS = document.getElementById("toBS").value;
+		var courseId = document.getElementById("course_id").value;
+		// console.log(courseId);
+		setBusStopSelect(buscategory_cd, courseId, fromBsCd, toBS);
+		drawmap.drawBusStopMarkers(buscategory_cd, courseId, 1, true, fromBsCd, toBS);
 		// バス停の色変更
 		drawmap.changeBusStopIcon(fromBsCd, buscategory_cd, 1, true);
+		// drawmap.drawBusStopMarkers(buscategory_cd, courseId, 1, true, fromBsCd, toBS);
+		// 検索条件：バス停ドロップダウン再設定
+		// setBusStopSelect(buscategory_cd, courseId, fromBsCd, toBS);
+		// drawmap.drawBusStopMarkers(buscategory_cd, courseId, null, true, fromBsCd, toBS);
 	});
 
 	// 到着バス停が選択されたとき
 	$('#toBS').change(function() {
-				console.log(this);
+				// console.log(this);
         if ($(this).val() == 0) {
             $('#toBSText').html('到着<span>するバス停をえらぶ</span>');
         } else {
 						$('#toBSText').html($('#toBS option:selected').text());
-						var op = [":courseId", "busstopId"]
-						tci.runApi("./ajax/getDepartureList.php", op, function(obj) {
-						});
         }
 		var toBsCd = $(this).val();
+		var fromBS = document.getElementById("fromBS").value;
+		var courseId = document.getElementById("course_id").value;
+		// console.log(courseId);
+		// drawmap.drawBusStopMarkers(buscategory_cd, courseId, 1, false, fromBS, toBsCd);
+		setBusStopSelect(buscategory_cd, courseId, fromBS, toBsCd);
+		drawmap.drawBusStopMarkers(buscategory_cd, courseId, 1, false, fromBS, toBsCd);
 		// バス停の色変更
 		drawmap.changeBusStopIcon(toBsCd, buscategory_cd, 2, true);
+		// drawmap.drawBusStopMarkers(buscategory_cd, courseId, 1, false, fromBS, toBsCd);
+		// 検索条件：バス停ドロップダウン再設定
+		// setBusStopSelect(buscategory_cd, courseId, fromBS, toBsCd);
+		// drawmap.drawBusStopMarkers(buscategory_cd, courseId, null, true, fromBS, toBsCd);
+		console.log(course_id);
+
 	});
 
     /*
@@ -262,7 +275,7 @@ function registerListener(init_coordinates) {
 		var bsname = $("#bsname_" + id).html();
 		$("#fromBS").val(bscd);
         $('#fromBSText').html($('#fromBS option:selected').text());
-		$(".custom_select_text#fromBS").children("span").html(bsname);
+		// $(".custom_select_text#fromBS").children("span").html(bsname);
 		drawmap.changeBusStopIcon(bscd, buscategory_cd, 1, true);
 		//$('.custom_select#fromLM').hide();
 		//$('.custom_select#fromBS').show();
@@ -500,17 +513,66 @@ function setCourseDropdown(buscategory_cd) {
 /**
  * バス停ドロップダウン生成（出発・到着両方）
  */
-function setBusStopSelect(buscategory_cd, course_id) {
+function setBusStopSelect(buscategory_cd, course_id, fromBS, toBS) {
+	if (fromBS == 0 && toBS == 0) {
+		// console.log(fromBS);
+		// console.log(toBS);
 	// いったんoptionを全削除、選択項目をリセット
-    $('#fromBSText').html('出発<span>するバス停をえらぶ</span>');
-    $('#toBSText').html('到着<span>するバス停をえらぶ</span>');
+  $('#fromBSText').html('出発<span>するバス停をえらぶ</span>');
+  $('#toBSText').html('到着<span>するバス停をえらぶ</span>');
 	$('#fromBS').children('option').remove();
 	$('#toBS').children('option').remove();
 	// 空要素を追加
 	$('#fromBS').append('<option value="0" selected="selected"></option>');
-	//$('#fromBS').append('<option value="9999">現在地</option>'); // 現在地から検索機能は一旦カット
 	$('#toBS').append('<option value="0" selected="selected"></option>');
-    var opts = {"buscategory_cd": buscategory_cd, "course_id": course_id};
+	var opts = {"buscategory_cd": buscategory_cd, "course_id": course_id, "fromBS": fromBS, "toBS": toBS, "orientation": 0};
+//	console.log(opts);
+	tci.runApi("./ajax/getBusStopId8DigitList.php", opts, function(response) {
+	//		console.log(response);
+	if (response.status == 0) {
+		$.each(response.busstop, function(i, busstop) {
+							// 出発バス停ドロップダウン選択肢
+			$('#fromBS').append(
+				'<option value="' + busstop.busstop_id8 + '">' + busstop.busstop_name + '</option>'
+			);
+							// 到着バス停ドロップダウン選択肢
+			$('#toBS').append(
+				'<option value="' + busstop.busstop_id8 + '">' + busstop.busstop_name + '</option>'
+			);
+		});
+	}
+	});
+	}
+	// // $('#fromBS').append('<option value="9999">現在地</option>'); // 現在地から検索機能は一旦カット
+
+	if (fromBS != 0) {
+		console.log(fromBS);
+		$('#toBS').children('option').remove();
+		$('#toBS').append('<option value="0" selected="selected"></option>');
+		var opts = {"buscategory_cd": buscategory_cd, "course_id": course_id, "fromBS": fromBS, "toBS": 0, "orientation": 0};
+		console.log(opts);
+    tci.runApi("./ajax/getBusStopId8DigitList.php", opts, function(response) {
+			console.log(response);
+		if (response.status == 0) {
+			$.each(response.busstop, function(i, busstop) {
+                // 出発バス停ドロップダウン選択肢
+				// $('#fromBS').append(
+				// 	'<option value="' + busstop.busstop_id8 + '">' + busstop.busstop_name + '</option>'
+				// );
+                // 到着バス停ドロップダウン選択肢
+				$('#toBS').append(
+					'<option value="' + busstop.busstop_id8 + '">' + busstop.busstop_name + '</option>'
+				);
+			});
+		}
+		});
+	}
+	if (toBS != 0) {
+		console.log(toBS);
+		$('#fromBS').children('option').remove();
+		$('#fromBS').append('<option value="0" selected="selected"></option>');
+		var opts = {"buscategory_cd": buscategory_cd, "course_id": course_id, "fromBS": 0, "toBS": toBS, "orientation": 1};
+		console.log(opts);
     tci.runApi("./ajax/getBusStopId8DigitList.php", opts, function(response) {
 			console.log(response);
 		if (response.status == 0) {
@@ -519,15 +581,12 @@ function setBusStopSelect(buscategory_cd, course_id) {
 				$('#fromBS').append(
 					'<option value="' + busstop.busstop_id8 + '">' + busstop.busstop_name + '</option>'
 				);
-                // 到着バス停ドロップダウン選択肢
-				$('#toBS').append(
-					'<option value="' + busstop.busstop_id8 + '">' + busstop.busstop_name + '</option>'
-				);
 			});
 		}
-	});
-}
+		});
+	}
 
+	}
 /*
 // (出発・到着)主要施設の選択肢を生成
 function setLandmarkSelect(buscategory_cd, course_id) {

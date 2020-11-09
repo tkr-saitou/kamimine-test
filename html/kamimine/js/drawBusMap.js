@@ -99,11 +99,10 @@ drawmap.mapInitialize = function(lat, lng, fullscreen) {
 		fullscreenControl : fullscreen,
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	};
-
 	map = new google.maps.Map(mapDiv, mapOpts);
 	google.maps.event.addListener(map, 'zoom_changed', function() {
-		changeIconSize(map.getZoom());
-		changePolylineWeight(map.getZoom());
+    		changeIconSize(map.getZoom());
+    		changePolylineWeight(map.getZoom());
 	});
 
     // 以下の処理はmap初期化の中ではなく、別で呼ぶべき→移動
@@ -112,7 +111,7 @@ drawmap.mapInitialize = function(lat, lng, fullscreen) {
 	// 全バス停表示
     drawmap.drawBusStopMarkers(0, 0);
 	// 全路線表示
-		drawmap.drawCoursePolyline(0, 0);
+    drawmap.drawCoursePolyline(0, 0);
 
 }
 
@@ -190,7 +189,7 @@ drawmap.drawBusMarkerIcon = function(buscategory_cd, course_id) {
 		marker.setMap(null);
 	});
 	busList = []; // グローバル変数初期化
-    var opts = {"areaCd": buscategory_cd, "routeCd": course_id};
+		var opts = {"areaCd": buscategory_cd, "routeCd": course_id};
     tci.runApi("./ajax/getBusLocation.php", opts, function(response) {
 		if (response.status == 0) {
 			$.each(response.bus, function(i, bus) {
@@ -236,6 +235,7 @@ function createBusMarker(bus) {
 }
 // 遅延別バスアイコン番号取得
 function getBusDelayIcon(bus) {
+    //console.log(bus);
 	if (bus.delay < 5) { // 5分未満は遅延無
 		return "blue";
 	} else if (5 <= bus.delay && bus.delay < 10) { // 5分程度遅延
@@ -287,23 +287,28 @@ function getBusAngleIcon(bus) {
 // バス停表示関連
 // DBよりバス停リストを取得してマーカーを表示する
 // ************************************************************
-drawmap.drawBusStopMarkers = function(areaCd, routeCd, displaySet, initFlg) {
-	if (initFlg) {
-		busstopList.forEach(function(marker, idx) {
-			marker.setMap(null);
-		});
-		busstopList = [];
-	}
-    var opts =  {"areaCd": areaCd, "routeCd": routeCd};
+drawmap.drawBusStopMarkers = function(areaCd, routeCd, displaySet, initFlg, fromBS, toBS) {
+    if (initFlg) {
+        busstopList.forEach(function(marker, idx) {
+	    	marker.setMap(null);
+    	});
+	    busstopList = [];
+    }
+    var opts =  {"areaCd": areaCd, "routeCd": routeCd, "fromBS": fromBS, "toBS": toBS};
     tci.runApi("./ajax/getBusStopList.php", opts, function(obj) {
 		if (obj.status == 0) {
 			$.each(obj.busstop, function(i, busstop) {
 				createBusStopMarker(busstop);
 			});
             // 検索時の再描画の時のみ
-            if (displaySet == 1) {
-                drawmap.changeBusStopIcon($("#fromBS").val(), areaCd, 1, false);
-                drawmap.changeBusStopIcon($("#toBS").val(), areaCd, 2, true);
+            if (displaySet == 1 && fromBS != 0) {
+								drawmap.changeBusStopIcon($("#fromBS").val(), areaCd, 1, false);
+						}
+						if (displaySet == 1 && toBS != 0) {
+
+								drawmap.changeBusStopIcon($("#toBS").val(), areaCd, 2, true);
+								drawmap.changeBusStopIcon($("#kana-departure .acc-layer3").attr('id'), areaCd, 3, false);
+								drawmap.changeBusStopIcon($("#kana-arrival .acc-layer3").attr('id'), areaCd, 4, true);
 //                for (var key in displaySet) {
 //                    drawmap.changeBusStopIcon(displaySet[key]["fromBsCd"], areaCd, 1, false);
 //                    drawmap.changeBusStopIcon(displaySet[key]["toBsCd"], areaCd, 2, false);
@@ -441,17 +446,14 @@ function createLandmarkMarker(landmark, areaCd) {
 // DBより路線（Course）の点列のリストを取得→ポリライン描画
 // ************************************************************
 drawmap.drawCoursePolyline = function(areaCd, routeCd, initFlg) {
-	if (initFlg) {
-		routeList.forEach(function(marker, idx) {
-			marker.setMap(null);
-		});
-		routeList = [];
-	}
-	var opts = {"areaCd": 0, "routeCd": 0};
-
-	tci.runApi("./ajax/getCoursePointList.php", opts, function(obj) {
-
-		console.log(obj);
+    if (initFlg) {
+        routeList.forEach(function(marker, idx) {
+	    	marker.setMap(null);
+	    });
+	    routeList = [];
+    }
+    var opts = {"areaCd": 0, "routeCd": 0};
+    tci.runApi("./ajax/getCoursePointList.php", opts, function(obj) {
 		if (obj.status == 0) {
 			$.each(obj.route, function(i, route) {
 				if (i == routeCd || routeCd == 0) {
@@ -487,20 +489,19 @@ function drawRoutePolyline(course_id, route, opacity) {
 		infoWnd.open(routeLine.getMap(), routeLine);
 	});
 	routeList.push(routeLine);
-	// if course
 }
 
 function getRouteColor(syscd) {
     if (syscd == 01) {
-      return "#ff0000";
+      return "#af3131";
     } else if (syscd == 02) {
-      return "#0000ff";
+      return "#32B16C";
     } else if (syscd == 03) {
-      return "#ffff00";
+      return "#315faf";
     } else if (syscd == 04) {
-      return "#008000";
+      return "#afaf31";
     } else if (syscd == 05) {
-      return "#ff1493";
+      return "#af31a3";
     } else {
       return;
     }

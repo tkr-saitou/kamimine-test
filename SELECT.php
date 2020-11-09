@@ -1,4 +1,4 @@
-SELECT
+<!-- SELECT
 distinct X.course_id
 FROM
 (
@@ -64,7 +64,7 @@ D.course_id = "03" AND
 SUBSTRING(D.busstop_id, 1, CHAR_LENGTH(D.busstop_id) - 2) = "00000103"
 ORDER BY
 D.stop_seq
-LIMIT 1
+LIMIT 1 -->
 
 <!-- 路 なし 出 なし 到 なし  アクション　出 -->
 SELECT  DISTINCT
@@ -201,28 +201,65 @@ AND VDIA.stop_seq  > 5
 
 SELECT  DISTINCT
 BS.busstop_id,
-                    BSL.busstop_name,
-                    BS.lat,
-                    BS.lng,
-                    VDIA.stop_seq
-            FROM    t_sbt_busstop BS
-                    LEFT JOIN t_sbt_busstop_lang BSL
-                        ON BSL.busstop_id = BS.busstop_id
-                        AND BSL.lang_cd = "ja"
-                    LEFT JOIN v_sbt_busdia VDIA
-                        ON VDIA.buscompany_id = "KMM"
-                        AND VDIA.busstop_id = BS.busstop_id
-                    LEFT JOIN v_sbt_busstop_category VBSC
-                        ON VBSC.buscompany_id = "KMM"
-                        AND VBSC.busstop_id = BS.busstop_id
-                    INNER JOIN t_sbt_calendar AS C
-                    ON VDIA.ybkbn = C.ybkbn
-            WHERE   1 = 1
+BSL.busstop_name,
+BS.lat,
+BS.lng,
+VDIA.stop_seq
+FROM    t_sbt_busstop BS
+LEFT JOIN t_sbt_busstop_lang BSL
+    ON BSL.busstop_id = BS.busstop_id
+    AND BSL.lang_cd = "ja"
+LEFT JOIN v_sbt_busdia VDIA
+    ON VDIA.buscompany_id = "KMM"
+    AND VDIA.busstop_id = BS.busstop_id
+LEFT JOIN v_sbt_busstop_category VBSC
+    ON VBSC.buscompany_id = "KMM"
+    AND VBSC.busstop_id = BS.busstop_id
+INNER JOIN t_sbt_calendar AS C
+ON VDIA.ybkbn = C.ybkbn
+WHERE   1 = 1
 AND C.srvdate = CURDATE()
 AND VDIA.course_id  = "01"
 AND VDIA.first_last_flg <> "L"
-AND VDIA.stop_seq < 5
+AND VDIA.stop_seq < ANY (
+SELECT VDIA.stop_seq from v_sbt_busdia VDIA
+WHERE VDIA.course_id = "01"
+AND VDIA.busstop_id = "0000010401"
+)
+
+<!-- 通らない -->
+SELECT  DISTINCT
+BS.busstop_id,
+BSL.busstop_name,
+BS.lat,
+BS.lng,
+VDIA.stop_seq
+FROM t_sbt_busstop BS
+LEFT JOIN t_sbt_busstop_lang BSL
+ON BSL.busstop_id = BS.busstop_id
+AND BSL.lang_cd = "ja"
+LEFT JOIN v_sbt_busdia VDIA
+ON VDIA.buscompany_id = "KMM"
+AND VDIA.busstop_id = BS.busstop_id
+LEFT JOIN v_sbt_busstop_category VBSC
+ON VBSC.buscompany_id = "KMM"
+AND VBSC.busstop_id = BS.busstop_id
+INNER JOIN t_sbt_calendar AS C
+ON VDIA.ybkbn = C.ybkbn
+WHERE   1 = 1
+AND C.srvdate = CURDATE()
+AND VDIA.course_id  = "01"
+AND VDIA.first_last_flg <> 'L'
+AND VDIA.stop_seq < ANY (
+SELECT VDIA.stop_seq from v_sbt_busdia VDIA
+WHERE VDIA.course_id = "01"
+AND VDIA.busstop_id = "0000010401"
+)
 
 <!-- :course_id -->
 <!-- :stop_seq -->
+
+
+
+
 
